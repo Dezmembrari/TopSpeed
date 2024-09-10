@@ -120,7 +120,7 @@
                 />
                 <img
                 class="vector-7-5InFe1"
-                src="../components/images/vector-7-1@2x.png"
+                src="../components/images/vector-4-4@2x.png"
                 alt="Vector 7"
                 />
             </div>
@@ -225,6 +225,7 @@ const submitForm = async () => {
     max-width: 50%;
     background-color: transparent;
     margin: 12px;
+    
 
     .contact-mobile-gJwtjs {
       background: transparent;
@@ -233,6 +234,7 @@ const submitForm = async () => {
     .contact-0FjsKs {
       align-content: center;
       margin: auto;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     @media (max-width: 1350px) {
@@ -253,6 +255,8 @@ const submitForm = async () => {
     margin: 30px;
     width: 50%;
     min-height: 10cm;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
     iframe {
       flex-direction: column;

@@ -14,7 +14,10 @@
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
     "vite": "^5.3.1"
   }
 }

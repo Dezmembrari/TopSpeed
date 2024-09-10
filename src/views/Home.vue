@@ -994,7 +994,7 @@
             </div>
             <div class="phone-FSbhl1">
               <input v-model="form.numar_de_telefon_optional" class="numar-de-telefon-optional-5InFe1 poppins-medium-stack-14-8px" name="numartelefon" placeholder="Numar de telefon (optional)" type="number" />
-              <img class="vector-7-5InFe1" src="../components/images/vector-7-1@2x.png" alt="Vector 7" />
+              <img class="vector-7-5InFe1" src="../components/images/vector-4-4@2x.png" alt="Vector 7" />
             </div>
             <div class="message-FSbhl1">
               <textarea v-model="form.mesaj" class="mesaj-ZILdUA" name="mesaj" placeholder="Mesaj"></textarea>
