@@ -699,7 +699,7 @@
             platformă fara cost suplimentar.
           </p>
         </div>
-        <a href="tel:+40788990011" class="contacteaza-ne-K86Ewf smart-layers-pointers" data-id="207:2710">
+        <a href="tel:+40788990011" style="color: white;" class="contacteaza-ne-K86Ewf smart-layers-pointers" data-id="207:2710">
           <!-- <router-link class="link" :to="{name: 'contact'}"> -->
           <div class="state-layer-9BUA1l state-layer" data-id="I207:2710;53939:32950">
             <img class="icon-Sifdis icon" data-id="I207:2710;53939:32951" src="../components/images/icon-49@2x.png" alt="Icon" />
@@ -712,7 +712,7 @@
         </a>
       </div>
       <div class="imagine-kx6xIJ" data-id="207:2711">
-        <img src="../components/images/receptie.png"/>
+        <img alt="Receptie Top Speed Service" src="../components/images/receptie.png"/>
       </div>
     </div>
 
@@ -724,7 +724,7 @@
         <div class="frame-12-bhevLl frame-12" data-id="207:2717">
           <div class="card-m"><!-- card 1-->
             <div class="content">
-              <div class="picture"><img class="pexels" src="../components/images/pexels.png" /></div>
+              <div class="picture"><img alt="masina la schimb" class="pexels" src="../components/images/pexels.png" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                 <p class="div">
@@ -739,7 +739,7 @@
           </div>
           <div class="card-m"><!-- card 2-->
                 <div class="content">
-                  <div class="picture"><img class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png"  /></div>
+                  <div class="picture"><img alt="masina pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png"  /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                     <p class="div">
@@ -754,7 +754,7 @@
               </div>
           <div class="card-m">
                 <div class="content">
-                  <div class="picture"><img class="laptop" src="../components/images/hands.png" /></div>
+                  <div class="picture"><img alt="o persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                     <p class="div">

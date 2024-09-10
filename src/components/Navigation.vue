@@ -62,7 +62,7 @@
         <transition name="branding">
             <div v-if="showBranding" class="branding">
               <router-link :to="{name: 'home'}">
-                <img src="../assets/TSP_Logo.png">
+                <img src="../assets/TSP_Logo.png" alt="Top Speed Service">
               </router-link>
             </div>
         </transition>
