@@ -25,10 +25,12 @@
             platformă fara cost suplimentar.
           </p>
           <div class="extended-FAB">
+            <router-link class="link" :to="{name: 'contact'}">
             <div class="state-layer">
               <img class="img" src="../components/images/icon-46@21x.png" />
               <div class="label-text">Contact</div>
             </div>
+            </router-link>
           </div>
           <div class="rating">
             <div class="tertiary-box">
@@ -89,9 +91,11 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <div class="tag">
-                  <div class="tag-or-button">Detalii</div>
-                </div>
+                <router-link class="link" :to="{name: 'servicii'}">
+                  <div class="tag">
+                    <div class="tag-or-button">Detalii</div>
+                  </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -107,9 +111,11 @@
                 </p>
               </div>
               <div class="tag-wrapper">
+                <router-link class="link" :to="{name: 'servicii'}">
                 <div class="tag">
                   <div class="tag-or-button">Detalii</div>
                 </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -125,9 +131,11 @@
                 </p>
               </div>
               <div class="tag-wrapper">
+                <router-link class="link" :to="{name: 'servicii'}">
                 <div class="tag">
                   <div class="tag-or-button">Detalii</div>
                 </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -384,13 +392,14 @@
               cost suplimentar.
             </p>
             <div class="extended-fab-GWw8gr smart-layers-pointers" data-id="244:1081">
+              <router-link class="link" :to="{name: 'contact'}"> 
               <div class="state-layer-rwYoxk smart-layers-pointers" data-id="I244:1081;53939:32950">
-                <img class="icon-sHa4Z4 icon" data-id="I244:1081;53939:32951" src="../components/images/icon-46@21x.png"
-                  alt="Icon" />
+                <img class="icon-sHa4Z4 icon" data-id="I244:1081;53939:32951" src="../components/images/icon-46@21x.png" alt="Icon" />
                 <div class="label-text-sHa4Z4 valign-text-middle label-text" data-id="I244:1081;53939:32952">
                   Contact
                 </div>
               </div>
+              </router-link>
             </div>
             <div class="rating-GWw8gr" data-id="244:1082">
               <div class="tertiary-box-Wh9G94" data-id="244:1083">
@@ -461,7 +470,9 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                    <router-link class="link" :to="{name: 'servicii'}">
+                      <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -477,7 +488,8 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    
                   </div>
                 </div>
               </div>
@@ -494,7 +506,8 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                
               </div>
             </div>
           </div>
@@ -686,7 +699,8 @@
             platformă fara cost suplimentar.
           </p>
         </div>
-        <div class="contacteaza-ne-K86Ewf smart-layers-pointers" data-id="207:2710">
+        <a href="tel:+40788990011" class="contacteaza-ne-K86Ewf smart-layers-pointers" data-id="207:2710">
+          <!-- <router-link class="link" :to="{name: 'contact'}"> -->
           <div class="state-layer-9BUA1l state-layer" data-id="I207:2710;53939:32950">
             <img class="icon-Sifdis icon" data-id="I207:2710;53939:32951" src="../components/images/icon-49@2x.png" alt="Icon" />
             <div class="label-text-Sifdis valign-text-middle label-text material-theme-bluelabellarge"
@@ -694,7 +708,8 @@
               CONTACTEAZA-NE
             </div>
           </div>
-        </div>
+          <!-- </router-link> -->
+        </a>
       </div>
       <div class="imagine-kx6xIJ" data-id="207:2711">
         <img src="../components/images/receptie.png"/>
@@ -717,7 +732,8 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                
               </div>
             </div>
           </div>
@@ -731,7 +747,8 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    
                   </div>
                 </div>
               </div>
@@ -746,13 +763,11 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <div class="tag"><div class="tag-or-button">Detalii</div></div>
+                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    
                   </div>
                 </div>
               </div>
-          <!-- <img class="card-1-xh2KAn" data-id="207:2718" src="../components/images/card-1-4@2x.png" alt="Card 1" /> -->
-          <!-- <img class="card-2-xh2KAn" data-id="207:2727" src="../components/images/card-2-5@2x.png" alt="Card 2" /> -->
-          <!-- <img class="card-3-xh2KAn" data-id="207:2736" src="../components/images/card-3-5@2x.png" alt="Card 3" /> -->
         </div>
       </div>
     </div>
@@ -848,6 +863,7 @@
             <div class="ellipse-793-uurO5n" data-id="228:3462"></div>
             <div class="text-info-uurO5n" data-id="228:3463">
               <div class="group-1000001773-xuonMF" data-id="228:3464">
+                <a href="tel:+40788990011">
                 <img
                   class="bxsphone-call-g2ApXA"
                   data-id="228:3465"
@@ -860,122 +876,39 @@
                 >
                   0788 990 011
                 </div>
+                </a>
               </div>
+              <a href="mailto:office@topspeedservice.eu">
               <img
                 class="icsharp-email-xuonMF"
                 data-id="228:3469"
                 src="../components/images/ic-sharp-email-4@2x.png"
                 alt="ic:sharp-email"
               />
+              </a>
               <div
                 class="officetopspeedserviceeu-xuonMF officetopspeedserviceeu inter-normal-white-15-4px"
                 data-id="228:3471"
               >
-                office@topspeedservice.eu
+              <a href="mailto:office@topspeedservice.eu" style="color: white;">office@topspeedservice.eu</a>
               </div>
+              <a href="https://maps.app.goo.gl/rg6mR3coquFgzpYi6" style="color: white;">
               <img
                 class="carbonlocation-filled-xuonMF"
                 data-id="228:3472"
                 src="../components/images/carbon-location-filled-4@2x.png"
                 alt="carbon:location-filled"
               />
+              </a>
               <p
                 class="sos-clinceni-dj401-a-6-bragadiru-077025-xuonMF sos-clinceni-dj401-a-6-bragadiru-077025 inter-normal-white-15-4px"
                 data-id="228:3475"
               >
-                Sos. Clinceni, DJ401A 6, Bragadiru 077025
+              <a href="https://maps.app.goo.gl/rg6mR3coquFgzpYi6" style="color: white;">Sos. Clinceni, DJ401A 6, Bragadiru 077025</a>
               </p>
             </div>
           </div>
         </div>
-
-
-        <!-- <div class="contact-form-jSxk1B" data-id="228:3476">
-          <div class="name-FSbhl1" data-id="228:3477">
-            <input
-              class="nume-Wmm1CL poppins-medium-stack-14-8px"
-              data-id="228:3478"
-              name="nume"
-              placeholder="Nume"
-              type="text"
-              required
-            />
-            <img
-              class="vector-4-Wmm1CL"
-              data-id="228:3479"
-              src="../components/images/vector-4-4@2x.png"
-              alt="Vector 4"
-            />
-          </div>
-          <div class="surname-FSbhl1" data-id="228:3480">
-            <input
-              class="prenume-a09DHC"
-              data-id="228:3481"
-              name="prenume"
-              placeholder="Prenume"
-              type="text"
-              required
-            />
-            <img
-              class="vector-5-a09DHC"
-              data-id="228:3482"
-              src="../components/images/vector-4-4@2x.png"
-              alt="Vector 5"
-            />
-          </div>
-          <div class="mail-FSbhl1" data-id="228:3483">
-            <input
-              class="email-gi4H8t poppins-medium-stack-14-8px"
-              data-id="228:3484"
-              name="email"
-              placeholder="Email"
-              type="email"
-              required
-            />
-            <img
-              class="vector-6"
-              data-id="228:3485"
-              src="../components/images/vector-4-4@2x.png"
-              alt="Vector 6"
-            />
-          </div>
-          <div class="phone-FSbhl1" data-id="228:3486">
-            <input
-              class="numar-de-telefon-optional-5InFe1 poppins-medium-stack-14-8px"
-              data-id="228:3487"
-              name="numartelefon"
-              placeholder="Numar de telefon (optional)"
-              type="number"
-            />
-            <img
-              class="vector-7-5InFe1"
-              data-id="228:3488"
-              src="../components/images/vector-7-1@2x.png"
-              alt="Vector 7"
-            />
-          </div>
-          <div class="message-FSbhl1" data-id="228:3489">
-            <textarea
-              class="mesaj-ZILdUA"
-              data-id="228:3490"
-              name="mesaj"
-              placeholder="Mesaj"
-              type="text"
-            ></textarea>
-            <img
-              class="vector-6"
-              data-id="228:3491"
-              src="../components/images/vector-4-4@2x.png"
-              alt="Vector 6"
-            />
-          </div>
-
-          <button type="button" class="button-FSbhl1 smart-layers-pointers" data-id="228:3492" onClick="SubmitForm('form')">
-            <div class="trimite-mesaj-nbeqyD" data-id="228:3493">
-              Trimite Mesaj
-            </div>
-          </button>
-        </div> -->
 
         <form @submit.prevent="submitForm">
           <!-- Updated form HTML with matching classes -->

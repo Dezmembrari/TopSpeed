@@ -61,7 +61,9 @@
         <!-- Branding -->
         <transition name="branding">
             <div v-if="showBranding" class="branding">
-              <img src="../assets/TSP_Logo.png">
+              <router-link :to="{name: 'home'}">
+                <img src="../assets/TSP_Logo.png">
+              </router-link>
             </div>
         </transition>
 
@@ -71,7 +73,7 @@
             <li><router-link class="link" :to="{name: 'servicii'}">Servicii</router-link></li>
             <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li>
             <li><router-link class="link" :to="{name: 'about'}">Despre noi</router-link></li>
-            <li><router-link class="link" :to="{name: 'contact'}"><div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.png" /> <p>Contacteaza-ne</p> </div> </router-link></li>
+            <li><router-link class="link-t" :to="{name: 'contact'}"><div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.png" /> <p>Contacteaza-ne</p> </div> </router-link></li>
         </ul>
 
         <!-- Mobile Icon -->
@@ -82,11 +84,11 @@
         <!-- Mobile Dropdown Navigation -->
         <transition name="mobile-nav">
             <ul v-show="mobileNav" class="dropdown-nav">
-                <li><router-link class="link" :to="{name: 'home'}">Acasa</router-link></li>
-                <li><router-link class="link" :to="{name: 'servicii'}">Servicii</router-link></li>
-                <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li>
-                <li><router-link class="link" :to="{name: 'about'}">Despre noi</router-link></li>
-                <li><router-link class="link" :to="{name: 'contact'}">Contact</router-link></li>
+                <li><router-link class="link" :to="{name: 'home'}" @click="closeMobileNav">Acasa</router-link></li>
+                <li><router-link class="link" :to="{name: 'servicii'}" @click="closeMobileNav">Servicii</router-link></li>
+                <li><router-link class="link" :to="{name: 'flota'}" @click="closeMobileNav">Flota</router-link></li>
+                <li><router-link class="link" :to="{name: 'about'}" @click="closeMobileNav">Despre noi</router-link></li>
+                <li><router-link class="link" :to="{name: 'contact'}" @click="closeMobileNav">Contact</router-link></li>
             </ul>
         </transition>
     </nav>
@@ -105,7 +107,7 @@ export default {
             mobileNav: null,
             windowWidth: null,
             showBranding: false,
-            mobileBanner: null,
+            mobileBanner: false,
         };
     },
 
@@ -125,6 +127,10 @@ export default {
     methods: {
         toggleMobileNav(){
             this.mobileNav=!this.mobileNav;
+        },
+
+        closeMobileNav() {
+        this.mobileNav = false;
         },
 
         updateScroll(){
@@ -166,6 +172,8 @@ header {
   position: fixed;
   transition: 0.5s ease all;
   color: rgba(255, 255, 255, 1.0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
   nav {
     display: flex; // Align branding, navigation, and icon in a single row
@@ -192,9 +200,23 @@ header {
       padding: 0px 0px; // Maintain padding for the logo
       background-color: transparent; // Add background color to match header
 
-      img {
-        height: 48px;
-        transition: 0.5s ease all;
+
+      a {
+        display: inline-block; // Ensures it doesn't affect layout
+        margin: 0; // Reset margins
+        padding: 0; // Reset padding
+        border: none; // Remove any borders
+        text-decoration: none; // Remove underline
+    
+        img {
+          display: block; // Ensures the image does not have extra space around it
+          height: 48px; // Maintain aspect ratio
+          width: auto; // Maintain aspect ratio
+          transition: 0.5s ease all;
+        }
+      // img {
+      //   height: 48px;
+      //   transition: 0.5s ease all;
        
       }
     }
@@ -225,12 +247,31 @@ header {
           border-bottom: 1px solid transparent;
 
           &:hover {
-            color: #000000; //schimbat
+            color: #000000; 
             border-color: #1a5e25; //schimbat
+            scale: 1.2;
           }
         }
 
-        div {
+        .link-t{
+          font-size: 14px;
+          color: #00000000;
+          text-decoration: none;
+          font-weight: 500;
+          transition: 0.5s ease all;
+          padding-bottom: 4px;
+          border-bottom: transparent;
+
+          &:hover {
+            color: transparent;
+            border-color: transparent; //schimbat
+            background-color: transparent;
+            scale: 1.2;
+            box-shadow: 0 4px 6px -1px rgba($color: #000000, $alpha: 0.1), 0 2px 4px -1px rgba($color: #000000, $alpha: 0.06);
+          }
+        }
+
+        .contacteaza-ne {
             display: inline-flex;  
             align-items: center;  
             justify-content: center;  
@@ -242,13 +283,8 @@ header {
             background-color: var(--receptie-theme-3syslightprimary);  
             border-radius: 25px;  
             transition: all 0.2s ease;
-        }
-
-        p{
             color:#fff
         }
-
-
       }
     }
 
@@ -298,7 +334,7 @@ header {
           transition: 0.8s ease all;
 
           &:hover {
-            color: #8ecad4;
+            color: #a2d48e;
           }
         }
       }
@@ -313,7 +349,7 @@ header {
 
     .mobile-nav-enter-active,
     .mobile-nav-leave-active {
-      transition: 1.0s ease-in-out all;
+      transition: 0.3s ease-in-out all;
     }
 
     .mobile-nav-enter-from,
@@ -347,7 +383,7 @@ header {
 
 .scrolled-nav {
   background-color: var(--receptie-theme-3syslightsurface-variant);
-  box-shadow: 0 4px 6px -1px rgba($color: #000000, $alpha: 0.1), 0 2px 4px -1px rgba($color: #000000, $alpha: 0.06);
+  box-shadow: 0 4px 6px -1px rgba($color: #000000, $alpha: 0.5), 0 2px 4px -1px rgba($color: #000000, $alpha: 0.06);
 
   nav {
     padding: 0px 15px;

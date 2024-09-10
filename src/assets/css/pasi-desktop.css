@@ -14,6 +14,7 @@
     background-color: var(--receptie-theme-3white);
     border-radius: 17.29px;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   .pas-1 .content {
@@ -99,6 +100,7 @@
   background-color: var(--receptie-theme-3white);
   border-radius: 17.29px;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .pas-2 .content {
@@ -184,6 +186,8 @@
     background-color: var(--receptie-theme-3white);
     border-radius: 17.29px;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
   
   .pas-3 .content {
@@ -271,6 +275,8 @@
     background-color: var(--receptie-theme-3white);
     border-radius: 17.29px;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
   
   .pas-4 .content {
@@ -357,6 +363,8 @@
      background-color: var(--receptie-theme-3white);
      border-radius: 17.29px;
      overflow: hidden;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
    }
    
    .pas-5 .content {
