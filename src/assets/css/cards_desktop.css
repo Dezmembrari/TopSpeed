@@ -1,0 +1,428 @@
+.card {
+  display: flex;
+  width: 368px;
+  height: 465px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px;
+  position: relative;
+  background-color: var(--receptie-theme-3white);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  height: 417px;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+}
+
+.card .picture {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 215px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card .pexels {
+  position: absolute;
+  width: 318px;
+  height: 215px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.card .mercedes-benz-amg {
+  position: absolute;
+  width: 350px;
+  height: 215px;
+  top: 0;
+  left: -27px;
+}
+
+.card .laptop {
+  position: absolute;
+  width: 318px;
+  height: 215px;
+  top: 0;
+  left: 0;
+  /* scale: 40%; */
+}
+
+.card .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.card .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--receptie-theme-3black);
+  font-size: 18px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.card .div {
+  position: relative;
+  width: 281px;
+  font-family: var(--m3-body-medium-font-family);
+  font-weight: var(--m3-body-medium-font-weight);
+  color: var(--receptie-theme-3static-dark-grey);
+  font-size: var(--m3-body-medium-font-size);
+  letter-spacing: var(--m3-body-medium-letter-spacing);
+  line-height: var(--m3-body-medium-line-height);
+  font-style: var(--m3-body-medium-font-style);
+}
+
+.card .tag-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 111.74px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+  transition: all 0.2s ease;
+}
+
+.card .tag {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14.89px;
+  padding: 11.91px 17.87px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--receptie-theme-3syslighttertiary-container);
+  border-radius: 148.93px;
+  border: 1.49px solid;
+  border-color: var(--receptie-theme-3syslighttertiary-container);
+}
+
+.card .tag-or-button {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.49px;
+  margin-left: -6px;
+  margin-right: -6px;
+  font-family: "Source Code Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--receptie-theme-3white);
+  font-size: 20.8px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.card .tag-wrapper:hover {
+  transform: scale(1.1);
+}
+
+
+/* --receptie-theme-3syslightsurface-variant
+
+--receptie-theme-3syslightsurface-container-highest
+
+--receptie-theme-3syslightsurface-container-high */
+
+
+/* card tablet */
+
+.card-t {
+  display: flex;
+  width: 288.86px;
+  height: 365px;
+  align-items: center;
+  gap: 7.85px;
+  padding: 18.84px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 9.42px;
+  overflow: hidden;
+}
+
+.card-t .content {
+  display: flex;
+  flex-direction: column;
+  width: 249.61px;
+  align-items: flex-start;
+  gap: 18.84px;
+  position: relative;
+  margin-top: -2.98px;
+  margin-bottom: -2.98px;
+}
+
+.card-t .picture {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 168.76px;
+  background-color: #dedede;
+  border-radius: 9.42px;
+  overflow: hidden;
+}
+
+.card-t .pexels {
+  position: absolute;
+  width: 250px;
+  height: 169px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.card-t .mercedes-benz-amg {
+  position: absolute;
+  width: 250px;
+  height: 169px;
+  top: 0;
+  left: 0;
+}
+
+.card-t .laptop {
+  position: absolute;
+  width: 250px;
+  height: 169px;
+  top: 0;
+  left: 0;
+}
+
+.card-t .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.14px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.card-t .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.78px;
+  font-family: var(--m3-title-medium-font-family);
+  font-weight: var(--m3-title-medium-font-weight);
+  color: #000000;
+  font-size: var(--m3-title-medium-font-size);
+  letter-spacing: var(--m3-title-medium-letter-spacing);
+  line-height: var(--m3-title-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--m3-title-medium-font-style);
+}
+
+.card-t .div {
+  position: relative;
+  width: 220.57px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--receptie-theme-3static-dark-grey);
+  font-size: 12px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+}
+
+.card-t .tag-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 87.71px;
+  align-items: center;
+  justify-content: center;
+  gap: 7.85px;
+  position: relative;
+  flex: 0 0 auto;
+  transition: all 0.2s ease;
+}
+
+.card-t .tag {
+  display: flex;
+  width: 87.71px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 11.69px;
+  padding: 9.35px 14.03px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--receptie-theme-3syslighttertiary-container);
+  border-radius: 116.9px;
+  border: 1.17px solid;
+  border-color: var(--receptie-theme-3syslighttertiary-container);
+}
+
+.card-t .tag-or-button {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.17px;
+  margin-left: -4.67px;
+  margin-right: -4.67px;
+  font-family: "Source Code Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.card-t .tag-wrapper:hover {
+  transform: scale(1.1);
+}
+
+/* card mobile */
+
+.card-m {
+  display: flex;
+  width: 288.86px;
+  height: 365px;
+  align-items: center;
+  gap: 7.85px;
+  padding: 18.84px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 9.42px;
+  overflow: hidden;
+}
+
+.card-m .content {
+  display: flex;
+  flex-direction: column;
+  width: 249.61px;
+  height: 327.32px;
+  align-items: flex-start;
+  gap: 18.84px;
+  position: relative;
+}
+
+.card-m .picture {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 168.76px;
+  background-color: #dedede;
+  border-radius: 9.42px;
+  overflow: hidden;
+}
+
+.card-m .pexels {
+  position: absolute;
+  width: 250px;
+  height: 169px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.card-m .mercedes-benz-amg {
+  position: absolute;
+  width: 270px;
+  height: 169px;
+  top: 0;
+  left: -21px;
+}
+
+.card-m .laptop {
+  position: absolute;
+  width: 250px;
+  height: 169px;
+  top: 0;
+  left: 0;
+}
+
+.card-m .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.14px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.card-m .text-wrapper {
+  position: relative;
+  width: 198px;
+  height: fit-content;
+  margin-top: -0.98px;
+  margin-left: -0.2px;
+  -webkit-text-stroke: 0.2px #000000;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15.5px;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.card-m .div {
+  position: relative;
+  width: 220.57px;
+  height: fit-content ;
+  font-family: var(--m3-body-medium-font-family);
+  font-weight: var(--m3-body-medium-font-weight);
+  color: var(--receptie-theme-3static-dark-grey);
+  font-size: var(--m3-body-medium-font-size);
+  letter-spacing: var(--m3-body-medium-letter-spacing);
+  line-height: var(--m3-body-medium-line-height);
+  font-style: var(--m3-body-medium-font-style);
+}
+
+.card-m .tag-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 87.71px;
+  align-items: center;
+  justify-content: center;
+  gap: 7.85px;
+  position: relative;
+  flex: 0 0 auto;
+  transition: all 0.2s ease;
+}
+
+.card-m .tag {
+  display: flex;
+  width: 87.71px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 11.69px;
+  padding: 9.35px 14.03px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--receptie-theme-3syslighttertiary-container);
+  border-radius: 116.9px;
+  border: 1.17px solid;
+  border-color: var(--receptie-theme-3syslighttertiary-container);
+}
+
+.card-m .tag-or-button {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.17px;
+  margin-left: -4.67px;
+  margin-right: -4.67px;
+  font-family: "Source Code Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.card-m .tag-wrapper:hover {
+  transform: scale(1.1);
+}

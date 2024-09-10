@@ -1,0 +1,209 @@
+/*pas tablet*/
+.pas-t {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12.84px;
+  padding: 20.54px 30.8px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15.4px;
+  overflow: hidden;
+}
+
+.pas-t .content {
+  display: inline-flex;
+  align-items: center;
+  gap: 20.54px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.pas-t .number {
+  position: relative;
+  width: 41.07px;
+  height: 41.07px;
+   background-color: var(--receptie-theme-3syslighttertiary-container); 
+  border-radius: 20.54px;
+}
+
+.pas-t .text-wrapper {
+  position: relative; /*absolute*/
+  height: 29px;
+  top: 8px;
+  left: 14px;
+  font-family: "Source Code Pro-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--receptie-theme-3white);
+  font-size: 23.1px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pas-t .headline-and-details {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7.7px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.pas-t .div {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.28px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24.9px;
+  letter-spacing: 0;
+  line-height: 32.1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.pas-t .p {
+  position: relative;
+  width: 546.78px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #666666;
+  font-size: 19.6px;
+  letter-spacing: 0.45px;
+  line-height: 21.4px;
+}
+
+
+/*pas mobile*/
+
+/* Card styling */
+.pas-m {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Default alignment to the left */
+  justify-content: center;
+  gap: 10px; /* Increase gap between content */
+  padding: 15px; /* Increase padding inside cards */
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%; /* Make the card take full width of the container */
+  max-width: 600px; /* Maximum width of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for card effect */
+  box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+  /* Height will be determined by content */
+}
+
+/* Ensure content is aligned properly inside cards */
+.pas-m .content {
+  display: flex;
+  align-items: center; /* Center-align items vertically */
+  gap: 10px; /* Increase gap between number and headline/details */
+  width: 100%; /* Full width of the card */
+}
+
+/* Ensure number is styled correctly */
+.pas-m .number {
+  width: 40px; /* Increase size for better visibility */
+  height: 40px;
+  background-color: var(--receptie-theme-3syslighttertiary-container);
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center number in the circle */
+  position: relative;
+}
+
+/* Ensure text-wrapper is styled correctly */
+.pas-m .text-wrapper {
+  font-family: "Source Code Pro-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--receptie-theme-3white);
+  font-size: 16px; /* Increase font size for better readability */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text within the number circle */
+  line-height: normal;
+}
+
+/* Headline and details */
+.pas-m .headline-and-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1; /* Allow this section to expand */
+}
+
+/* Title styling */
+.pas-m .div {
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px; /* Increase font size for better readability */
+  line-height: 24px; /* Increase line-height for better spacing */
+  margin: 0; /* Remove default margin */
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Paragraph styling */
+.pas-m .p {
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #666666;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  line-height: 24px; /* Increase line-height for better readability */
+  margin: 0; /* Remove default margin */
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Align cards alternately */
+.pas-m:nth-child(odd) {
+  align-self: flex-start; /* Align odd cards to the left */
+}
+
+.pas-m:nth-child(even) {
+  align-self: flex-end; /* Align even cards to the right */
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 768px) {
+  .pas-m {
+    width: 80%; /* Adjust card width for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .pas-m {
+    width: 60%; /* Further adjust card width for even larger screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .pas-m {
+    min-height: auto; /* Ensure card height adjusts to content */
+  }
+}
+
+#pas2,
+#pas4 {
+  align-self: flex-end; /* Aligns the content to the right */
+}
+
+#pas1,
+#pas3,
+#pas5 {
+  align-self: flex-start; /* Aligns the content to the left */
+}
+
+
+

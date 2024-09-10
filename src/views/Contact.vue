@@ -1,0 +1,303 @@
+<template>
+  <div class="screen">
+    <div class="mobile-720-360">
+      <div class="contact-mobile-gJwtjs" data-id="228:3455">
+        <div class="contact-0FjsKs contact" data-id="228:3456">
+          <div class="card-info-jSxk1B" data-id="228:3457">
+            <div class="frame-1-j04gnn" data-id="228:3458">
+              <img
+                class="rectangle-3841-uurO5n"
+                data-id="228:3459"
+                src="../components/images/rectangle-3841-4@2x.png"
+                alt="Rectangle 3841"
+              />
+              <img
+                class="ellipse-794-uurO5n"
+                data-id="228:3460"
+                src="../components/images/ellipse-794-2@2x.png"
+                alt="Ellipse 794"
+              />
+              <h1 class="title-uurO5n" data-id="228:3461">
+                Informatii contact
+              </h1>
+              <div class="ellipse-793-uurO5n" data-id="228:3462"></div>
+              <div class="text-info-uurO5n" data-id="228:3463">
+                <div class="group-1000001773-xuonMF" data-id="228:3464">
+                  <img
+                    class="bxsphone-call-g2ApXA"
+                    data-id="228:3465"
+                    src="../components/images/bxs-phone-call-4@2x.png"
+                    alt="bxs:phone-call"
+                  />
+                  <div
+                    class="x0788-990-011-g2ApXA x0788-990-011 inter-normal-white-15-4px"
+                    data-id="228:3468"
+                  >
+                    0788 990 011
+                  </div>
+                </div>
+                <img
+                  class="icsharp-email-xuonMF"
+                  data-id="228:3469"
+                  src="../components/images/ic-sharp-email-4@2x.png"
+                  alt="ic:sharp-email"
+                />
+                <div
+                  class="officetopspeedserviceeu-xuonMF officetopspeedserviceeu inter-normal-white-15-4px"
+                  data-id="228:3471"
+                >
+                  office@topspeedservice.eu
+                </div>
+                <img
+                  class="carbonlocation-filled-xuonMF"
+                  data-id="228:3472"
+                  src="../components/images/carbon-location-filled-4@2x.png"
+                  alt="carbon:location-filled"
+                />
+                <p
+                  class="sos-clinceni-dj401-a-6-bragadiru-077025-xuonMF sos-clinceni-dj401-a-6-bragadiru-077025 inter-normal-white-15-4px"
+                  data-id="228:3475"
+                >
+                  Sos. Clinceni, DJ401A 6, Bragadiru 077025
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <form @submit.prevent="submitForm" class="contact-form-jSxk1B" data-id="228:3476">
+            <div class="name-FSbhl1" data-id="228:3477">
+                <input
+                v-model="form.nume"
+                class="nume-Wmm1CL poppins-medium-stack-14-8px"
+                name="nume"
+                placeholder="Nume"
+                type="text"
+                required
+                />
+                <img
+                class="vector-4-Wmm1CL"
+                src="../components/images/vector-4-4@2x.png"
+                alt="Vector 4"
+                />
+            </div>
+            <div class="surname-FSbhl1" data-id="228:3480">
+                <input
+                v-model="form.prenume"
+                class="prenume-a09DHC"
+                name="prenume"
+                placeholder="Prenume"
+                type="text"
+                required
+                />
+                <img
+                class="vector-5-a09DHC"
+                src="../components/images/vector-4-4@2x.png"
+                alt="Vector 5"
+                />
+            </div>
+            <div class="mail-FSbhl1" data-id="228:3483">
+                <input
+                v-model="form.email"
+                class="email-gi4H8t poppins-medium-stack-14-8px"
+                name="email"
+                placeholder="Email"
+                type="email"
+                required
+                />
+                <img
+                class="vector-6"
+                src="../components/images/vector-4-4@2x.png"
+                alt="Vector 6"
+                />
+            </div>
+            <div class="phone-FSbhl1" data-id="228:3486">
+                <input
+                v-model="form.numar_de_telefon_optional"
+                class="numar-de-telefon-optional-5InFe1 poppins-medium-stack-14-8px"
+                name="numardetelefonoptional"
+                placeholder="Numar de telefon (optional)"
+                type="number"
+                />
+                <img
+                class="vector-7-5InFe1"
+                src="../components/images/vector-7-1@2x.png"
+                alt="Vector 7"
+                />
+            </div>
+            <div class="message-FSbhl1" data-id="228:3489">
+                <textarea
+                v-model="form.mesaj"
+                class="mesaj-ZILdUA"
+                name="mesaj"
+                placeholder="Mesaj"
+                required
+                ></textarea>
+                <img
+                class="vector-6"
+                src="../components/images/vector-4-4@2x.png"
+                alt="Vector 6"
+                />
+            </div>
+            <a href="javascript:SubmitForm('form2')">
+                <button type="submit" class="button-FSbhl1 smart-layers-pointers" data-id="228:3492">
+                <div class="trimite-mesaj-nbeqyD" data-id="228:3493">
+                    Trimite Mesaj
+                </div>
+                </button>
+            </a>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.2774958081704!2d25.96845447464996!3d44.3658914764609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40adffb57a537def%3A0xb5be45e52dd86aef!2sTop%20Speed%20Service%20-%20Service%20Auto%20%C8%99i%20Centru%20de%20Constatare%20Daune%20Bragadiru!5e0!3m2!1sro!2sro!4v1725889184748!5m2!1sro!2sro"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</template>
+
+
+<script setup>
+import { ref } from 'vue';
+import emailjs from 'emailjs-com';
+import '../emailsConfig'; // Import the configuration file
+
+const form = ref({
+  nume: '',
+  prenume: '',
+  email: '',
+  numar_de_telefon_optional: '',
+  mesaj: '',
+});
+
+const validateForm = () => {
+  // Check if required fields are filled
+  return form.value.nume && form.value.prenume && form.value.email;
+};
+
+const clearForm = () => {
+  form.value = {
+    nume: '',
+    prenume: '',
+    email: '',
+    numar_de_telefon_optional: '',
+    mesaj: '',
+  };
+};
+
+const submitForm = async () => {
+  if (!validateForm()) {
+    alert('Vă rugăm să completați toate câmpurile obligatorii.');
+    return;
+  }
+
+  try {
+    await emailjs.send('service_ptfsh2s', 'template_y2a0dxr', form.value);
+    alert('Mesajul a fost trimis cu succes!');
+    clearForm();
+  } catch (error) {
+    console.error('FAILED...', error);
+    alert('A apărut o eroare. Vă rugăm să încercați din nou.');
+  }
+};
+</script>
+
+
+
+<style scoped lang="scss">
+.screen {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--receptie-theme-3syslightsurface-container-lowest);
+  padding-top: 100px;
+
+  .mobile-720-360 {
+    flex: 1;
+    max-width: 50%;
+    background-color: transparent;
+    margin: 12px;
+
+    .contact-mobile-gJwtjs {
+      background: transparent;
+    }
+
+    .contact-0FjsKs {
+      align-content: center;
+      margin: auto;
+    }
+
+    @media (max-width: 1350px) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      max-width: 80%;
+      margin: 0; // Reset margins for vertical alignment
+      margin: auto;
+    }
+  }
+
+  .map {
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: rgba(0, 0, 0, 0.062);
+    border-style: solid;
+    margin: 30px;
+    width: 50%;
+    min-height: 10cm;
+
+    iframe {
+      flex-direction: column;
+      align-content: center;
+      width: 100%;
+      /* Makes the iframe responsive */
+      height: 100%;
+      /* Adjusts height to fill the container */
+      border: 0;
+      /* Removes border */
+      border-radius: 25px;
+      min-height: 10cm;
+    }
+  }
+
+  @media (max-width: 1350px) {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    .map {
+      max-width: auto;
+      margin: auto;
+      width: 650px;
+    }
+
+    @media (max-width: 835px) {
+      .map {
+        max-width: auto;
+        margin: auto;
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .map {
+        max-width: auto;
+        margin: auto;
+        width: 350px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    min-width: 360px;
+  }
+}
+</style>
