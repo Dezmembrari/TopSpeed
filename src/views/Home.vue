@@ -83,7 +83,7 @@
 
           <div class="card"> <!--card 1-->
             <div class="content">
-              <div class="picture"><img class="pexels" src="../components/images/pexels.png" /></div>
+              <div class="picture"><img alt="Cheie de la masina la schimb," class="pexels" src="../components/images/pexels.png" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                 <p class="div">
@@ -102,7 +102,7 @@
 
           <div class="card"> <!--card 2-->
             <div class="content">
-              <div class="picture"><img class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png" /></div>
+              <div class="picture"><img alt="masina tractata pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                 <p class="div">
@@ -122,7 +122,7 @@
 
           <div class="card"> <!--card 3-->
             <div class="content">
-              <div class="picture"><img class="laptop" src="../components/images/hands.png" /></div>
+              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                 <p class="div">
@@ -462,7 +462,7 @@
 
           <div class="card-t"> <!--card 1-->
                 <div class="content">
-                  <div class="picture"><img class="pexels" src="../components/images/pexels.png" /></div>
+                  <div class="picture"><img alt="Cheie pentru masina la schimb" class="pexels" src="../components/images/pexels.png" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                     <p class="div">
@@ -480,7 +480,7 @@
 
           <div class="card-t"> <!--card 2-->
                 <div class="content">
-                  <div class="picture"><img class="mercedes-benz-amg" id="1001" src="../components/images/mercedes-platforma.png" /></div>
+                  <div class="picture"><img alt="Masina tractata pe platforma" class="mercedes-benz-amg" id="1001" src="../components/images/mercedes-platforma.png" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                     <p class="div">
@@ -497,7 +497,7 @@
         
           <div class="card-t"> <!--card 3-->
             <div class="content">
-              <div class="picture"><img class="laptop" src="../components/images/hands.png" /></div>
+              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                 <p class="div">
