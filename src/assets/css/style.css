@@ -256,6 +256,7 @@ input:focus {
   background-color: var(--receptie-theme-3white);
   display: flexbox;
   flex-direction: column;
+  font-family: "Roboto", sans-serif;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -383,7 +384,7 @@ input:focus {
   width: 689px;
   top: 26px;
   left: 377px;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: var(--receptie-theme-3white);
   font-size: 40px;
@@ -416,7 +417,7 @@ input:focus {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   /* text-fill-color: transparent; */
-  font-family: "Roboto-Medium", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: transparent;
   font-size: 36px;
@@ -475,7 +476,7 @@ input:focus {
 .hero-area .label-text {
   position: relative;
   width: fit-content;
-  font-family: var(--material-theme-green-label-large-font-family);
+  font-family: "Roboto", sans-serif;
   font-weight: var(--material-theme-green-label-large-font-weight);
   color: var(--receptie-theme-3syslightprimary);
   font-size: var(--material-theme-green-label-large-font-size);
@@ -569,8 +570,8 @@ input:focus {
   position: relative;
   width: fit-content;
   margin-top: -1px;
-  font-family: "Roboto-Medium", Helvetica;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+    font-weight: 500;
   color: var(--receptie-theme-3white);
   font-size: 18px;
   text-align: center;
@@ -598,8 +599,8 @@ input:focus {
   position: absolute;
   top: 9px;
   left: 20px;
-  font-family: "Roboto-Medium", Helvetica;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+    font-weight: 500;
   color: var(--receptie-theme-3white);
   font-size: 18px;
   text-align: center;
@@ -862,6 +863,7 @@ input:focus {
   background-color: transparent;
   color: var(--receptie-theme-3black);
   font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 36px;
   font-size: 32px;
@@ -1096,8 +1098,8 @@ input:focus {
 .desktop-u621280p .informatii-contact-JcJNSd {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xxxl);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-xxxl);
   font-style: normal;
   font-weight: 600;
   height: auto;
@@ -1378,8 +1380,8 @@ input:focus {
   background-color: transparent;
   border: 0;
   color: var(--stack);
-  font-family: var(--font-family-poppins);
-  font-size: 15.4px;
+  font-family: "Roboto", sans-serif;
+    font-size: 15.4px;
   font-style: normal;
   font-weight: 500;
   height: 106px;
@@ -1426,7 +1428,7 @@ input:focus {
 .desktop-u621280p .trimite-mesaj-1SAeSx {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
+  font-family: "Roboto", sans-serif;
   font-size: 15.4px;
   font-style: normal;
   font-weight: 500;
@@ -1495,6 +1497,7 @@ input:focus {
 /* screen - mobile-720-360 */
 
 .mobile-720-360 {
+  font-family: "Roboto", sans-serif;
   align-items: center;
   background-color: var(--receptie-theme-3white);
   display: flex;
@@ -1598,8 +1601,8 @@ input:focus {
 }
 
 .mobile-720-360 .label-text-zxxTxm {
-  font-family: var(--font-family-roboto);
-  font-size: 9.6px;
+  font-family: "Roboto", sans-serif;
+    font-size: 9.6px;
   font-weight: 500;
   letter-spacing: 0.07px;
   line-height: 13.7px;
@@ -1697,8 +1700,8 @@ input:focus {
 
 .mobile-720-360 .label-text-E3x8PA {
   flex: 1;
-  font-family: var(--font-family-inter);
-  font-size: 15.5px;
+  font-family: "Roboto", sans-serif;
+    font-size: 15.5px;
   font-weight: 700;
   letter-spacing: -0.31px;
   line-height: 18.6px;
@@ -1739,6 +1742,7 @@ input:focus {
 .mobile-720-360 .text0-2072707-5xUiQg {
   align-self: stretch;
   background-color: transparent;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0px;
   line-height: 34px;
   position: relative;
@@ -1756,8 +1760,8 @@ input:focus {
 
 .mobile-720-360 .span1-jGHvdy {
   color: var(--william);
-  font-family: var(--font-family-inter);
-  font-size: 38.9px;
+  font-family: "Roboto", sans-serif;
+    font-size: 38.9px;
   font-style: normal;
   font-weight: 700;
 }
@@ -1774,18 +1778,18 @@ input:focus {
 }
 
 .mobile-720-360 .servicii-complete-de-QyHEzt {
-  background-color: transparent;
-  /* color: var(--receptie-theme-3syslighton-secondary-container); */
-  color: black;
+  background-color: white;
+  color: var(--receptie-theme-3syslighton-secondary-container);
+  /* color: black; */
   flex: 1;
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-m);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 37.2px;
   margin-top: -0.96px;
-  opacity: 0.5;
+  opacity: 1;
   position: relative;
   text-align: justify;
 }
@@ -1904,8 +1908,8 @@ input:focus {
   align-self: stretch;
   background-color: transparent;
   color: var(--receptie-theme-3black);
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-m);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -2129,8 +2133,8 @@ input:focus {
 .mobile-720-360 .title-uurO5n {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
-  font-size: 24.6px;
+  font-family: "Roboto", sans-serif;
+    font-size: 24.6px;
   font-style: normal;
   font-weight: 600;
   height: auto;
@@ -2286,8 +2290,8 @@ input:focus {
   background-color: transparent;
   border: 0;
   color: #00000073;
-  font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xs);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 500;
   height: 24.642505645751953px;
@@ -2397,8 +2401,8 @@ input:focus {
   background-color: transparent;
   border: 0;
   color: var(--stack);
-  font-family: var(--font-family-poppins);
-  font-size: 15.4px;
+  font-family: "Roboto", sans-serif;
+    font-size: 15.4px;
   font-style: normal;
   font-weight: 500;
   height: 71px;
@@ -2442,8 +2446,8 @@ input:focus {
 .mobile-720-360 .trimite-mesaj-nbeqyD {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
-  font-size: 15.4px;
+  font-family: "Roboto", sans-serif;
+    font-size: 15.4px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -2650,8 +2654,8 @@ input:focus {
   background-color: transparent;
   color: var(--receptie-theme-3white);
   display: -webkit-box;
-  font-family: var(--font-family-inter);
-  font-size: 31px;
+  font-family: "Roboto", sans-serif;
+    font-size: 31px;
   font-style: normal;
   font-weight: 700;
   height: auto;
@@ -2694,8 +2698,8 @@ input:focus {
   background-color: transparent;
   color: transparent;
   display: -webkit-box;
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xl);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -2772,8 +2776,8 @@ input:focus {
 
 .tablet-1280-720 .label-text-sHa4Z4 {
   color: var(--receptie-theme-3syslightprimary);
-  font-family: var(--font-family-roboto);
-  font-size: 10.8px;
+  font-family: "Roboto", sans-serif;
+    font-size: 10.8px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.08px;
@@ -3123,8 +3127,8 @@ input:focus {
   line-clamp: 1;
   color: var(--receptie-theme-3white);
   display: -webkit-box;
-  font-family: var(--font-family-roboto);
-  font-size: 10.1px;
+  font-family: "Roboto", sans-serif;
+    font-size: 10.1px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.07px;
@@ -3228,8 +3232,8 @@ input:focus {
   line-clamp: 1;
   color: var(--receptie-theme-3white);
   display: -webkit-box;
-  font-family: var(--font-family-inter);
-  font-size: 29.4px;
+  font-family: "Roboto", sans-serif;
+    font-size: 29.4px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.59px;
@@ -3272,8 +3276,8 @@ input:focus {
   align-self: stretch;
   background-color: transparent;
   color: var(--receptie-theme-3black);
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-m);
+  font-family: "Roboto", sans-serif;
+    font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0px;
@@ -3490,8 +3494,8 @@ input:focus {
 .tablet-1280-720 .informatii-contact-xUH78L {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
-  font-size: 46.6px;
+  font-family: "Roboto", sans-serif;
+    font-size: 46.6px;
   font-style: normal;
   font-weight: 600;
   height: auto;
@@ -3794,8 +3798,8 @@ input:focus {
 .tablet-1280-720 .trimite-mesaj-88iNP9 {
   background-color: transparent;
   color: var(--receptie-theme-3white);
-  font-family: var(--font-family-poppins);
-  font-size: 29.1px;
+  font-family: "Roboto", sans-serif;
+    font-size: 29.1px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;

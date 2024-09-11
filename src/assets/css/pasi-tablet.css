@@ -34,7 +34,7 @@
   height: 29px;
   top: 8px;
   left: 14px;
-  font-family: "Source Code Pro-Medium", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: var(--receptie-theme-3white);
   font-size: 23.1px;
@@ -55,7 +55,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.28px;
-  font-family: "Roboto-Regular", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 24.9px;
@@ -73,7 +73,7 @@
 .pas-t .p {
   position: relative;
   width: 546.78px;
-  font-family: "Roboto-Regular", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #666666;
   font-size: 19.6px;
@@ -124,7 +124,7 @@
 
 /* Ensure text-wrapper is styled correctly */
 .pas-m .text-wrapper {
-  font-family: "Source Code Pro-Medium", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: var(--receptie-theme-3white);
   font-size: 16px; /* Increase font size for better readability */
@@ -146,7 +146,7 @@
 
 /* Title styling */
 .pas-m .div {
-  font-family: "Roboto-Regular", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #000000;
   font-size: 18px; /* Increase font size for better readability */
@@ -157,7 +157,7 @@
 
 /* Paragraph styling */
 .pas-m .p {
-  font-family: "Roboto-Regular", Helvetica;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #666666;
   font-size: 16px;

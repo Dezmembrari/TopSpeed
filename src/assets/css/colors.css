@@ -34,10 +34,10 @@
     --font-size-xxl: 32px;
     --font-size-xxxl: 36px;
   
-    --font-family-inter: "Inter", Helvetica;
-    --font-family-poppins: "Poppins", Helvetica;
-    --font-family-roboto: "Roboto", Helvetica;
-    --m3-body-medium-font-family: 'Roboto Flex', sans-serif;
+    --font-family-inter: "Roboto", sans-serif;
+    --font-family-poppins: "Roboto", sans-serif;
+    --font-family-roboto: "Roboto", sans-serif;
+    --m3-body-medium-font-family: "Roboto", sans-serif;
   }
 
   .title-page {
