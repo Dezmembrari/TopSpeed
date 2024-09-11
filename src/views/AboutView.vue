@@ -25,12 +25,12 @@ export default {
 <style lang="scss">
 .container {
   align-items: center;
-  background-color: #cdeec5ec;
+  background-color: var(--background-1);
   display: flex;
   flex-wrap: wrap;
   gap: 140px 21px;
   justify-content: center;
-  padding: 160px 50px 60px;
+  padding: 160px 50px 50px;
   position: relative;
   min-width: 360px;
 
@@ -65,7 +65,7 @@ export default {
 
   .text-wrapper {
     color: #000000;
-    font-family: "Roboto-Bold", Helvetica;
+    font-family: "Roboto", sans-serif;
     font-size: 28px;
     font-weight: 500;
     letter-spacing: 0;
@@ -87,7 +87,7 @@ export default {
 
   @media(max-width:720px){
     
-    padding: 60px 12px 50px;
+    padding: 60px 24px 50px;
     gap: 50px ;
   }
 

@@ -144,7 +144,7 @@ export default {
 
         checkScreen(){
             this.windowWidth=window.innerWidth;
-            if(this.windowWidth <= 750){
+            if(this.windowWidth <= 765){
                 this.mobile=true;
                 this.mobileBanner=true;
                 return;
@@ -224,7 +224,7 @@ header {
     .navigation {
       display: none; // Hidden by default (for mobile)
 
-      @media (min-width: 750px) {
+      @media (min-width: 766px) {
         display: flex; // Show on larger screens
         align-items: center;
         justify-content: flex-end;
@@ -295,7 +295,7 @@ header {
       color: var(--receptie-theme-3syslighton-secondary-container); // icon color
       font-size: 24px;
       margin-left: auto; // Push icon to the right side
-      @media (min-width: 750px) {
+      @media (min-width: 766px) {
         display: none; // Hide icon on larger screens
       }
     }
@@ -339,7 +339,7 @@ header {
         }
       }
 
-      @media (min-width: 750px) {
+      @media (min-width: 766px) {
         display: none; // Hide on larger screens
       }
     }
@@ -412,7 +412,7 @@ header {
   width: 100%;
   z-index: 100; // Ensure it stays above other elements
 
-  @media (max-width: 750px) {
+  @media (max-width: 766px) {
     display: none; // Hide banner on screens smaller than 750px
   }
 
@@ -464,7 +464,7 @@ header {
 
       .officetopspeedserviceeu-HSA5eX {
         display: -webkit-box;
-        height: 17.075096130371094px;
+        height: 17px;
         line-height: 17.4px;
         overflow: hidden;
         text-align: left;
@@ -490,7 +490,7 @@ header {
 
     .luni-vineri-0800-cmdIc7 {
       display: -webkit-box;
-      height: 17.075096130371094px;
+      height: 17;
       line-height: 17.4px;
       overflow: hidden;
       text-align: left;

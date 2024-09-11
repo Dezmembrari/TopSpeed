@@ -11,7 +11,7 @@
     --receptie-theme-3syslightsecondary: #44673c;
     --receptie-theme-3syslightsecondary-container: #c9f2bb;
     --receptie-theme-3syslightshadow: #000000;
-    --receptie-theme-3syslightsurface-container-highest: hsl(122, 44%, 75%);
+    --receptie-theme-3syslightsurface-container-highest: rgb(163, 219, 165);
     --receptie-theme-3syslightsurface-container-high: #CDEACE;
     --receptie-theme-3syslightsurface-container-lowest: #DBE6D3;
     --receptie-theme-3syslightsurface-variant: #d2e9d3;
@@ -22,6 +22,10 @@
     --stack: #8d8d8d;
     --white: #ffffff;
     --william: #396561;
+
+    --background-1:rgba(210, 233, 211, 0.35);
+    --background-2:rgba(163, 219, 165, 0.35);
+    --background-3:rgba(210, 233, 211, 0.35);
   
     --font-size-14px: 14px;
     --font-size-28px: 28px;

@@ -8,7 +8,7 @@
     <div class="hero-area">
       <div class="overlap">
         <div class="imagine">
-          <img class="whatsapp-image" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.png" />
+          <img alt="Poza receptie" class="whatsapp-image" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.png" />
         </div>
         <div class="rectangle"></div>
         <div class="text">
@@ -27,7 +27,7 @@
           <div class="extended-FAB">
             <router-link class="link" :to="{name: 'contact'}">
             <div class="state-layer">
-              <img class="img" src="../components/images/icon-46@21x.png" />
+              <img alt="" class="img" src="../components/images/icon-46@21x.png" />
               <div class="label-text">Contact</div>
             </div>
             </router-link>
@@ -51,10 +51,10 @@
                       <div class="star-2"></div>
                       <div class="star-3"></div>
                       <div class="star-4"></div>
-                      <img class="img" src="../components/images/star-1-1@2x.png" />
+                      <img alt="" class="img" src="../components/images/star-1-1@2x.png" />
                     </div>
                   </div>
-                  <img class="location-on" src="../components/images/location-on-1@2x.png" />
+                  <img alt="" class="location-on" src="../components/images/location-on-1@2x.png" />
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@
     <div class="slider-parteneri">
       <div class="frame">
         <div class="slider-horizontal">
-          <img class="change-to-your-logos" src="../components/images/change-to-your-logos-here-8.png" />
+          <img alt="logos" class="change-to-your-logos" src="../components/images/change-to-your-logos-here-8.png" />
         </div>
       </div>
     </div>
@@ -275,47 +275,14 @@
               </div>
               <div class="rectangle-3842-JcJNSd" data-id="253:491">
                 <iframe
+                  title="Top Speed Service Map Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22815.94797603058!2d25.967510141312513!3d44.37172375792776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40adffb57a537def%3A0xb5be45e52dd86aef!2sTop%20Speed%20Service%20S.R.L.!5e0!3m2!1sen!2sro!4v1724256171219!5m2!1sen!2sro"
                   width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
-          <!-- <div class="contact-form-hNZXTq" data-id="249:244">
-            <div class="name-nQwLm2" data-id="249:245">
-              <input class="nume-ujjqxD poppins-medium-stack-14-8px" data-id="249:246" name="nume" placeholder="Nume"
-                type="text" required />
-              <img class="vector-4-ujjqxD" data-id="249:247" src="../components/images/vector-4-2@2x.png" alt="Vector 4" />
-            </div>
-            <div class="surname-nQwLm2" data-id="249:248">
-              <input class="prenume-zNx0t3 poppins-medium-stack-14-8px" data-id="249:249" name="prenume"
-                placeholder="Prenume" type="text" required />
-              <img class="vector-5-zNx0t3" data-id="249:250" src="../components/images/vector-4-4@2x.png" alt="Vector 5" />
-            </div>
-            <div class="mail-nQwLm2 mail" data-id="249:251">
-              <input class="email-JSvoEZ poppins-medium-stack-14-8px" data-id="249:252" name="email" placeholder="Email"
-                type="email" required />
-              <img class="vector-6-JSvoEZ vector-6" data-id="249:253" src="../components/images/vector-4-4@2x.png" alt="Vector 6" />
-            </div>
-            <div class="phone-nQwLm2 phone" data-id="249:254">
-              <input class="numar-de-telefon-optional-wLv2rG poppins-medium-stack-14-8px" data-id="249:255"
-                name="numartelefon" placeholder="Numar de telefon (optional)" type="number" />
-              <img class="vector-7-wLv2rG" data-id="249:256" src="../components/images/vector-7-2@2x.png" alt="Vector 7" />
-            </div>
-            <div class="message-nQwLm2" data-id="249:257">
-              <textarea class="mesaj-OkBlSx" data-id="249:258" name="mesaj" placeholder="Mesaj" type="text"
-                required></textarea>
-              <img class="vector-6-OkBlSx vector-6" data-id="249:259" src="../components/images/vector-6-5.png" alt="Vector 6" />
-            </div>
-            <button type="button" onClick="SubmitForm('form')">
-              <div class="button-nQwLm2 smart-layers-pointers">
-                <div class="trimite-mesaj-1SAeSx">
-                  Trimite Mesaj
-                </div>
-              </div>
-            </button>
-          </div> -->
-
+          
             <form @submit.prevent="submitForm">
               <div class="contact-form-hNZXTq">
               <!-- Name Input -->
