@@ -1776,7 +1776,7 @@ input:focus {
 }
 
 .mobile-720-360 .servicii-complete-de-QyHEzt {
-  background-color: white;
+  /* background-color: white; */
   color: var(--receptie-theme-3syslighton-secondary-container);
   /* color: black; */
   flex: 1;

@@ -64,11 +64,7 @@
     </div>
 
     <div class="slider-parteneri">
-      <div class="frame">
-        <div class="slider-horizontal">
-          <img alt="logos" class="change-to-your-logos" src="../components/images/change-to-your-logos-here-8.png" />
-        </div>
-      </div>
+      <Slider/>
     </div>
 
 
@@ -91,7 +87,7 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <router-link class="link" :to="{name: 'servicii'}">
+                <router-link class="link" :to="{name: 'servicii', hash: '#masina'}">
                   <div class="tag">
                     <div class="tag-or-button">Detalii</div>
                   </div>
@@ -111,7 +107,7 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <router-link class="link" :to="{name: 'servicii'}">
+                <router-link class="link" :to="{name: 'servicii', hash: '#platforma'}">
                 <div class="tag">
                   <div class="tag-or-button">Detalii</div>
                 </div>
@@ -131,7 +127,7 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <router-link class="link" :to="{name: 'servicii'}">
+                <router-link class="link" :to="{name: 'servicii', hash: '#dosar'}">
                 <div class="tag">
                   <div class="tag-or-button">Detalii</div>
                 </div>
@@ -139,8 +135,6 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -410,12 +404,7 @@
         </div>
         
     <div class="slider-parteneri-xXSLxn" data-id="244:1095">
-      <div class="frame-427319145-rtkTOh" data-id="244:1096">
-        <div class="slider-horizontal-C4MYba" data-id="244:1097">
-          <img class="change-to-your-logos-here-qLKuxc" data-id="I244:1097;1:16"
-            src="../components/images/change-to-your-logos-here-7.png" alt="Change to your logos here" />
-        </div>
-      </div>
+      <Slider/>
     </div>
 
     <div class="x3-cards-tablet-1280-720-PXugFz" data-id="228:3294"><!--3 cards tablet done-->
@@ -920,6 +909,7 @@
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
 import '../emailsConfig'; // Import the configuration file
+import Slider from '@/components/Slider.vue';
 
 const form = ref({
   nume: '',
