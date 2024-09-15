@@ -16,12 +16,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  server: {
-    http: {
-      key: fs.readFileSync(path.resolve(__dirname, './server.key')),
-      cert: fs.readFileSync(path.resolve(__dirname, './server.crt')),
-    },
-    host: true,
-    port: 1515, // Change to your preferred port
-  }
+  // server: {
+  //   http: {
+  //     key: fs.readFileSync(path.resolve(__dirname, './server.key')),
+  //     cert: fs.readFileSync(path.resolve(__dirname, './server.crt')),
+  //   },
+  //   host: true,
+  //   port: 1515, // Change to your preferred port
+  // }
 });
