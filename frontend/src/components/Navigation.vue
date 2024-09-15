@@ -71,7 +71,7 @@
         <ul v-show="!mobile" class="navigation">
             <li><router-link class="link" :to="{name: 'home'}">Acasa</router-link></li>
             <li><router-link class="link" :to="{name: 'servicii'}">Servicii</router-link></li>
-            <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li>
+            <!-- <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li> -->
             <li><router-link class="link" :to="{name: 'about'}">Despre noi</router-link></li>
             <li><router-link class="link-t" :to="{name: 'contact'}"><div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.png" /> <p>Contacteaza-ne</p> </div> </router-link></li>
         </ul>
@@ -86,7 +86,7 @@
             <ul v-show="mobileNav" class="dropdown-nav">
                 <li><router-link class="link" :to="{name: 'home'}" @click="closeMobileNav">Acasa</router-link></li>
                 <li><router-link class="link" :to="{name: 'servicii'}" @click="closeMobileNav">Servicii</router-link></li>
-                <li><router-link class="link" :to="{name: 'flota'}" @click="closeMobileNav">Flota</router-link></li>
+                <!-- <li><router-link class="link" :to="{name: 'flota'}" @click="closeMobileNav">Flota</router-link></li> -->
                 <li><router-link class="link" :to="{name: 'about'}" @click="closeMobileNav">Despre noi</router-link></li>
                 <li><router-link class="link" :to="{name: 'contact'}" @click="closeMobileNav">Contact</router-link></li>
             </ul>

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Step 1: Pull the latest code
+echo "Pulling the latest code..."
+git pull origin main
+
+# Step 2: Install frontend dependencies and build
+echo "Building the frontend..."
+cd frontend
+npm install
+npm run build
+cd ..
+
+# Step 3: Install backend dependencies
+echo "Installing backend dependencies..."
+cd backend
+npm install
+cd ..
+
+# Step 4: Restart the backend server using PM2
+echo "Restarting the backend server..."
+pm2 restart backend || pm2 start backend/server.js --name backend
+
+echo "Deployment complete!"
