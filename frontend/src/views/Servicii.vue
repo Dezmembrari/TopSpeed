@@ -4,6 +4,7 @@
 
       <h1 style="text-align: center; padding: 12px; font-size:38px">Servicii oferite:</h1>
 
+      
       <TwoRow
       :title1="'Tinichigerie'"
       :text1="'Oferim servicii profesioniste de tinichigerie pentru autoturisme. Utilizăm echipamente moderne și tehnologie de vârf pentru a repara caroseria vehiculului dumneavoastră, asigurându-ne că acesta revine la forma sa originală cu soluții rapide și eficiente.'"
@@ -13,9 +14,9 @@
       :title2="'Vopsitorie'"
       :text2="'Oferim vopsitorie profesională pentru autoturisme și vehicule mari, cu două cabine dedicate: una pentru autoturisme și una pentru camioane și autocare. Garantăm finisaje excelente și durabile pentru toate tipurile de vehicule.'"
       :image2="'/assets/vopsitorie-BTDrA_nV.webp'"
-      >
-      </TwoRow>
-
+      />
+      
+      <div class="verde">
       <TwoRow
       :title1="'Mecanică și Diagnoză Computerizată'"
       :text1="'Oferim servicii de mecanică auto și diagnoză computerizată pentru identificarea precisă a defecțiunilor. Cu echipamente moderne și expertiză tehnică, ne asigurăm că vehiculul tău funcționează optim în cel mai scurt timp posibil.'"
@@ -25,32 +26,33 @@
       :title2="'Reîncărcare Freon'"
       :text2="'Oferim servicii de reîncărcare pentru toate tipurile de freon utilizate în sistemele de climatizare auto: R134a, R1234yf și R12. Indiferent de modelul vehiculului tău, asigurăm reîncărcarea corectă și eficientă a freonului, folosind echipamente moderne pentru a garanta performanța optimă a climatizării.'"
       :image2="'/assets/aer-Bj9APm4C.webp'"
-      >
-      </TwoRow>
+      />
+     </div>
 
-        <div class="cards" id="masina">
-            <Stepper :cards="cardData1" />
-            <div class="txt-img">
-                <h1>Masina la schimb</h1>
-                <img src="../components/images/pexels.webp"/>
-            </div>    
-        </div>
 
-        <div class="cards" id="platforma">
-            <div class="txt-img">
-                <h1>Transport cu platforma</h1>
-                <img src="../components/images/mercedes-platforma.webp"/>
-            </div>
-            <Stepper :cards="cardData2" />
-        </div>
+      <TwoRow id="masina" 
+      :title1="'Mașină la Schimb'"
+      :text1="'Pentru clienții care își repară autoturismul la noi, oferim o mașină similară din parcul nostru auto, pe toată durata reparației. Dacă programul nu vă permite deplasarea, vă punem la dispoziție serviciul de ridicare a vehiculului din locația indicată și livrarea mașinii la schimb la aceeași adresă.'"
+      :image1="'/assets/pexels-Cj0xXAfz.webp'"
+      :showFirstRow="true"
+      :showSecondRow="true"
+      :title2="'Transport cu Platforma'"
+      :text2="'În cazul unui accident, vă putem prelua vehiculul de la locul incidentului sau de la locația indicată de dumneavoastră și îl transportăm direct la service pentru reparații și constatare. De asemenea, putem aduce mașina la schimb la locația dorită, asigurându-ne că aveți un mijloc de transport disponibil în timpul reparațiilor.'"
+      :image2="'/assets/mercedes-platforma-D3-s_S5L.webp'"
+      />
+   
+      <div class="verde">
+      <TwoRow id="dosar"
+      :title1="'Întocmirea Dosarului de Daună'"
+      :text1="'Ne ocupăm complet de documentația necesară și întocmirea dosarului de daună, gestionând toate demersurile cu constatatorul. Vă oferim, de asemenea, consiliere pentru completarea constatării amiabile și pașii care decurg din aceasta.'"
+      :image1="'/assets/hands-DdFxnlZM.webp'"
+      :showFirstRow="true"
+      :showSecondRow="false"
+      />
+     </div>
+
+
         
-        <div class="cards" id="dosar">
-            <Stepper :cards="cardData3"/>
-            <div class="txt-img">
-                <h1 >Intocmirea dosarului</h1>
-                <img src="../components/images/hands.webp"/>
-            </div>
-        </div>
 
     </div>
     </div>
@@ -137,70 +139,18 @@ import Stepper from '../components/Stepper.vue';
 .screen{
     background: var(--background-1);
     min-width: 360px;
-}
-
-
-  .servicii{
+    
+    .servicii{
     padding-top: 90px;
     margin: 0px;
     position: relative;
     color: black;
 
-    .cards{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: auto;
-        background-color:var(--background-2);
-        border-radius: 0px;
-        // margin-bottom: 24px;
-
-        
-        
-        .txt-img{
-        display: flex;
-        position: relative;
-        flex-direction: column-reverse;
-        width: 100%;
-        align-items: center;
-
-        img{
-            margin: 12px;
-            border-radius: 25px;
-            width: 350px;
-            height: auto;
-            border: 2px solid #ffffff; /* Add border */
-            box-shadow: 0 4px 8px rgb(0, 0, 0,0.3), 0 6px 20px rgb(0, 0, 0,0.4); /* Add drop shadow */
-            
-            // @media (max-width: 880px) {
-            //     display: none;
-                
-            // }
-
-            @media (max-width:768px) {
-              width: 57%;
-              height: auto;
-            }
-        }
-        }
-
-        &:nth-child(5){
-            background-color: transparent;
-        }
-
-        @media (max-width: 880px) {
-            flex-direction:column ;
-
-            &:nth-child(4),
-            &:nth-child(6){
-            flex-direction: column-reverse;
-            }
-        }
-    }  
+    .verde{
+      background: var(--background-2);
     }
-
+    }
     
     
-    
-
+  } 
 </style>

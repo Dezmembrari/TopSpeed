@@ -27,10 +27,10 @@
         </div> -->
         <div class="footer__section">
           <div class="footer__section-title">Legal</div>
-          <div>Privacy Policy</div>
-          <div>Terms &amp; Services</div>
-          <div>Terms of Use</div>
-          <div>Cookies &amp; GDPR</div>
+          <div><router-link class="link" :to="{name: 'privacy'}">Privacy Policy</router-link></div>
+          <!-- <div>Terms &amp; Services</div>
+          <div>Terms of Use</div> -->
+          <div><router-link class="link" :to="{name: 'cookies'}">Cookies</router-link></div>
         </div>
         <div class="footer__section">
           <div class="footer__section-title">Acces rapid</div>

@@ -27,5 +27,7 @@ cd ..
 # Step 4: Restart the backend server using PM2
 echo "Restarting the backend server..."
 pm2 restart backend || pm2 start backend/server.js --name backend
+pm2 startup
+pm2 save
 
 echo "Deployment complete!"
