@@ -8,13 +8,13 @@
               <img
                 class="rectangle-3841-uurO5n"
                 data-id="228:3459"
-                src="../components/images/rectangle-3841-4@2x.png"
+                src="../components/images/rectangle-3841-4@2x.webp"
                 alt="Rectangle 3841"
               />
               <img
                 class="ellipse-794-uurO5n"
                 data-id="228:3460"
-                src="../components/images/ellipse-794-2@2x.png"
+                src="../components/images/ellipse-794-2@2x.webp"
                 alt="Ellipse 794"
               />
               <h1 class="title-uurO5n" data-id="228:3461">
@@ -26,7 +26,7 @@
                   <img
                     class="bxsphone-call-g2ApXA"
                     data-id="228:3465"
-                    src="../components/images/bxs-phone-call-4@2x.png"
+                    src="../components/images/bxs-phone-call-4@2x.webp"
                     alt="bxs:phone-call"
                   />
                   <div
@@ -39,7 +39,7 @@
                 <img
                   class="icsharp-email-xuonMF"
                   data-id="228:3469"
-                  src="../components/images/ic-sharp-email-4@2x.png"
+                  src="../components/images/ic-sharp-email-4@2x.webp"
                   alt="ic:sharp-email"
                 />
                 <div
@@ -51,7 +51,7 @@
                 <img
                   class="carbonlocation-filled-xuonMF"
                   data-id="228:3472"
-                  src="../components/images/carbon-location-filled-4@2x.png"
+                  src="../components/images/carbon-location-filled-4@2x.webp"
                   alt="carbon:location-filled"
                 />
                 <p
@@ -76,7 +76,7 @@
                 />
                 <img
                 class="vector-4-Wmm1CL"
-                src="../components/images/vector-4-4@2x.png"
+                src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 4"
                 />
             </div>
@@ -91,7 +91,7 @@
                 />
                 <img
                 class="vector-5-a09DHC"
-                src="../components/images/vector-4-4@2x.png"
+                src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 5"
                 />
             </div>
@@ -106,7 +106,7 @@
                 />
                 <img
                 class="vector-6"
-                src="../components/images/vector-4-4@2x.png"
+                src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 6"
                 />
             </div>
@@ -120,7 +120,7 @@
                 />
                 <img
                 class="vector-7-5InFe1"
-                src="../components/images/vector-4-4@2x.png"
+                src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 7"
                 />
             </div>
@@ -134,7 +134,7 @@
                 ></textarea>
                 <img
                 class="vector-6"
-                src="../components/images/vector-4-4@2x.png"
+                src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 6"
                 />
             </div>

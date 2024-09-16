@@ -8,7 +8,7 @@
     <div class="hero-area">
       <div class="overlap">
         <div class="imagine">
-          <img alt="Poza receptie" class="whatsapp-image" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.png" />
+          <img alt="Poza receptie" class="whatsapp-image" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" />
         </div>
         <div class="rectangle"></div>
         <div class="text">
@@ -27,7 +27,7 @@
           <div class="extended-FAB">
             <router-link class="link" :to="{name: 'contact'}">
             <div class="state-layer">
-              <img alt="" class="img" src="../components/images/icon-46@21x.png" />
+              <img alt="" class="img" src="../components/images/icon-46@21x.webp" />
               <div class="label-text">Contact</div>
             </div>
             </router-link>
@@ -51,10 +51,10 @@
                       <div class="star-2"></div>
                       <div class="star-3"></div>
                       <div class="star-4"></div>
-                      <img alt="" class="img" src="../components/images/star-1-1@2x.png" />
+                      <img alt="" class="img" src="../components/images/star-1-1@2x.webp" />
                     </div>
                   </div>
-                  <img alt="" class="location-on" src="../components/images/location-on-1@2x.png" />
+                  <img alt="" class="location-on" src="../components/images/location-on-1@2x.webp" />
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@
 
           <div class="card"> <!--card 1-->
             <div class="content">
-              <div class="picture"><img alt="Cheie de la masina la schimb," class="pexels" src="../components/images/pexels.png" /></div>
+              <div class="picture"><img alt="Cheie de la masina la schimb," class="pexels" src="../components/images/pexels.webp" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                 <p class="div">
@@ -98,7 +98,7 @@
 
           <div class="card"> <!--card 2-->
             <div class="content">
-              <div class="picture"><img alt="masina tractata pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png" /></div>
+              <div class="picture"><img alt="masina tractata pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.webp" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                 <p class="div">
@@ -118,7 +118,7 @@
 
           <div class="card"> <!--card 3-->
             <div class="content">
-              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
+              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.webp" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                 <p class="div">
@@ -241,29 +241,29 @@
         <div class="contact-Wb6jT4" data-id="249:224">
           <div class="card-info-hNZXTq" data-id="249:225">
             <div class="frame-1-QOzZTe" data-id="249:226">
-              <img class="rectangle-3841-JcJNSd" data-id="249:227" src="../components/images/rectangle-3841-2.png"
+              <img class="rectangle-3841-JcJNSd" data-id="249:227" src="../components/images/rectangle-3841-2.webp"
                 alt="Rectangle 3841" />
-              <img class="ellipse-794-JcJNSd" data-id="249:228" src="../components/images/ellipse-794-2@2x.png" alt="Ellipse 794" />
+              <img class="ellipse-794-JcJNSd" data-id="249:228" src="../components/images/ellipse-794-2@2x.webp" alt="Ellipse 794" />
               <div class="informatii-contact-JcJNSd" data-id="249:229">
                 Informatii contact
               </div>
               <div class="ellipse-793-JcJNSd ellipse-793" data-id="249:230"></div>
               <div class="text-info-JcJNSd" data-id="249:231">
                 <div class="group-1000001773-sOPNOG group-1000001773" data-id="249:232">
-                  <img class="bxsphone-call-sxRkSj" data-id="249:233" src="../components/images/bxs-phone-call-2@2x.png"
+                  <img class="bxsphone-call-sxRkSj" data-id="249:233" src="../components/images/bxs-phone-call-2@2x.webp"
                     alt="bxs:phone-call" />
                   <div class="x0788-990-011-sxRkSj x0788-990-011 inter-normal-white-12-9px" data-id="249:236">
                     <a href="tel:+40788990011" style="color:white;">0788 990 011</a>
                   </div>
                 </div>
-                <img class="icsharp-email-sOPNOG" data-id="249:237" src="../components/images/ic-sharp-email-2@2x.png"
+                <img class="icsharp-email-sOPNOG" data-id="249:237" src="../components/images/ic-sharp-email-2@2x.webp"
                   alt="ic:sharp-email" />
                 <div class="officetopspeedserviceeu-sOPNOG officetopspeedserviceeu inter-normal-white-12-9px"
                   data-id="249:239">
                   <a href="mailto:office@topspeedservice.eu" style="color:white;">office@topspeedservice.eu</a>
                 </div>
                 <img class="carbonlocation-filled-sOPNOG" data-id="249:240"
-                  src="../components/images/carbon-location-filled-2@2x.png" alt="carbon:location-filled" />
+                  src="../components/images/carbon-location-filled-2@2x.webp" alt="carbon:location-filled" />
                 <p class="sos-clinceni-dj401-a-6-bragadiru-077025-sOPNOG sos-clinceni-dj401-a-6-bragadiru-077025 inter-normal-white-12-9px"
                   data-id="249:243">
                   Sos. Clinceni, DJ401A 6, Bragadiru 077025
@@ -284,31 +284,31 @@
               <!-- Name Input -->
               <div class="name-nQwLm2">
                 <input v-model="form.nume" class="nume-ujjqxD poppins-medium-stack-14-8px" name="nume" placeholder="Nume" type="text" required />
-                <img class="vector-4-ujjqxD" src="../components/images/vector-4-2@2x.png" alt="Vector 4" />
+                <img class="vector-4-ujjqxD" src="../components/images/vector-4-2@2x.webp" alt="Vector 4" />
               </div>
 
               <!-- Surname Input -->
               <div class="surname-nQwLm2">
                 <input v-model="form.prenume" class="prenume-zNx0t3 poppins-medium-stack-14-8px" name="prenume" placeholder="Prenume" type="text" required />
-                <img class="vector-5-zNx0t3" src="../components/images/vector-4-4@2x.png" alt="Vector 5" />
+                <img class="vector-5-zNx0t3" src="../components/images/vector-4-4@2x.webp" alt="Vector 5" />
               </div>
 
               <!-- Email Input -->
               <div class="mail-nQwLm2 mail">
                 <input v-model="form.email" class="email-JSvoEZ poppins-medium-stack-14-8px" name="email" placeholder="Email" type="email" required />
-                <img class="vector-6-JSvoEZ vector-6" src="../components/images/vector-4-4@2x.png" alt="Vector 6" />
+                <img class="vector-6-JSvoEZ vector-6" src="../components/images/vector-4-4@2x.webp" alt="Vector 6" />
               </div>
 
               <!-- Phone Input -->
               <div class="phone-nQwLm2 phone">
                 <input v-model="form.numar_de_telefon_optional" class="numar-de-telefon-optional-wLv2rG poppins-medium-stack-14-8px" name="numardetelefonoptional" placeholder="Numar de telefon (optional)" type="number" />
-                <img class="vector-7-wLv2rG" src="../components/images/vector-7-2@2x.png" alt="Vector 7" />
+                <img class="vector-7-wLv2rG" src="../components/images/vector-7-2@2x.webp" alt="Vector 7" />
               </div>
 
               <!-- Message Input -->
               <div class="message-nQwLm2">
                 <textarea v-model="form.mesaj" class="mesaj-OkBlSx" name="mesaj" placeholder="Mesaj" required></textarea>
-                <img class="vector-6-OkBlSx vector-6" src="../components/images/vector-6-5.png" alt="Vector 6" />
+                <img class="vector-6-OkBlSx vector-6" src="../components/images/vector-6-5.webp" alt="Vector 6" />
               </div>
 
               <!-- Submit Button -->
@@ -336,13 +336,13 @@
         <div class="hero-area-xXSLxn" data-id="244:1072">
           <div class="imagine-oyeKb8" data-id="244:1073">
             <img class="whats-app-image-2024-SiDLZE" data-id="244:1074"
-              src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.png"
+              src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp"
               alt="WhatsApp Image 2024-08-04 at 15.45.14_e5fa0d06 1" />
           </div>
           <div class="rectangle-5-oyeKb8" data-id="244:1075"></div>
           <div class="text-oyeKb8" data-id="244:1076">
             <div class="titlu-GWw8gr" data-id="244:1077">
-              <img class="polygon-1-lxax5Z polygon-1" data-id="244:1078" src="../components/images/polygon-1-1.png"
+              <img class="polygon-1-lxax5Z polygon-1" data-id="244:1078" src="../components/images/polygon-1-1.webp"
                 alt="Polygon 1" />
               <h1 class="centru-constatare-daune-service-auto-lxax5Z" data-id="244:1079">
                 <span class="span0-FU9915">CENTRU CONSTATARE DAUNE </span>
@@ -357,7 +357,7 @@
             <div class="extended-fab-GWw8gr smart-layers-pointers" data-id="244:1081">
               <router-link class="link" :to="{name: 'contact'}"> 
               <div class="state-layer-rwYoxk smart-layers-pointers" data-id="I244:1081;53939:32950">
-                <img class="icon-sHa4Z4 icon" data-id="I244:1081;53939:32951" src="../components/images/icon-46@21x.png" alt="Icon" />
+                <img class="icon-sHa4Z4 icon" data-id="I244:1081;53939:32951" src="../components/images/icon-46@21x.webp" alt="Icon" />
                 <div class="label-text-sHa4Z4 valign-text-middle label-text" data-id="I244:1081;53939:32952">
                   Contact
                 </div>
@@ -377,26 +377,26 @@
                       </div>
                     </div>
                   </div>
-                  <img class="location_on-wxidLP" data-id="244:1087" src="../components/images/location-on-1@2x.png"
+                  <img class="location_on-wxidLP" data-id="244:1087" src="../components/images/location-on-1@2x.webp"
                     alt="location_on" />
                   <div class="average-rating-44-wxidLP roboto-medium-white-13-9px" data-id="244:1088">
                     Average rating 4.4
                   </div>
                   <div class="stars-wxidLP" data-id="244:1089">
                     <article class="star-dixKi5 star" data-id="244:1090">
-                      <img class="star-1" data-id="I244:1090;134:3598" src="../components/images/star-1-1@2x.png" alt="Star 1" />
+                      <img class="star-1" data-id="I244:1090;134:3598" src="../components/images/star-1-1@2x.webp" alt="Star 1" />
                     </article>
                     <article class="star-MWD0Wm star" data-id="244:1091">
-                      <img class="star-1" data-id="I244:1091;134:3598" src="../components/images/star-1-2@2x.png" alt="Star 1" />
+                      <img class="star-1" data-id="I244:1091;134:3598" src="../components/images/star-1-2@2x.webp" alt="Star 1" />
                     </article>
                     <article class="star-U6YVa0 star" data-id="244:1092">
-                      <img class="star-1" data-id="I244:1092;134:3598" src="../components/images/star-1-3@2x.png" alt="Star 1" />
+                      <img class="star-1" data-id="I244:1092;134:3598" src="../components/images/star-1-3@2x.webp" alt="Star 1" />
                     </article>
                     <article class="star-d3SFh0 star" data-id="244:1093">
-                      <img class="star-1" data-id="I244:1093;134:3598" src="../components/images/star-1-4@2x.png" alt="Star 1" />
+                      <img class="star-1" data-id="I244:1093;134:3598" src="../components/images/star-1-4@2x.webp" alt="Star 1" />
                     </article>
                     <article class="star-IsKLtb star" data-id="244:1094">
-                      <img class="star-1" data-id="I244:1094;134:3598" src="../components/images/star-1-2@2x.png" alt="Star" />
+                      <img class="star-1" data-id="I244:1094;134:3598" src="../components/images/star-1-2@2x.webp" alt="Star" />
                     </article>
                   </div>
                 </div>
@@ -420,7 +420,7 @@
 
           <div class="card-t"> <!--card 1-->
                 <div class="content">
-                  <div class="picture"><img alt="Cheie pentru masina la schimb" class="pexels" src="../components/images/pexels.png" /></div>
+                  <div class="picture"><img alt="Cheie pentru masina la schimb" class="pexels" src="../components/images/pexels.webp" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                     <p class="div">
@@ -438,7 +438,7 @@
 
           <div class="card-t"> <!--card 2-->
                 <div class="content">
-                  <div class="picture"><img alt="Masina tractata pe platforma" class="mercedes-benz-amg" id="1001" src="../components/images/mercedes-platforma.png" /></div>
+                  <div class="picture"><img alt="Masina tractata pe platforma" class="mercedes-benz-amg" id="1001" src="../components/images/mercedes-platforma.webp" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                     <p class="div">
@@ -455,7 +455,7 @@
         
           <div class="card-t"> <!--card 3-->
             <div class="content">
-              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
+              <div class="picture"><img alt="Persoana semnand acte" class="laptop" src="../components/images/hands.webp" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                 <p class="div">
@@ -469,9 +469,9 @@
               </div>
             </div>
           </div>
-          <!-- <img class="card-1-bucx9j" data-id="228:3298" src="../components/images/card-1@2x.png" alt="Card 1" /> -->
-          <!-- <img class="card-2-bucx9j" data-id="228:3307" src="../components/images/card-2@2x.png" alt="Card 2" /> -->
-          <!-- <img class="card-3-bucx9j" data-id="228:3316" src="../components/images/card-3@2x.png" alt="Card 3" /> -->
+          <!-- <img class="card-1-bucx9j" data-id="228:3298" src="../components/images/card-1@2x.webp" alt="Card 1" /> -->
+          <!-- <img class="card-2-bucx9j" data-id="228:3307" src="../components/images/card-2@2x.webp" alt="Card 2" /> -->
+          <!-- <img class="card-3-bucx9j" data-id="228:3316" src="../components/images/card-3@2x.webp" alt="Card 3" /> -->
       </div>
     </div>
     </div>
@@ -551,11 +551,11 @@
             </div>
           </div>
 
-          <!-- <img class="pas-5-P7LRfs" data-id="228:3264" src="../components/images/pas-5.png" alt="Pas 5" />
-          <img class="pas-4-P7LRfs" data-id="228:3270" src="../components/images/pas-4-3.png" alt="Pas 4" />
-          <img class="pas-3-P7LRfs" data-id="228:3276" src="../components/images/pas-3-1.png" alt="Pas 3" />
-          <img class="pas-2-P7LRfs" data-id="228:3282" src="../components/images/pas-2-3.png" alt="Pas 2" />
-          <img class="pas-1-P7LRfs" data-id="228:3288" src="../components/images/pas-1-3.png" alt="Pas 1" /> -->
+          <!-- <img class="pas-5-P7LRfs" data-id="228:3264" src="../components/images/pas-5.webp" alt="Pas 5" />
+          <img class="pas-4-P7LRfs" data-id="228:3270" src="../components/images/pas-4-3.webp" alt="Pas 4" />
+          <img class="pas-3-P7LRfs" data-id="228:3276" src="../components/images/pas-3-1.webp" alt="Pas 3" />
+          <img class="pas-2-P7LRfs" data-id="228:3282" src="../components/images/pas-2-3.webp" alt="Pas 2" />
+          <img class="pas-1-P7LRfs" data-id="228:3288" src="../components/images/pas-1-3.webp" alt="Pas 1" /> -->
         
       </div>
     </div>
@@ -568,29 +568,29 @@
 
 
           <div class="frame-1-tyNvjJ" data-id="228:3223">
-            <img class="rectangle-3841-xUH78L" data-id="228:3224" src="../components/images/rectangle-3841-5.png"
+            <img class="rectangle-3841-xUH78L" data-id="228:3224" src="../components/images/rectangle-3841-5.webp"
               alt="Rectangle 3841" />
-            <img class="ellipse-794-xUH78L" data-id="228:3225" src="../components/images/ellipse-794-3@2x.png" alt="Ellipse 794" />
+            <img class="ellipse-794-xUH78L" data-id="228:3225" src="../components/images/ellipse-794-3@2x.webp" alt="Ellipse 794" />
             <div class="informatii-contact-xUH78L" data-id="228:3226">
               Informatii contact
             </div>
             <div class="ellipse-793-xUH78L" data-id="228:3227"></div>
             <div class="text-info-xUH78L" data-id="228:3228">
               <div class="group-1000001773-JZNwD1 group-1000001773" data-id="228:3229">
-                <img class="bxsphone-call-EupbpD" data-id="228:3230" src="../components/images/bxs-phone-call-5@2x.png"
+                <img class="bxsphone-call-EupbpD" data-id="228:3230" src="../components/images/bxs-phone-call-5@2x.webp"
                   alt="bxs:phone-call" />
                 <div class="x0788-990-011-EupbpD x0788-990-011 inter-normal-white-24-3px" data-id="228:3233">
                   <a href="tel:+40788990011" style="color:white;">0788 990 011</a>
                 </div>
               </div>
-              <img class="icsharp-email-JZNwD1" data-id="228:3234" src="../components/images/ic-sharp-email-5@2x.png"
+              <img class="icsharp-email-JZNwD1" data-id="228:3234" src="../components/images/ic-sharp-email-5@2x.webp"
                 alt="ic:sharp-email" />
               <div class="officetopspeedserviceeu-JZNwD1 officetopspeedserviceeu inter-normal-white-24-3px"
                 data-id="228:3236">
                 <a href="mailto:office@topspeedservice.eu" style="color:white;">office@topspeedservice.eu</a>
               </div>
               <img class="carbonlocation-filled-JZNwD1" data-id="228:3237"
-                src="../components/images/carbon-location-filled-5@2x.png" alt="carbon:location-filled" />
+                src="../components/images/carbon-location-filled-5@2x.webp" alt="carbon:location-filled" />
               <p class="sos-clinceni-dj401-a-6-bragadiru-077025-JZNwD1 sos-clinceni-dj401-a-6-bragadiru-077025 inter-normal-white-24-3px"
                 data-id="228:3240">
                 Sos. Clinceni, DJ401A 6, Bragadiru 077025
@@ -604,23 +604,23 @@
         <div class="frame-1000001764-d3ZKcW">
           <div class="name-Saiq66">
             <input v-model="form.nume" class="nume-VeK45S poppins-medium-stack-23-3px" name="nume" placeholder="Nume" type="text" required />
-            <img class="vector-4-VeK45S" src="../components/images/vector-4-5.png" alt="Vector 4" />
+            <img class="vector-4-VeK45S" src="../components/images/vector-4-5.webp" alt="Vector 4" />
           </div>
           <div class="surname-Saiq66">
             <input v-model="form.prenume" class="prenume-Ah1DGN poppins-medium-stack-23-3px" name="prenume" placeholder="Prenume" type="text" required />
-            <img class="vector-5-Ah1DGN" src="../components/images/vector-5.png" alt="Vector 5" />
+            <img class="vector-5-Ah1DGN" src="../components/images/vector-5.webp" alt="Vector 5" />
           </div>
           <div class="mail-Saiq66 mail">
             <input v-model="form.email" class="email-zAYfnx poppins-medium-stack-23-3px" name="email" placeholder="Email" type="email" required />
-            <img class="vector-6" src="../components/images/vector-6.png" alt="Vector 6" />
+            <img class="vector-6" src="../components/images/vector-6.webp" alt="Vector 6" />
           </div>
           <div class="phone-Saiq66 phone">
             <input v-model="form.numar_de_telefon_optional" class="numar-de-telefon-optional-aHyREI poppins-medium-stack-23-3px" name="numartelefon" placeholder="Numar de telefon (optional)" type="number" />
-            <img class="vector-6" src="../components/images/vector-6-1.png" alt="Vector 6" />
+            <img class="vector-6" src="../components/images/vector-6-1.webp" alt="Vector 6" />
           </div>
           <div class="message-Saiq66">
             <textarea v-model="form.mesaj" class="mesaj-PftNeo poppins-medium-stack-23-3px" name="mesaj" placeholder="Mesaj"></textarea>
-            <img class="vector-6" src="../components/images/vector-6-1.png" alt="Vector 6" />
+            <img class="vector-6" src="../components/images/vector-6-1.webp" alt="Vector 6" />
           </div>
           <button type="submit" class="button-Saiq66 smart-layers-pointers" @click="submitForm">
             <div class="trimite-mesaj-88iNP9">
@@ -660,7 +660,7 @@
         <a href="tel:+40788990011" style="color: white;" class="contacteaza-ne-K86Ewf smart-layers-pointers" data-id="207:2710">
           <!-- <router-link class="link" :to="{name: 'contact'}"> -->
           <div class="state-layer-9BUA1l state-layer" data-id="I207:2710;53939:32950">
-            <img class="icon-Sifdis icon" data-id="I207:2710;53939:32951" src="../components/images/icon-49@2x.png" alt="Icon" />
+            <img class="icon-Sifdis icon" data-id="I207:2710;53939:32951" src="../components/images/icon-49@2x.webp" alt="Icon" />
             <div class="label-text-Sifdis valign-text-middle label-text material-theme-bluelabellarge"
               data-id="I207:2710;53939:32952">
               CONTACTEAZA-NE
@@ -670,7 +670,7 @@
         </a>
       </div>
       <div class="imagine-kx6xIJ" data-id="207:2711">
-        <img alt="Receptie Top Speed Service" src="../components/images/receptie.png"/>
+        <img alt="Receptie Top Speed Service" src="../components/images/receptie.webp"/>
       </div>
     </div>
 
@@ -682,7 +682,7 @@
         <div class="frame-12-bhevLl frame-12" data-id="207:2717">
           <div class="card-m"><!-- card 1-->
             <div class="content">
-              <div class="picture"><img alt="masina la schimb" class="pexels" src="../components/images/pexels.png" /></div>
+              <div class="picture"><img alt="masina la schimb" class="pexels" src="../components/images/pexels.webp" /></div>
               <div class="frame">
                 <h1 class="text-wrapper">Masina la schimb, oriunde!</h1>
                 <p class="div">
@@ -697,7 +697,7 @@
           </div>
           <div class="card-m"><!-- card 2-->
                 <div class="content">
-                  <div class="picture"><img alt="masina pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.png"  /></div>
+                  <div class="picture"><img alt="masina pe platforma" class="mercedes-benz-amg" src="../components/images/mercedes-platforma.webp"  /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Transport gratuit, fara batai de cap!</h1>
                     <p class="div">
@@ -712,7 +712,7 @@
               </div>
           <div class="card-m">
                 <div class="content">
-                  <div class="picture"><img alt="o persoana semnand acte" class="laptop" src="../components/images/hands.png" /></div>
+                  <div class="picture"><img alt="o persoana semnand acte" class="laptop" src="../components/images/hands.webp" /></div>
                   <div class="frame">
                     <h1 class="text-wrapper">Intocmire dosar, fara efort!</h1>
                     <p class="div">
@@ -808,13 +808,13 @@
             <img
               class="rectangle-3841-uurO5n"
               data-id="228:3459"
-              src="../components/images/rectangle-3841-4@2x.png"
+              src="../components/images/rectangle-3841-4@2x.webp"
               alt="Rectangle 3841"
             />
             <img
               class="ellipse-794-uurO5n"
               data-id="228:3460"
-              src="../components/images/ellipse-794-2@2x.png"
+              src="../components/images/ellipse-794-2@2x.webp"
               alt="Ellipse 794"
             />
             <h1 class="title-uurO5n" data-id="228:3461">Informatii contact</h1>
@@ -825,7 +825,7 @@
                 <img
                   class="bxsphone-call-g2ApXA"
                   data-id="228:3465"
-                  src="../components/images/bxs-phone-call-4@2x.png"
+                  src="../components/images/bxs-phone-call-4@2x.webp"
                   alt="bxs:phone-call"
                 />
                 <div
@@ -840,7 +840,7 @@
               <img
                 class="icsharp-email-xuonMF"
                 data-id="228:3469"
-                src="../components/images/ic-sharp-email-4@2x.png"
+                src="../components/images/ic-sharp-email-4@2x.webp"
                 alt="ic:sharp-email"
               />
               </a>
@@ -854,7 +854,7 @@
               <img
                 class="carbonlocation-filled-xuonMF"
                 data-id="228:3472"
-                src="../components/images/carbon-location-filled-4@2x.png"
+                src="../components/images/carbon-location-filled-4@2x.webp"
                 alt="carbon:location-filled"
               />
               </a>
@@ -873,23 +873,23 @@
           <div class="contact-form-jSxk1B">
             <div class="name-FSbhl1">
               <input v-model="form.nume" class="nume-Wmm1CL poppins-medium-stack-14-8px" name="nume" placeholder="Nume" type="text" required />
-              <img class="vector-4-Wmm1CL" src="../components/images/vector-4-4@2x.png" alt="Vector 4" />
+              <img class="vector-4-Wmm1CL" src="../components/images/vector-4-4@2x.webp" alt="Vector 4" />
             </div>
             <div class="surname-FSbhl1">
               <input v-model="form.prenume" class="prenume-a09DHC" name="prenume" placeholder="Prenume" type="text" required />
-              <img class="vector-5-a09DHC" src="../components/images/vector-4-4@2x.png" alt="Vector 5" />
+              <img class="vector-5-a09DHC" src="../components/images/vector-4-4@2x.webp" alt="Vector 5" />
             </div>
             <div class="mail-FSbhl1">
               <input v-model="form.email" class="email-gi4H8t poppins-medium-stack-14-8px" name="email" placeholder="Email" type="email" required />
-              <img class="vector-6" src="../components/images/vector-4-4@2x.png" alt="Vector 6" />
+              <img class="vector-6" src="../components/images/vector-4-4@2x.webp" alt="Vector 6" />
             </div>
             <div class="phone-FSbhl1">
               <input v-model="form.numar_de_telefon_optional" class="numar-de-telefon-optional-5InFe1 poppins-medium-stack-14-8px" name="numartelefon" placeholder="Numar de telefon (optional)" type="number" />
-              <img class="vector-7-5InFe1" src="../components/images/vector-4-4@2x.png" alt="Vector 7" />
+              <img class="vector-7-5InFe1" src="../components/images/vector-4-4@2x.webp" alt="Vector 7" />
             </div>
             <div class="message-FSbhl1">
               <textarea v-model="form.mesaj" class="mesaj-ZILdUA" name="mesaj" placeholder="Mesaj"></textarea>
-              <img class="vector-6" src="../components/images/vector-4-4@2x.png" alt="Vector 6" />
+              <img class="vector-6" src="../components/images/vector-4-4@2x.webp" alt="Vector 6" />
             </div>
             <button type="submit" class="button-FSbhl1 smart-layers-pointers">
               <div class="trimite-mesaj-nbeqyD">

@@ -5,14 +5,14 @@
             <Stepper :cards="cardData1" />
             <div class="txt-img">
                 <h1>Masina la schimb</h1>
-                <img src="../components/images/pexels.png"/>
+                <img src="../components/images/pexels.webp"/>
             </div>    
         </div>
 
         <div class="cards" id="platforma">
             <div class="txt-img">
                 <h1>Transport cu platforma</h1>
-                <img src="../components/images/mercedes-platforma.png"/>
+                <img src="../components/images/mercedes-platforma.webp"/>
             </div>
             <Stepper :cards="cardData2" />
         </div>
@@ -21,7 +21,7 @@
             <Stepper :cards="cardData3"/>
             <div class="txt-img">
                 <h1 >Intocmirea dosarului</h1>
-                <img src="../components/images/hands.png"/>
+                <img src="../components/images/hands.webp"/>
             </div>
         </div>
 
