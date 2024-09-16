@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Step 0: check for pm2
+if ! command -v pm2 &> /dev/null
+then
+    echo "PM2 not found. Installing PM2..."
+    npm install -g pm2
+fi
+
 # Step 1: Pull the latest code
 echo "Pulling the latest code..."
 git pull origin main
