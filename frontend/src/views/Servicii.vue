@@ -4,12 +4,12 @@
       <TwoRow
       :title1="'Tinichigerie'"
       :text1="'Oferim servicii profesioniste de tinichigerie pentru autoturisme. Utilizăm echipamente moderne și tehnologie de vârf pentru a repara caroseria vehiculului dumneavoastră, asigurându-ne că acesta revine la forma sa originală cu soluții rapide și eficiente.'"
-      :image1="'/src/components/images/tinichigerie.webp'"
+      :image1="'/assets/tinichigerie-BTOF1Iq6.webp'"
       :showFirstRow="true"
       :showSecondRow="true"
       :title2="'Vopsitorie'"
       :text2="'Oferim vopsitorie profesională pentru autoturisme și vehicule mari, cu două cabine dedicate: una pentru autoturisme și una pentru camioane și autocare. Garantăm finisaje excelente și durabile pentru toate tipurile de vehicule.'"
-      :image2="'/src/components/images/vopsitorie.webp'"
+      :image2="'/assets/vopsitorie-BTDrA_nV.webp'"
       >
       </TwoRow>
 
@@ -157,22 +157,27 @@ import Stepper from '../components/Stepper.vue';
             border: 2px solid #ffffff; /* Add border */
             box-shadow: 0 4px 8px rgb(0, 0, 0,0.3), 0 6px 20px rgb(0, 0, 0,0.4); /* Add drop shadow */
             
-            @media (max-width: 880px) {
-                display: none;
+            // @media (max-width: 880px) {
+            //     display: none;
                 
+            // }
+
+            @media (max-width:768px) {
+              width: 57%;
+              height: auto;
             }
         }
         }
 
-        &:nth-child(3){
+        &:nth-child(4){
             background-color: transparent;
         }
 
         @media (max-width: 880px) {
             flex-direction:column ;
 
-            &:nth-child(1),
-            &:nth-child(3){
+            &:nth-child(3),
+            &:nth-child(5){
             flex-direction: column-reverse;
             }
         }

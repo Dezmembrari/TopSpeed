@@ -1,4 +1,5 @@
 <template>
+  <h1 style="text-align: center; padding: 12px; font-size:38px">Servicii oferite:</h1>
   <div class="two-row-component">
     <!-- First Row -->
     <div class="row" v-if="showFirstRow">
@@ -75,6 +76,15 @@ export default {
   flex-direction: column;
   gap: 2rem;
   margin: 30px;
+  padding: 12px;
+  
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+  }
+
 }
 
 .row {
@@ -109,6 +119,12 @@ export default {
   border: 2px solid #ffffff; /* Add border */
   box-shadow: 0 4px 8px rgb(0, 0, 0,0.3), 0 6px 20px rgb(0, 0, 0,0.4); /* Add drop shadow */
             
+
+  @media (max-width:768px) {
+    width: 70%;
+    height: auto;
+  }
+
 }
 
 /* Responsive styles */
