@@ -1,6 +1,9 @@
 <template>
     <div class="screen">
     <div class="servicii">
+
+      <h1 style="text-align: center; padding: 12px; font-size:38px">Servicii oferite:</h1>
+
       <TwoRow
       :title1="'Tinichigerie'"
       :text1="'Oferim servicii profesioniste de tinichigerie pentru autoturisme. Utilizăm echipamente moderne și tehnologie de vârf pentru a repara caroseria vehiculului dumneavoastră, asigurându-ne că acesta revine la forma sa originală cu soluții rapide și eficiente.'"
@@ -10,6 +13,18 @@
       :title2="'Vopsitorie'"
       :text2="'Oferim vopsitorie profesională pentru autoturisme și vehicule mari, cu două cabine dedicate: una pentru autoturisme și una pentru camioane și autocare. Garantăm finisaje excelente și durabile pentru toate tipurile de vehicule.'"
       :image2="'/assets/vopsitorie-BTDrA_nV.webp'"
+      >
+      </TwoRow>
+
+      <TwoRow
+      :title1="'Mecanică și Diagnoză Computerizată'"
+      :text1="'Oferim servicii de mecanică auto și diagnoză computerizată pentru identificarea precisă a defecțiunilor. Cu echipamente moderne și expertiză tehnică, ne asigurăm că vehiculul tău funcționează optim în cel mai scurt timp posibil.'"
+      :image1="'/assets/mecanica-IqAVDPB6.webp'"
+      :showFirstRow="true"
+      :showSecondRow="true"
+      :title2="'Reîncărcare Freon'"
+      :text2="'Oferim servicii de reîncărcare pentru toate tipurile de freon utilizate în sistemele de climatizare auto: R134a, R1234yf și R12. Indiferent de modelul vehiculului tău, asigurăm reîncărcarea corectă și eficientă a freonului, folosind echipamente moderne pentru a garanta performanța optimă a climatizării.'"
+      :image2="'/assets/aer-Bj9APm4C.webp'"
       >
       </TwoRow>
 
@@ -169,15 +184,15 @@ import Stepper from '../components/Stepper.vue';
         }
         }
 
-        &:nth-child(4){
+        &:nth-child(5){
             background-color: transparent;
         }
 
         @media (max-width: 880px) {
             flex-direction:column ;
 
-            &:nth-child(3),
-            &:nth-child(5){
+            &:nth-child(4),
+            &:nth-child(6){
             flex-direction: column-reverse;
             }
         }

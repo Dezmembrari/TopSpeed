@@ -1,5 +1,4 @@
 <template>
-  <h1 style="text-align: center; padding: 12px; font-size:38px">Servicii oferite:</h1>
   <div class="two-row-component">
     <!-- First Row -->
     <div class="row" v-if="showFirstRow">

@@ -428,7 +428,7 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <router-link class="link" :to="{name: 'servicii'}">
+                    <router-link class="link" :to="{name: 'servicii', hash: '#masina'}">
                       <div class="tag"><div class="tag-or-button">Detalii</div></div>
                     </router-link>
                   </div>
@@ -446,7 +446,7 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    <router-link class="link" :to="{name: 'servicii', hash: '#platforma'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
                     
                   </div>
                 </div>
@@ -464,7 +464,7 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                <router-link class="link" :to="{name: 'servicii', hash: '#dosar'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
                 
               </div>
             </div>
@@ -690,7 +690,7 @@
                 </p>
               </div>
               <div class="tag-wrapper">
-                <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                <router-link class="link" :to="{name: 'servicii', hash: '#masina'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
                 
               </div>
             </div>
@@ -705,7 +705,7 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    <router-link class="link" :to="{name: 'servicii', hash: '#platforma'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
                     
                   </div>
                 </div>
@@ -721,7 +721,7 @@
                     </p>
                   </div>
                   <div class="tag-wrapper">
-                    <router-link class="link" :to="{name: 'servicii'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
+                    <router-link class="link" :to="{name: 'servicii', hash: '#dosar'}"><div class="tag"><div class="tag-or-button">Detalii</div></div></router-link>
                     
                   </div>
                 </div>
