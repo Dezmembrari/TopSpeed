@@ -3,27 +3,45 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./src/assets/ICON.png">
+    <link rel="preload" href="/assets/receptie-CRYEMBfw.webp" as="image">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="og:type" content="website" />
     <meta name="description" content="Top Speed Service SRL din Bragadiru este atât un service auto de încredere, cât și un centru specializat în constatarea daunelor. Oferim servicii complete de mecanica, tinichigerie și vopsitorie pentru a vă asigura că vehiculul dumneavoastră este în cele mai bune condiții." />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Import Material 3 Font: Roboto Flex -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..700&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB"
-      crossorigin="anonymous"
-    />
+
+    <!-- Load FontAwesome asynchronously -->
+    <script>
+      var fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://pro.fontawesome.com/releases/v5.15.3/css/all.css';
+      document.head.appendChild(fa);
+    </script>
+
+    <!-- Critical CSS inlined -->
+    <style>
+      /* Critical CSS styles here */
+    </style>
+
+    <!-- Non-Critical CSS deferred -->
+    <link rel="stylesheet" href="/assets/index-7X5KFi-m.css" media="print" onload="this.media='all'">
+    
     <title>Top Speed Service</title>
   </head>
 
-
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
 
-    <script> /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+    <!-- Defer main JavaScript file -->
+    <script type="module" src="/src/main.js" defer></script>
 
+    <script>
       if (!HTMLFormElement.prototype.reportValidity) {
         HTMLFormElement.prototype.reportValidity = function () {
           if (this.checkValidity()) return true;
@@ -34,7 +52,7 @@
           return false;
         };
       }
-  
+
       function SubmitForm(form_name) {
         var form = document.getElementsByName(form_name)[0];
         if (form.reportValidity()) {
@@ -43,8 +61,5 @@
         }
       }
     </script>
-
-
   </body>
 </html>
-

@@ -20,16 +20,16 @@
   // Define an array of image paths
   const images = [
     "Autonet.svg",
-    "Autototal.png",
-    "logo-materom.png",
-    "ic_new_logo.png",
-    "LogoConex20Ani_Gri-1024x399.png",
+    "Autototal.webp",
+    "logo-materom.webp",
+    "ic_new_logo.webp",
+    "LogoConex20Ani_Gri-1024x399.webp",
 
     "Autonet.svg",
-    "Autototal.png",
-    "logo-materom.png",
-    "ic_new_logo.png",
-    "LogoConex20Ani_Gri-1024x399.png"
+    "Autototal.webp",
+    "logo-materom.webp",
+    "ic_new_logo.webp",
+    "LogoConex20Ani_Gri-1024x399.webp"
   ];
   
   // Function to generate the full URL for images dynamically

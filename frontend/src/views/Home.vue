@@ -669,8 +669,8 @@
           <!-- </router-link> -->
         </a>
       </div>
-      <div class="imagine-kx6xIJ" data-id="207:2711">
-        <img alt="Receptie Top Speed Service" src="../components/images/receptie.webp"/>
+      <div class="imagine-kx6xIJ"  data-id="207:2711">
+        <img alt="Receptie Top Speed Service" loading="lazy" src="../components/images/receptie.webp"/>
       </div>
     </div>
 

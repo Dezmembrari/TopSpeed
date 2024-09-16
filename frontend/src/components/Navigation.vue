@@ -12,7 +12,7 @@
           <img
             class="phone-0TmUck phone"
             data-id="244:1201"
-            src="./images/phone-1@2x.png"
+            src="./images/phone-1@2x.webp"
             alt="Phone"
           />
           <div
@@ -26,7 +26,7 @@
           <img
             class="mail-HSA5eX mail"
             data-id="244:1204"
-            src="./images/mail-2@2x.png"
+            src="./images/mail-2@2x.webp"
             alt="mail"
           />
           <div
@@ -45,7 +45,7 @@
         <img
           class="clock-cmdIc7"
           data-id="244:1207"
-          src="./images/clock-1@2x.png"
+          src="./images/clock-1@2x.webp"
           alt="Clock"
         />
         <div
@@ -62,7 +62,7 @@
         <transition name="branding">
             <div v-if="showBranding" class="branding">
               <router-link :to="{name: 'home'}">
-                <img src="../assets/TSP_Logo.png" alt="Top Speed Service">
+                <img src="../components/images/TSP_Logo.webp" alt="Top Speed Service">
               </router-link>
             </div>
         </transition>
@@ -73,7 +73,7 @@
             <li><router-link class="link" :to="{name: 'servicii'}">Servicii</router-link></li>
             <!-- <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li> -->
             <li><router-link class="link" :to="{name: 'about'}">Despre noi</router-link></li>
-            <li><router-link class="link-t" :to="{name: 'contact'}"><div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.png" /> <p>Contacteaza-ne</p> </div> </router-link></li>
+            <li><router-link class="link-t" :to="{name: 'contact'}"><div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.webp" /> <p>Contacteaza-ne</p> </div> </router-link></li>
         </ul>
 
         <!-- Mobile Icon -->

@@ -3,20 +3,20 @@
       <div class="footer__content">
         <div class="footer__brand">
           <h1 class="footer__title">Top Speed Service</h1>
-          <img class="footer__logo" src="../components/images/vector-11-3.png" alt="Vector 11" />
+          <img class="footer__logo" src="../components/images/vector-11-3.webp" alt="Vector 11" />
         </div>
         <div class="footer__contact">
           <div class="footer__section-title">Detalii de contact</div>
           <div class="footer__contact-item">
-            <img src="../components/images/group-1000001780-2@2x.png" alt="Contact" />
+            <img src="../components/images/group-1000001780-2@2x.webp" alt="Contact" />
             <a href="tel:+40788990011">0788 990 011</a>
           </div>
           <div class="footer__contact-item">
-            <img src="../components/images/vector-8@2x.png" alt="Email" />
+            <img src="../components/images/vector-8@2x.webp" alt="Email" />
             <a href="mailto:office@topspeedservice.eu">office@topspeedservice.eu</a>
           </div>
           <div class="footer__contact-item">
-            <img src="../components/images/vector-9@2x.png" alt="Address" />
+            <img src="../components/images/vector-9@2x.webp" alt="Address" />
             <a href="https://maps.app.goo.gl/rg6mR3coquFgzpYi6">Sos. Clinceni, DJ401A 6, Bragadiru 077025</a>
           </div>
         </div>
