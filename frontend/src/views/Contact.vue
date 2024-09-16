@@ -200,7 +200,7 @@ const submitForm = async () => {
   }
 
   try {
-    await emailjs.send('service_ptfsh2s', 'template_y2a0dxr', form.value);
+    await emailjs.send('service_ptfsh2s', 'template_y2a0dxr', form.value);  //   service/user id from settings   ---  template id   emailjs
     alert('Mesajul a fost trimis cu succes!');
     clearForm();
   } catch (error) {
