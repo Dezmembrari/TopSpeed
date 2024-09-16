@@ -1,6 +1,18 @@
 <template>
     <div class="screen">
     <div class="servicii">
+      <TwoRow
+      :title1="'Tinichigerie'"
+      :text1="'Oferim servicii profesioniste de tinichigerie pentru autoturisme. Utilizăm echipamente moderne și tehnologie de vârf pentru a repara caroseria vehiculului dumneavoastră, asigurându-ne că acesta revine la forma sa originală cu soluții rapide și eficiente.'"
+      :image1="'/src/components/images/tinichigerie.webp'"
+      :showFirstRow="true"
+      :showSecondRow="true"
+      :title2="'Vopsitorie'"
+      :text2="'Oferim vopsitorie profesională pentru autoturisme și vehicule mari, cu două cabine dedicate: una pentru autoturisme și una pentru camioane și autocare. Garantăm finisaje excelente și durabile pentru toate tipurile de vehicule.'"
+      :image2="'/src/components/images/vopsitorie.webp'"
+      >
+      </TwoRow>
+
         <div class="cards" id="masina">
             <Stepper :cards="cardData1" />
             <div class="txt-img">
@@ -30,7 +42,8 @@
   </template>
   
   <script setup>
-  import Stepper from '../components/Stepper.vue';
+  import TwoRow from '@/components/TwoRow.vue';
+import Stepper from '../components/Stepper.vue';
   
   const cardData1 = [
   {
@@ -151,7 +164,7 @@
         }
         }
 
-        &:nth-child(2){
+        &:nth-child(3){
             background-color: transparent;
         }
 
