@@ -63,9 +63,9 @@
       </div>
     </div>
 
-    <div class="slider-parteneri">
+    <!-- <div class="slider-parteneri">
       <Slider/>
-    </div>
+    </div> -->
 
 
     <div class="x3-cards-desktop-1280-zEMWSi" data-id="173:3116"> <!-- 3 cards done-->
@@ -405,9 +405,9 @@
           </div>
         </div>
         
-    <div class="slider-parteneri-xXSLxn" data-id="244:1095">
+    <!-- <div class="slider-parteneri-xXSLxn" data-id="244:1095">
       <Slider/>
-    </div>
+    </div> -->
 
     <div class="x3-cards-tablet-1280-720-PXugFz" data-id="228:3294"><!--3 cards tablet done-->
       <div class="x3-card-system-OZsZrx" data-id="228:3295">

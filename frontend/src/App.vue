@@ -10,11 +10,6 @@ import Footers from './components/Footer.vue';
   <Footers />
 </template>
 
-
-
-
-
-
 <style scoped>
 
 </style>
