@@ -26,7 +26,8 @@ cd ..
 
 # Step 4: Restart the backend server using PM2
 echo "Restarting the backend server..."
-pm2 restart backend || pm2 start backend/server.js --name backend
+pm2 restart backend || pm2 start /home/topspeedservice/domains/test.topspeedservice.ro/backend/app.js --name "topspeed-backend"
+pm2 save
 pm2 startup
 pm2 save
 
