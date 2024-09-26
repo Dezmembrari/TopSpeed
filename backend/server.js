@@ -16,11 +16,11 @@ app.get('*.js', (req, res, next) => {
   if (fs.existsSync(brotliPath)) {
     req.url = req.url + '.br';
     res.set('Content-Encoding', 'br');
-    res.set('Content-Type', 'application/javascript');
+    res.set('Content-Type', 'application/javascript; charset=UTF-8');
   } else if (fs.existsSync(gzipPath)) {
     req.url = req.url + '.gz';
     res.set('Content-Encoding', 'gzip');
-    res.set('Content-Type', 'application/javascript');
+    res.set('Content-Type', 'application/javascript; charset=UTF-8');
   }
 
   next();
@@ -33,11 +33,11 @@ app.get('*.css', (req, res, next) => {
   if (fs.existsSync(brotliPath)) {
     req.url = req.url + '.br';
     res.set('Content-Encoding', 'br');
-    res.set('Content-Type', 'text/css');
+    res.set('Content-Type', 'text/css; charset=UTF-8');
   } else if (fs.existsSync(gzipPath)) {
     req.url = req.url + '.gz';
     res.set('Content-Encoding', 'gzip');
-    res.set('Content-Type', 'text/css');
+    res.set('Content-Type', 'text/css; charset=UTF-8');
   }
 
   next();
