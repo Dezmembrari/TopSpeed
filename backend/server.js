@@ -8,6 +8,16 @@ const port = process.env.PORT || 3000;
 // Use compression middleware to enable Gzip compression
 app.use(compression());
 
+// Middleware to set the correct Content-Type for JS and CSS
+app.use((req, res, next) => {
+  if (req.url.endsWith('.js')) {
+    res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+  } else if (req.url.endsWith('.css')) {
+    res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+  }
+  next();
+});
+
 // Serve Brotli or Gzip compressed files if they exist
 app.get('*.js', (req, res, next) => {
   const brotliPath = path.join(__dirname, '../frontend/dist', req.url + '.br');
@@ -16,11 +26,9 @@ app.get('*.js', (req, res, next) => {
   if (fs.existsSync(brotliPath)) {
     req.url = req.url + '.br';
     res.set('Content-Encoding', 'br');
-    res.set('Content-Type', 'application/javascript; charset=UTF-8');
   } else if (fs.existsSync(gzipPath)) {
     req.url = req.url + '.gz';
     res.set('Content-Encoding', 'gzip');
-    res.set('Content-Type', 'application/javascript; charset=UTF-8');
   }
 
   next();
@@ -33,11 +41,9 @@ app.get('*.css', (req, res, next) => {
   if (fs.existsSync(brotliPath)) {
     req.url = req.url + '.br';
     res.set('Content-Encoding', 'br');
-    res.set('Content-Type', 'text/css; charset=UTF-8');
   } else if (fs.existsSync(gzipPath)) {
     req.url = req.url + '.gz';
     res.set('Content-Encoding', 'gzip');
-    res.set('Content-Type', 'text/css; charset=UTF-8');
   }
 
   next();
