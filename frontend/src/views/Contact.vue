@@ -194,9 +194,17 @@ const clearForm = () => {
   };
 };
 
+
+let recaptchaLoaded = false;
+
 const submitForm = async () => {
   if (!validateForm()) {
     alert('Vă rugăm să completați toate câmpurile obligatorii.');
+    return;
+  }
+
+  if (!recaptchaLoaded) {
+    alert('reCAPTCHA nu este disponibil. Vă rugăm să încercați din nou mai târziu.');
     return;
   }
 
@@ -230,6 +238,12 @@ onMounted(() => {
   const script = document.createElement('script');
   script.src = `https://www.gstatic.com/recaptcha/releases/${siteKey}/recaptcha__en.js`;
   script.async = true;
+
+  // Set recaptchaLoaded to true when the script is loaded
+  script.onload = () => {
+    recaptchaLoaded = true;
+  };
+
   document.head.appendChild(script);
 });
 </script>
