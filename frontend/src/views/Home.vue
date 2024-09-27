@@ -960,6 +960,14 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
+      // Track Google Ads conversion
+      gtag('event', 'conversion', {
+        send_to: 'AW-16523511425/Z7fjCNijldcZEIGNg8c9', // Replace with your Conversion ID and Label
+        event_callback: () => {
+          console.log('Google Ads conversion tracked');
+        }
+      });
+
       // Clear form on success
       form.value = {
         nume: '',
