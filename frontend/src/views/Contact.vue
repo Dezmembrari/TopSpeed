@@ -244,6 +244,12 @@ onMounted(() => {
     recaptchaLoaded = true;
   };
 
+  // Handle errors during script loading
+  script.onerror = () => {
+    console.error('reCAPTCHA script failed to load.');
+    alert('reCAPTCHA nu este disponibil. Vă rugăm să încercați din nou mai târziu.');
+  };
+
   document.head.appendChild(script);
 });
 </script>
