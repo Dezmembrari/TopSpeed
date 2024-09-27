@@ -167,8 +167,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import emailjs from 'emailjs-com';
-import '../emailsConfig'; // Import the configuration file
 
 const form = ref({
   nume: '',
@@ -200,9 +198,20 @@ const submitForm = async () => {
   }
 
   try {
-    await emailjs.send('service_ptfsh2s', 'template_y2a0dxr', form.value);  //   service/user id from settings   ---  template id   emailjs
-    alert('Mesajul a fost trimis cu succes!');
-    clearForm();
+    const response = await fetch('http://localhost:3000/api/contact', {  //MODIFICA DOMAIN-UL in deployment
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form.value),
+    });
+
+    if (response.ok) {
+      alert('Mesajul a fost trimis cu succes!');
+      clearForm();
+    } else {
+      alert('A apărut o eroare. Vă rugăm să încercați din nou.');
+    }
   } catch (error) {
     console.error('FAILED...', error);
     alert('A apărut o eroare. Vă rugăm să încercați din nou.');

@@ -2,13 +2,15 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression'); // Import compression middleware
 const fs = require('fs');
+const nodemailer = require('nodemailer');
+require('dotenv').config({ path: './credentials.env' });
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Use compression middleware to enable Gzip compression
 app.use(compression());
 
-// Middleware to set the correct Content-Type for JS and CSS
+// Middleware to set the correct Content-Type for JS and CSS for FireFox
 app.use((req, res, next) => {
   if (req.url.endsWith('.js')) {
     res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
@@ -57,6 +59,67 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
+
+
+
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Route for the contact form - updated to /api/contact
+app.post('/api/contact', async (req, res) => {
+  console.log('Request body:', req.body);
+  
+  const { nume, prenume, email, numar_de_telefon_optional, mesaj } = req.body;
+
+  // Validate the input before proceeding
+  if (!nume || !prenume || !email) {
+    return res.status(400).send('Please fill in all required fields.');
+  }
+
+  try {
+    // Create a transporter object using your SMTP server settings
+    let transporter = nodemailer.createTransport({
+      host: 'mail.topspeedservice.ro',  // Replace with your SMTP server
+      port: 587,  // Use the correct port (25, 465, or 587)
+      secure: false,  // true for port 465, false for other ports
+      auth: {
+        user: process.env.SMTP_USER,  // Your email address
+        pass: process.env.SMTP_PASS,  // Your email password
+      },
+    });
+
+    // Email options
+    let mailOptions = {
+      from: `"${nume} ${prenume}" <${email}>`,  // Sender name and email (user input)
+      to: process.env.SMTP_USER,  // Where the form will be sent
+      replyTo: email,
+      subject: 'New Contact Form Submission',
+      text: `You have a new contact form submission\n
+             Name: ${nume} ${prenume}\n
+             Email: ${email}\n
+             Phone (optional): ${numar_de_telefon_optional || 'N/A'}\n
+             Message: ${mesaj}`,  // Plain text body
+      html: `<p>You have a new contact form submission</p>
+             <p><strong>Name:</strong> ${nume} ${prenume}</p>
+             <p><strong>Email:</strong> ${email}</p>
+             <p><strong>Phone (optional):</strong> ${numar_de_telefon_optional || 'N/A'}</p>
+             <p><strong>Message:</strong> ${mesaj}</p>`,  // HTML body
+    };
+
+    // Send the email
+    let info = await transporter.sendMail(mailOptions);
+    console.log('Message sent: %s', info.messageId);
+    res.status(200).send('Email sent successfully!');
+  } catch (error) {
+    console.error('Error sending email:', error);  // Log the error object
+    res.status(500).send(`Error sending email: ${error.message}`);  // Include error details in the response
+  }
+});
+
+
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
