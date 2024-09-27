@@ -236,7 +236,7 @@ const submitForm = async () => {
 onMounted(() => {
   // Load the reCAPTCHA Enterprise script
   const script = document.createElement('script');
-  script.src = `https://www.gstatic.com/recaptcha/releases/${siteKey}/recaptcha__en.js`;
+  script.src = `https://www.gstatic.com/recaptcha/releases/6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk/recaptcha__en.js`;
   script.async = true;
 
   // Set recaptchaLoaded to true when the script is loaded
