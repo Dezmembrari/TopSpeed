@@ -165,7 +165,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk';  // Your site key
+const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk'; // Your site key
 
 const form = ref({
   nume: '',
@@ -173,47 +173,23 @@ const form = ref({
   email: '',
   numar_de_telefon_optional: '',
   mesaj: '',
-  honeypot: '',  // Honeypot field
-  recaptchaToken: '',  // Added reCAPTCHA token field
+  honeypot: '', // Honeypot field
+  recaptchaToken: '', // Added reCAPTCHA token field
 });
 
-const validateForm = () => {
-  // Check if required fields are filled
-  return form.value.nume && form.value.prenume && form.value.email;
-};
-
-const clearForm = () => {
-  form.value = {
-    nume: '',
-    prenume: '',
-    email: '',
-    numar_de_telefon_optional: '',
-    mesaj: '',
-    honeypot: '',  // Clear honeypot field as well
-    recaptchaToken: '',  // Clear reCAPTCHA token
-  };
-};
-
-
-let recaptchaLoaded = false;
-
 const submitForm = async () => {
-  if (!validateForm()) {
+  // Validate required fields
+  if (!form.value.nume || !form.value.prenume || !form.value.email) {
     alert('Vă rugăm să completați toate câmpurile obligatorii.');
-    return;
-  }
-
-  if (!recaptchaLoaded) {
-    alert('reCAPTCHA nu este disponibil. Vă rugăm să încercați din nou mai târziu.');
     return;
   }
 
   try {
     // Get the reCAPTCHA token using reCAPTCHA Enterprise
-    const recaptchaToken = await window.recaptchaV3.execute(siteKey, { action: 'submit' });
+    const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
     form.value.recaptchaToken = recaptchaToken; // Add token to form data
 
-    const response = await fetch('http://test.topspeedservice.ro/api/contact', {  // Update with your domain
+    const response = await fetch('http://test.topspeedservice.ro/api/contact', { // Update with your domain
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -222,38 +198,34 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
-      clearForm();  // Clear form on success
+      // Clear form on success
+      form.value = {
+        nume: '',
+        prenume: '',
+        email: '',
+        numar_de_telefon_optional: '',
+        mesaj: '',
+        honeypot: '',
+        recaptchaToken: '',
+      };
       alert('Mesajul dvs. a fost trimis cu succes!');
     } else {
       alert('A apărut o eroare. Vă rugăm să încercați din nou.');
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error:', error);
     alert('A apărut o eroare. Vă rugăm să încercați din nou.');
   }
 };
 
+// Load the reCAPTCHA script
 onMounted(() => {
-  // Load the reCAPTCHA Enterprise script
   const script = document.createElement('script');
-  script.src = `https://www.gstatic.com/recaptcha/releases/6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk/recaptcha__en.js`;
+  script.src = 'https://www.google.com/recaptcha/enterprise.js?render=' + siteKey;
   script.async = true;
-
-  // Set recaptchaLoaded to true when the script is loaded
-  script.onload = () => {
-    recaptchaLoaded = true;
-  };
-
-  // Handle errors during script loading
-  script.onerror = () => {
-    console.error('reCAPTCHA script failed to load.');
-    alert('reCAPTCHA nu este disponibil. Vă rugăm să încercați din nou mai târziu.');
-  };
-
   document.head.appendChild(script);
 });
 </script>
-
 
 
 
