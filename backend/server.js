@@ -12,6 +12,9 @@ const port = process.env.PORT || 3000;
 // Use compression middleware to enable Gzip compression
 app.use(compression());
 
+// Enable trust proxy
+app.set('trust proxy', true);  // Add this line to enable trust proxy
+
 // Middleware to set the correct Content-Type for JS and CSS for FireFox
 app.use((req, res, next) => {
   if (req.url.endsWith('.js')) {
@@ -60,9 +63,6 @@ app.use(express.static(path.join(__dirname, '../frontend/dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
-
-
-
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
@@ -129,6 +129,16 @@ app.post('/api/contact', contactFormLimiter, async (req, res) => {
     );
 
     if (!recaptchaResponse.data.success) {
+      const response = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+        method: 'POST',
+        body: new URLSearchParams({
+            secret: recaptchaSecret,
+            response: token,
+        }),
+    });
+    
+    const data = await response.json();
+    console.log('reCAPTCHA response:', data);
       console.error('reCAPTCHA verification failed:', recaptchaResponse.data);
       return res.status(400).send('reCAPTCHA verification failed');
     }
