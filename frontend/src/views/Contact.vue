@@ -139,6 +139,7 @@
               />
             </div>
             <input type="hidden" v-model="form.honeypot" name="honeypot" />
+            <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
 
             <button type="submit" class="button-FSbhl1 smart-layers-pointers" data-id="228:3492">
               <div class="trimite-mesaj-nbeqyD" data-id="228:3493">
@@ -162,7 +163,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk';  // Your site key
 
@@ -173,6 +174,7 @@ const form = ref({
   numar_de_telefon_optional: '',
   mesaj: '',
   honeypot: '',  // Honeypot field
+  recaptchaToken: '',  // Added reCAPTCHA token field
 });
 
 const validateForm = () => {
@@ -188,6 +190,7 @@ const clearForm = () => {
     numar_de_telefon_optional: '',
     mesaj: '',
     honeypot: '',  // Clear honeypot field as well
+    recaptchaToken: '',  // Clear reCAPTCHA token
   };
 };
 
@@ -216,17 +219,26 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
-      alert('Mesaj trimis cu succes!');
-      clearForm();
+      clearForm();  // Clear form on success
+      alert('Mesajul dvs. a fost trimis cu succes!');
     } else {
       alert('A apărut o eroare. Vă rugăm să încercați din nou.');
     }
   } catch (error) {
-    console.error('Error:', error);
+    console.error(error);
     alert('A apărut o eroare. Vă rugăm să încercați din nou.');
   }
 };
+
+onMounted(() => {
+  // Load the reCAPTCHA Enterprise script
+  const script = document.createElement('script');
+  script.src = `https://www.gstatic.com/recaptcha/releases/${siteKey}/recaptcha__en.js`;
+  script.async = true;
+  document.head.appendChild(script);
+});
 </script>
+
 
 
 
