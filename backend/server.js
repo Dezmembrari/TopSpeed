@@ -1,11 +1,13 @@
 const express = require('express');
 const path = require('path');
-const compression = require('compression'); // Import compression middleware
+const compression = require('compression');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 const axios = require('axios');  // For reCAPTCHA verification
 const rateLimit = require('express-rate-limit');  // For rate limiting
+const helmet = require('helmet'); // Add helmet middleware
 require('dotenv').config({ path: './credentials.env' });
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -13,7 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(compression());
 
 // Enable trust proxy
-app.set('trust proxy', 'loopback');  // Add this line to enable trust proxy
+app.set('trust proxy', 'loopback');
 
 // Middleware to set the correct Content-Type for JS and CSS for FireFox
 app.use((req, res, next) => {
@@ -67,6 +69,17 @@ app.get('*', (req, res) => {
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Add Helmet middleware with CSP
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      frameAncestors: ["'self'", "https://www.google.com"], // Allow framing from self and Google
+      // Add other directives as needed
+    },
+  },
+}));
 
 // Define rate limiter
 const contactFormLimiter = rateLimit({
