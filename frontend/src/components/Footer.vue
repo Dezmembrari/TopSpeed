@@ -13,7 +13,7 @@
           </div>
           <div class="footer__contact-item">
             <img src="../components/images/vector-8@2x.webp" alt="Email" />
-            <a href="mailto:office@topspeedservice.eu">office@topspeedservice.eu</a>
+            <a href="mailto:contact@topspeedservice.ro">contact@topspeedservice.ro</a>
           </div>
           <div class="footer__contact-item">
             <img src="../components/images/vector-9@2x.webp" alt="Address" />

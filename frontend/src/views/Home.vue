@@ -260,7 +260,7 @@
                   alt="ic:sharp-email" />
                 <div class="officetopspeedserviceeu-sOPNOG officetopspeedserviceeu inter-normal-white-12-9px"
                   data-id="249:239">
-                  <a href="mailto:office@topspeedservice.eu" style="color:white;">office@topspeedservice.eu</a>
+                  <a href="mailto: contact@topspeedservice.ro" style="color:white;">contact@topspeedservice.ro</a>
                 </div>
                 <img class="carbonlocation-filled-sOPNOG" data-id="249:240"
                   src="../components/images/carbon-location-filled-2@2x.webp" alt="carbon:location-filled" />
@@ -587,7 +587,7 @@
                 alt="ic:sharp-email" />
               <div class="officetopspeedserviceeu-JZNwD1 officetopspeedserviceeu inter-normal-white-24-3px"
                 data-id="228:3236">
-                <a href="mailto:office@topspeedservice.eu" style="color:white;">office@topspeedservice.eu</a>
+                <a href="mailto:contact@topspeedservice.ro" style="color:white;">contact@topspeedservice.ro</a>
               </div>
               <img class="carbonlocation-filled-JZNwD1" data-id="228:3237"
                 src="../components/images/carbon-location-filled-5@2x.webp" alt="carbon:location-filled" />
@@ -836,7 +836,7 @@
                 </div>
                 </a>
               </div>
-              <a href="mailto:office@topspeedservice.eu">
+              <a href="mailto:contact@topspeedservice.ro">
               <img
                 class="icsharp-email-xuonMF"
                 data-id="228:3469"
@@ -848,7 +848,7 @@
                 class="officetopspeedserviceeu-xuonMF officetopspeedserviceeu inter-normal-white-15-4px"
                 data-id="228:3471"
               >
-              <a href="mailto:office@topspeedservice.eu" style="color: white;">office@topspeedservice.eu</a>
+              <a href="mailto:contact@topspeedservice.ro" style="color: white;">contact@topspeedservice.ro</a>
               </div>
               <a href="https://maps.app.goo.gl/rg6mR3coquFgzpYi6" style="color: white;">
               <img

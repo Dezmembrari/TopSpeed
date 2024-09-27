@@ -34,9 +34,9 @@
             data-id="244:1205"
           >
             <a
-              href="mailto:office@topspeedservice.eu"
+              href="mailto:contact@topspeedservice.ro"
               style="color: white;"
-              >office@topspeedservice.eu</a
+              >contact@topspeedservice.ro</a
             >
           </div>
         </div>

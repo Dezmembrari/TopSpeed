@@ -46,7 +46,7 @@
                   class="officetopspeedserviceeu-xuonMF officetopspeedserviceeu inter-normal-white-15-4px"
                   data-id="228:3471"
                 >
-                  office@topspeedservice.eu
+                    contact@topspeedservice.ro
                 </div>
                 <img
                   class="carbonlocation-filled-xuonMF"
@@ -184,12 +184,18 @@ const submitForm = async () => {
     return;
   }
 
+  // Check if grecaptcha is available
+  if (typeof grecaptcha === 'undefined' || !grecaptcha.enterprise) {
+    alert('reCAPTCHA is not loaded. Please try again later.');
+    return;
+  }
+
   try {
-    // Get the reCAPTCHA token using reCAPTCHA Enterprise
+    // Get the reCAPTCHA token
     const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
     form.value.recaptchaToken = recaptchaToken; // Add token to form data
 
-    const response = await fetch('https://test.topspeedservice.ro/api/contact', { // Update with your domain
+    const response = await fetch('https://test.topspeedservice.ro/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
