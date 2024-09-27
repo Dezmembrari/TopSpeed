@@ -311,6 +311,9 @@
                 <img class="vector-6-OkBlSx vector-6" src="../components/images/vector-6-5.webp" alt="Vector 6" />
               </div>
 
+              <input type="hidden" v-model="form.honeypot" name="honeypot" />
+              <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
+
               <!-- Submit Button -->
               <button type="submit" class="button-FSbhl1 smart-layers-pointers">
                 <div class="trimite-mesaj-1SAeSx">
@@ -622,6 +625,10 @@
             <textarea v-model="form.mesaj" class="mesaj-PftNeo poppins-medium-stack-23-3px" name="mesaj" placeholder="Mesaj"></textarea>
             <img class="vector-6" src="../components/images/vector-6-1.webp" alt="Vector 6" />
           </div>
+
+          <input type="hidden" v-model="form.honeypot" name="honeypot" />
+          <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
+
           <button type="submit" class="button-Saiq66 smart-layers-pointers" @click="submitForm">
             <div class="trimite-mesaj-88iNP9">
               Trimite Mesaj
@@ -891,6 +898,10 @@
               <textarea v-model="form.mesaj" class="mesaj-ZILdUA" name="mesaj" placeholder="Mesaj"></textarea>
               <img class="vector-6" src="../components/images/vector-4-4@2x.webp" alt="Vector 6" />
             </div>
+
+            <input type="hidden" v-model="form.honeypot" name="honeypot" />
+            <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
+
             <button type="submit" class="button-FSbhl1 smart-layers-pointers">
               <div class="trimite-mesaj-nbeqyD">
                 Trimite Mesaj
@@ -908,10 +919,9 @@
 
   
 <script setup>
-import { ref } from 'vue';
-import emailjs from 'emailjs-com';
-import '../emailsConfig'; // Import the configuration file
-import Slider from '@/components/Slider.vue';
+import { ref, onMounted } from 'vue';
+
+const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk'; // Your site key
 
 const form = ref({
   nume: '',
@@ -919,42 +929,65 @@ const form = ref({
   email: '',
   numar_de_telefon_optional: '',
   mesaj: '',
+  honeypot: '', // Honeypot field
+  recaptchaToken: '', // Added reCAPTCHA token field
 });
 
-const validateForm = () => {
-  // Check if required fields are filled
-  return form.value.nume && form.value.prenume && form.value.email;
-};
-
-const clearForm = () => {
-  form.value = {
-    nume: '',
-    prenume: '',
-    email: '',
-    numar_de_telefon_optional: '',
-    mesaj: '',
-  };
-};
-
-
-
 const submitForm = async () => {
-  if (!validateForm()) {
+  // Validate required fields
+  if (!form.value.nume || !form.value.prenume || !form.value.email) {
     alert('Vă rugăm să completați toate câmpurile obligatorii.');
     return;
   }
 
+  // Check if grecaptcha is available
+  if (typeof grecaptcha === 'undefined' || !grecaptcha.enterprise) {
+    alert('reCAPTCHA is not loaded. Please try again later.');
+    return;
+  }
+
   try {
-    await emailjs.send('service_ptfsh2s', 'template_y2a0dxr', form.value);
-    alert('Mesajul a fost trimis cu succes!');
-    clearForm();
+    // Get the reCAPTCHA token
+    const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
+    form.value.recaptchaToken = recaptchaToken; // Add token to form data
+
+    const response = await fetch('https://test.topspeedservice.ro/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form.value),
+    });
+
+    if (response.ok) {
+      // Clear form on success
+      form.value = {
+        nume: '',
+        prenume: '',
+        email: '',
+        numar_de_telefon_optional: '',
+        mesaj: '',
+        honeypot: '',
+        recaptchaToken: '',
+      };
+      alert('Mesajul dvs. a fost trimis cu succes!');
+    } else {
+      alert('A apărut o eroare. Vă rugăm să încercați din nou.');
+    }
   } catch (error) {
-    console.error('FAILED...', error);
+    console.error('Error:', error);
     alert('A apărut o eroare. Vă rugăm să încercați din nou.');
   }
 };
-</script>
 
+// Load the reCAPTCHA script
+onMounted(() => {
+  const script = document.createElement('script');
+  script.src = 'https://www.google.com/recaptcha/enterprise.js?render=' + siteKey;
+  script.async = true;
+  document.head.appendChild(script);
+});
+</script>
   
   <style lang="scss" scoped>
   
