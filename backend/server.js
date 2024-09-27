@@ -116,7 +116,7 @@ app.post('/api/contact', contactFormLimiter, async (req, res) => {
 
   // Verify reCAPTCHA
   try {
-    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;  // Store your secret key in credentials.env
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
     const recaptchaResponse = await axios.post(
       `https://www.google.com/recaptcha/api/siteverify`,
       null,
@@ -127,9 +127,10 @@ app.post('/api/contact', contactFormLimiter, async (req, res) => {
         },
       }
     );
-
+  
+    console.log('reCAPTCHA verification response:', recaptchaResponse.data);
+  
     if (!recaptchaResponse.data.success) {
-      console.error('reCAPTCHA verification failed:', recaptchaResponse.data);
       return res.status(400).send('reCAPTCHA verification failed');
     }
   } catch (err) {
