@@ -66,92 +66,89 @@
 
           <form @submit.prevent="submitForm" class="contact-form-jSxk1B" data-id="228:3476">
             <div class="name-FSbhl1" data-id="228:3477">
-                <input
+              <input
                 v-model="form.nume"
                 class="nume-Wmm1CL poppins-medium-stack-14-8px"
                 name="nume"
                 placeholder="Nume"
                 type="text"
                 required
-                />
-                <img
+              />
+              <img
                 class="vector-4-Wmm1CL"
                 src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 4"
-                />
+              />
             </div>
             <div class="surname-FSbhl1" data-id="228:3480">
-                <input
+              <input
                 v-model="form.prenume"
                 class="prenume-a09DHC"
                 name="prenume"
                 placeholder="Prenume"
                 type="text"
                 required
-                />
-                <img
+              />
+              <img
                 class="vector-5-a09DHC"
                 src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 5"
-                />
+              />
             </div>
             <div class="mail-FSbhl1" data-id="228:3483">
-                <input
+              <input
                 v-model="form.email"
                 class="email-gi4H8t poppins-medium-stack-14-8px"
                 name="email"
                 placeholder="Email"
                 type="email"
                 required
-                />
-                <img
+              />
+              <img
                 class="vector-6"
                 src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 6"
-                />
+              />
             </div>
             <div class="phone-FSbhl1" data-id="228:3486">
-                <input
+              <input
                 v-model="form.numar_de_telefon_optional"
                 class="numar-de-telefon-optional-5InFe1 poppins-medium-stack-14-8px"
                 name="numardetelefonoptional"
                 placeholder="Numar de telefon (optional)"
                 type="number"
-                />
-                <img
+              />
+              <img
                 class="vector-7-5InFe1"
                 src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 7"
-                />
+              />
             </div>
             <div class="message-FSbhl1" data-id="228:3489">
-                <textarea
+              <textarea
                 v-model="form.mesaj"
                 class="mesaj-ZILdUA"
                 name="mesaj"
                 placeholder="Mesaj"
                 required
-                ></textarea>
-                <img
+              ></textarea>
+              <img
                 class="vector-6"
                 src="../components/images/vector-4-4@2x.webp"
                 alt="Vector 6"
-                />
+              />
             </div>
-            <a href="javascript:SubmitForm('form2')">
-                <button type="submit" class="button-FSbhl1 smart-layers-pointers" data-id="228:3492">
-                <div class="trimite-mesaj-nbeqyD" data-id="228:3493">
-                    Trimite Mesaj
-                </div>
-                </button>
-            </a>
-            </form>
+            <input type="hidden" v-model="form.honeypot" name="honeypot" />
 
-
+            <button type="submit" class="button-FSbhl1 smart-layers-pointers" data-id="228:3492">
+              <div class="trimite-mesaj-nbeqyD" data-id="228:3493">
+                Trimite Mesaj
+              </div>
+            </button>
+          </form>
         </div>
       </div>
     </div>
-
 
     <div class="map">
       <iframe
@@ -164,9 +161,10 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref } from 'vue';
+
+const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk';  // Your site key
 
 const form = ref({
   nume: '',
@@ -174,6 +172,7 @@ const form = ref({
   email: '',
   numar_de_telefon_optional: '',
   mesaj: '',
+  honeypot: '',  // Honeypot field
 });
 
 const validateForm = () => {
@@ -188,6 +187,7 @@ const clearForm = () => {
     email: '',
     numar_de_telefon_optional: '',
     mesaj: '',
+    honeypot: '',  // Clear honeypot field as well
   };
 };
 
@@ -197,8 +197,17 @@ const submitForm = async () => {
     return;
   }
 
+  // Get the reCAPTCHA token
+  const recaptchaToken = await new Promise((resolve) => {
+    grecaptcha.execute(siteKey, { action: 'submit' }).then((token) => {
+      resolve(token);
+    });
+  });
+
+  form.value.recaptchaToken = recaptchaToken; // Add token to form data
+
   try {
-    const response = await fetch('http://localhost:3000/api/contact', {  //MODIFICA DOMAIN-UL in deployment
+    const response = await fetch('http://test.topspeedservice.ro/api/contact', {  // Update with your domain
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -207,13 +216,13 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
-      alert('Mesajul a fost trimis cu succes!');
+      alert('Mesaj trimis cu succes!');
       clearForm();
     } else {
       alert('A apărut o eroare. Vă rugăm să încercați din nou.');
     }
   } catch (error) {
-    console.error('FAILED...', error);
+    console.error('Error:', error);
     alert('A apărut o eroare. Vă rugăm să încercați din nou.');
   }
 };

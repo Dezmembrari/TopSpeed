@@ -3,6 +3,8 @@ const path = require('path');
 const compression = require('compression'); // Import compression middleware
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+const axios = require('axios');  // For reCAPTCHA verification
+const rateLimit = require('express-rate-limit');  // For rate limiting
 require('dotenv').config({ path: './credentials.env' });
 const app = express();
 const port = process.env.PORT || 3000;
@@ -66,15 +68,73 @@ app.get('*', (req, res) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Define rate limiter
+const contactFormLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,  // 15 minutes
+  max: 5,  // Limit each IP to 5 requests per windowMs
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+});
+
+// Define spam keywords
+const spamKeywords = ['viagra', 'loan', 'free', 'win', 'credit', 'pariuri', 'superbet', 'castiga'];
+
+// Define blacklisted email domains
+const blacklistedDomains = ['spamdomain.com', 'disposablemail.com', 'mailinator.com'];
+
 // Route for the contact form - updated to /api/contact
-app.post('/api/contact', async (req, res) => {
+app.post('/api/contact', contactFormLimiter, async (req, res) => {
   console.log('Request body:', req.body);
   
-  const { nume, prenume, email, numar_de_telefon_optional, mesaj } = req.body;
+  const { nume, prenume, email, numar_de_telefon_optional, mesaj, honeypot, recaptchaToken } = req.body;
+
+  // Honeypot field check
+  if (honeypot) {
+    console.warn('Spam detected via honeypot field');
+    return res.status(400).send('Spam detected');
+  }
 
   // Validate the input before proceeding
   if (!nume || !prenume || !email) {
     return res.status(400).send('Please fill in all required fields.');
+  }
+
+  // Email domain blacklist check
+  const emailDomain = email.split('@')[1].toLowerCase();
+  if (blacklistedDomains.includes(emailDomain)) {
+    console.warn('Spam detected via email domain blacklist');
+    return res.status(400).send('Spam detected');
+  }
+
+  // Keyword filtering
+  const messageContent = `${nume} ${prenume} ${email} ${mesaj}`.toLowerCase();
+  const containsSpamKeyword = spamKeywords.some((keyword) => messageContent.includes(keyword));
+
+  if (containsSpamKeyword) {
+    console.warn('Spam detected via keyword filtering');
+    return res.status(400).send('Spam detected');
+  }
+
+  // Verify reCAPTCHA
+  try {
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;  // Store your secret key in credentials.env
+    const recaptchaResponse = await axios.post(
+      `https://www.google.com/recaptcha/api/siteverify`,
+      null,
+      {
+        params: {
+          secret: recaptchaSecret,
+          response: recaptchaToken,
+        },
+      }
+    );
+
+    if (!recaptchaResponse.data.success) {
+      console.error('reCAPTCHA verification failed:', recaptchaResponse.data);
+      return res.status(400).send('reCAPTCHA verification failed');
+    }
+  } catch (err) {
+    console.error('reCAPTCHA verification error:', err);
+    return res.status(500).send('Internal server error during reCAPTCHA verification');
   }
 
   try {
@@ -116,8 +176,6 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).send(`Error sending email: ${error.message}`);  // Include error details in the response
   }
 });
-
-
 
 // Start the server
 app.listen(port, () => {
