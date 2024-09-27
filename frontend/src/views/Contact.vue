@@ -200,16 +200,11 @@ const submitForm = async () => {
     return;
   }
 
-  // Get the reCAPTCHA token
-  const recaptchaToken = await new Promise((resolve) => {
-    grecaptcha.execute(siteKey, { action: 'submit' }).then((token) => {
-      resolve(token);
-    });
-  });
-
-  form.value.recaptchaToken = recaptchaToken; // Add token to form data
-
   try {
+    // Get the reCAPTCHA token using reCAPTCHA Enterprise
+    const recaptchaToken = await window.recaptchaV3.execute(siteKey, { action: 'submit' });
+    form.value.recaptchaToken = recaptchaToken; // Add token to form data
+
     const response = await fetch('http://test.topspeedservice.ro/api/contact', {  // Update with your domain
       method: 'POST',
       headers: {
