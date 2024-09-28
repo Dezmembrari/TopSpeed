@@ -7,14 +7,14 @@
         <p>{{ text1 }}</p>
       </div>
       <div class="column image-column">
-        <img :src="image1" :alt="title1" />
+        <div :class="['image', imageClass1]"></div>
       </div>
     </div>
 
     <!-- Second Row (reversed layout) -->
     <div class="row reversed" v-if="showSecondRow">
       <div class="column image-column">
-        <img :src="image2" :alt="title2" />
+        <div :class="['image', imageClass2]"></div>
       </div>
       <div class="column text-column">
         <h1>{{ title2 }}</h1>
@@ -37,7 +37,7 @@ export default {
       required: false,
       default: ''
     },
-    image1: {
+    imageClass1: {
       type: String,
       required: false,
       default: ''
@@ -52,7 +52,7 @@ export default {
       required: false,
       default: ''
     },
-    image2: {
+    imageClass2: {
       type: String,
       required: false,
       default: ''
@@ -69,7 +69,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .two-row-component {
   display: flex;
   flex-direction: column;
@@ -83,7 +83,6 @@ export default {
     align-content: center;
     justify-content: center;
   }
-
 }
 
 .row {
@@ -100,30 +99,41 @@ export default {
   flex: 1;
 }
 
-.text-column h1 {
-  align-content: center;
-  justify-content: center;
-}
-
-.text-column p {
-  font-size: 1.2rem;
-}
-
-.image-column img {
-  margin: auto;
-  display: flex;
-  border-radius: 25px;
-  width: 350px;
-  height: 237.92px;
-  border: 2px solid #ffffff; /* Add border */
-  box-shadow: 0 4px 8px rgb(0, 0, 0,0.3), 0 6px 20px rgb(0, 0, 0,0.4); /* Add drop shadow */
-            
-
-  @media (max-width:768px) {
-    width: 70%;
-    height: auto;
+.text-column {
+  h1 {
+    align-content: center;
+    justify-content: center;
   }
 
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.image-column {
+  .image {
+    margin: auto;
+    display: flex;
+    border-radius: 25px;
+    width: 350px;
+    height: 237.92px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+  }
+  @media (max-width: 480px) {
+      width: 90%;
+      height: auto;
+      aspect-ratio: 350 / 237.92; // Maintain aspect ratio
+      .image{
+        width: 100%;
+        
+      }
+    }
 }
 
 /* Responsive styles */
@@ -138,7 +148,7 @@ export default {
   flex-direction: row;
 }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .reversed {
     flex-direction: column-reverse;
   }
