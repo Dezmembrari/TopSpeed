@@ -243,6 +243,10 @@ onMounted(() => {
 
 
 <style scoped lang="scss">
+.grecaptcha-badge { 
+    visibility: hidden !important;
+}
+
 .screen {
   display: flex;
   width: 100%;

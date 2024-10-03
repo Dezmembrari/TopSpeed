@@ -1010,6 +1010,8 @@ onMounted(() => {
   /* Add other styles you need to override */
   }
 
-  
+  .grecaptcha-badge { 
+    visibility: hidden !important;
+  }
 
   </style>
