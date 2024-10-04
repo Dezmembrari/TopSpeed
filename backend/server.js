@@ -75,7 +75,7 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'","https://maps.googleapis.com","https://maps.gstatic.com" ],  // Allow scripts from Google Maps and Allow scripts from Google Maps static resources
+      scriptSrc: ["'self'","https://maps.googleapis.com","https://maps.gstatic.com", "static.hotjar.com", "maps.googleapis.com" ],  // Allow scripts from Google Maps and Allow scripts from Google Maps static resources
       frameAncestors: ["'self'", "https://www.google.com"], // Allow framing from self and Google
       imgSrc: ["'self'", "https://maps.gstatic.com", "https://*.googleusercontent.com"], // Allow images from Google User Content and Allow images from Google Maps static resources
       styleSrc: ["'self'","https://fonts.googleapis.com"],  // Allow styles from Google Fonts (if used)
