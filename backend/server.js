@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(compression());
 
 // Enable trust proxy
-// app.set('trust proxy', 'loopback');
+app.set('trust proxy', 'loopback');
 
 // Middleware to set the correct Content-Type for JS and CSS for FireFox
 app.use((req, res, next) => {
