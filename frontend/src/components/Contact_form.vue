@@ -205,7 +205,7 @@
       const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
       form.value.recaptchaToken = recaptchaToken; // Add token to form data
   
-      const response = await fetch('https://test.topspeedservice.ro/api/contact', {
+      const response = await fetch('https://topspeedservice.eu/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
