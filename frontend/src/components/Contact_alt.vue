@@ -129,7 +129,7 @@ const submitForm = async () => {
 // Load the reCAPTCHA script
 onMounted(() => {
     const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js?render=' + siteKey;
+    script.src = 'https://www.google.com/recaptcha/enterprise.js?render=6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE';
     script.async = true;
     document.head.appendChild(script);
 });
