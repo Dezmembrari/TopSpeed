@@ -60,7 +60,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk'; // Your site key
+const siteKey = '6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE'; // Your site key
 
 const form = ref({
     nume: '',
