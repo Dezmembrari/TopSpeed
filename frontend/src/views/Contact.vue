@@ -1,12 +1,12 @@
 <template>
   <div class="padding_contact">
-     <Contact_form/>
+     <Contact_alt/>
   </div>
 
 </template>
 
 <script setup>
-import Contact_form from '@/components/Contact_form.vue';
+import Contact_alt from '@/components/Contact_alt.vue';
 
 
 </script>

@@ -172,7 +172,7 @@
     </div>
   </template>
   
-  <script setup>
+<script setup>
   import { ref, onMounted } from 'vue';
   
   const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk'; // Your site key
@@ -248,7 +248,7 @@
     script.async = true;
     document.head.appendChild(script);
   });
-  </script>
+</script>
   
   
   

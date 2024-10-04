@@ -3358,7 +3358,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 959px;
+  height: fit-content;
   /* overflow: hidden; */
   position: relative;
   width: 100%;
