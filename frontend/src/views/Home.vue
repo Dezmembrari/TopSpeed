@@ -63,11 +63,6 @@
       </div>
     </div>
 
-    <!-- <div class="slider-parteneri">
-      <Slider/>
-    </div> -->
-
-
     <div class="x3-cards-desktop-1280-zEMWSi" data-id="173:3116"> <!-- 3 cards done-->
       <div class="x3-card-system-3sITVr" data-id="173:3117">
         <h2 class="daca-aducei-autoturi-gRxQAK material-theme-blueheadlinemedium" data-id="173:3118">
@@ -236,7 +231,7 @@
     </div>
     <!-- </div> -->
 
-    <div class="contact-desktop-zEMWSi" data-id="228:2974">
+    <!-- <div class="contact-desktop-zEMWSi" data-id="228:2974">
       <div class="contact-mobile-VpWYN0" data-id="249:223">
         <div class="contact-Wb6jT4" data-id="249:224">
           <div class="card-info-hNZXTq" data-id="249:225">
@@ -281,31 +276,31 @@
           
             <form @submit.prevent="submitForm">
               <div class="contact-form-hNZXTq">
-              <!-- Name Input -->
+             
               <div class="name-nQwLm2">
                 <input v-model="form.nume" class="nume-ujjqxD poppins-medium-stack-14-8px" name="nume" placeholder="Nume" type="text" required />
                 <img class="vector-4-ujjqxD" src="../components/images/vector-4-2@2x.webp" alt="Vector 4" />
               </div>
 
-              <!-- Surname Input -->
+          
               <div class="surname-nQwLm2">
                 <input v-model="form.prenume" class="prenume-zNx0t3 poppins-medium-stack-14-8px" name="prenume" placeholder="Prenume" type="text" required />
                 <img class="vector-5-zNx0t3" src="../components/images/vector-4-4@2x.webp" alt="Vector 5" />
               </div>
 
-              <!-- Email Input -->
+          
               <div class="mail-nQwLm2 mail">
                 <input v-model="form.email" class="email-JSvoEZ poppins-medium-stack-14-8px" name="email" placeholder="Email" type="email" required />
                 <img class="vector-6-JSvoEZ vector-6" src="../components/images/vector-4-4@2x.webp" alt="Vector 6" />
               </div>
 
-              <!-- Phone Input -->
+           
               <div class="phone-nQwLm2 phone">
                 <input v-model="form.numar_de_telefon_optional" class="numar-de-telefon-optional-wLv2rG poppins-medium-stack-14-8px" name="numardetelefonoptional" placeholder="Numar de telefon (optional)" type="number" />
                 <img class="vector-7-wLv2rG" src="../components/images/vector-7-2@2x.webp" alt="Vector 7" />
               </div>
 
-              <!-- Message Input -->
+             
               <div class="message-nQwLm2">
                 <textarea v-model="form.mesaj" class="mesaj-OkBlSx" name="mesaj" placeholder="Mesaj" required></textarea>
                 <img class="vector-6-OkBlSx vector-6" src="../components/images/vector-6-5.webp" alt="Vector 6" />
@@ -314,24 +309,31 @@
               <input type="hidden" v-model="form.honeypot" name="honeypot" />
               <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
 
-              <!-- Submit Button -->
+           
               <button type="submit" class="button-FSbhl1 smart-layers-pointers">
                 <div class="trimite-mesaj-1SAeSx">
                   Trimite Mesaj
                 </div>
               </button>
+
+              <div style="background-color: red;">
+              <small style="color: black;">
+                This site is protected by reCAPTCHA and the Google 
+                <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+              </small>
+              </div>
             </div>
           </form>
-
-
         </div>
       </div>
 
 
       
 
-    </div>
+    </div> -->
   </form> <!--^^^^^ DESKTOP ^^^^^ -->
+
 
   <form class="tablet-1280-720 screen" data-id="228:3453" name="form3" action="form3" method="post">
     <input type="text" name="trapit" value="" style="display: none" />
@@ -563,7 +565,7 @@
       </div>
     </div>
 
-    <div class="contact-tablet-PXugFz" data-id="228:3220">
+    <!-- <div class="contact-tablet-PXugFz" data-id="228:3220">
       <div class="contact-Znx2ca" data-id="228:3221">
 
         <div class="card-info-d3ZKcW" data-id="228:3222">
@@ -603,7 +605,7 @@
         </div>
 
         <form @submit.prevent="submitForm">
-        <!-- Your form HTML with updated classes -->
+  
         <div class="frame-1000001764-d3ZKcW">
           <div class="name-Saiq66">
             <input v-model="form.nume" class="nume-VeK45S poppins-medium-stack-23-3px" name="nume" placeholder="Nume" type="text" required />
@@ -638,11 +640,9 @@
         </form>
 
       </div>
-    </div>
+    </div> -->
 
   </form> <!--^^^^^ TABLET ^^^^^ -->
-
-
 
 
   <form class="mobile-720-360 screen" data-id="207:2694" name="form2" action="form2" method="post">
@@ -808,7 +808,7 @@
       </div>
     </div>
 
-    <div class="contact-mobile-gJwtjs" data-id="228:3455">
+    <!-- <div class="contact-mobile-gJwtjs" data-id="228:3455">
       <div class="contact-0FjsKs contact" data-id="228:3456">
         <div class="card-info-jSxk1B" data-id="228:3457">
           <div class="frame-1-j04gnn" data-id="228:3458">
@@ -876,7 +876,7 @@
         </div>
 
         <form @submit.prevent="submitForm">
-          <!-- Updated form HTML with matching classes -->
+           Updated form HTML with matching classes 
           <div class="contact-form-jSxk1B">
             <div class="name-FSbhl1">
               <input v-model="form.nume" class="nume-Wmm1CL poppins-medium-stack-14-8px" name="nume" placeholder="Nume" type="text" required />
@@ -911,93 +911,19 @@
         </form>
 
       </div>
-    </div>
+    </div> -->
   </form> <!--^^^^^ MOBILE ^^^^^ -->
 
+  <Contact_form/>
 
 </template>
 
   
 <script setup>
-import { ref, onMounted } from 'vue';
-
-const siteKey = '6LdZmFAqAAAAADJi2v5hylUGu4pQmDGM59_GRBRk'; // Your site key
-
-const form = ref({
-  nume: '',
-  prenume: '',
-  email: '',
-  numar_de_telefon_optional: '',
-  mesaj: '',
-  honeypot: '', // Honeypot field
-  recaptchaToken: '', // Added reCAPTCHA token field
-});
-
-const submitForm = async () => {
-  // Validate required fields
-  if (!form.value.nume || !form.value.prenume || !form.value.email) {
-    alert('Vă rugăm să completați toate câmpurile obligatorii.');
-    return;
-  }
-
-  // Check if grecaptcha is available
-  if (typeof grecaptcha === 'undefined' || !grecaptcha.enterprise) {
-    alert('reCAPTCHA is not loaded. Please try again later.');
-    return;
-  }
-
-  try {
-    // Get the reCAPTCHA token
-    const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
-    form.value.recaptchaToken = recaptchaToken; // Add token to form data
-
-    const response = await fetch('https://test.topspeedservice.ro/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form.value),
-    });
-
-    if (response.ok) {
-      // Track Google Ads conversion
-      gtag('event', 'conversion', {
-        send_to: 'AW-16523511425/Z7fjCNijldcZEIGNg8c9', // Replace with your Conversion ID and Label
-        event_callback: () => {
-          console.log('Google Ads conversion tracked');
-        }
-      });
-
-      // Clear form on success
-      form.value = {
-        nume: '',
-        prenume: '',
-        email: '',
-        numar_de_telefon_optional: '',
-        mesaj: '',
-        honeypot: '',
-        recaptchaToken: '',
-      };
-      alert('Mesajul dvs. a fost trimis cu succes!');
-    } else {
-      alert('A apărut o eroare. Vă rugăm să încercați din nou.');
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert('A apărut o eroare. Vă rugăm să încercați din nou.');
-  }
-};
-
-// Load the reCAPTCHA script
-onMounted(() => {
-  const script = document.createElement('script');
-  script.src = 'https://www.google.com/recaptcha/enterprise.js?render=' + siteKey;
-  script.async = true;
-  document.head.appendChild(script);
-});
+import Contact_form from '@/components/Contact_form.vue';
 </script>
   
-  <style lang="scss" scoped>
+<style lang="scss" scoped>
   
   html, body {
   overflow: hidden; /* Hide scrollbars */
@@ -1014,4 +940,4 @@ onMounted(() => {
     visibility: hidden !important;
   }
 
-  </style>
+</style>

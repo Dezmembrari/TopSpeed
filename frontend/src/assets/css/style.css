@@ -2226,10 +2226,10 @@ input:focus {
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
-  gap: 51px 40.415000915527344px;
+  gap: 51px 40.5px;
   justify-content: center;
   overflow: hidden;
-  padding: 10px 0px;
+  padding: auto;
   position: relative;
   width: 316.5841979980469px;
 }
