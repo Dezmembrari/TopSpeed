@@ -6,12 +6,83 @@ const nodemailer = require("nodemailer");
 const axios = require("axios");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
+// const cors = require("cors"); // Add CORS
 require("dotenv").config({ path: "./credentials.env" });
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// ... (previous middleware and configurations remain the same) ...
+// Use compression middleware to enable Gzip compression
+app.use(compression());
+
+// Enable trust proxy
+app.set('trust proxy', 'loopback');
+
+// Middleware to set the correct Content-Type for JS and CSS for FireFox
+app.use((req, res, next) => {
+  if (req.url.endsWith('.js')) {
+    res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+  } else if (req.url.endsWith('.css')) {
+    res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+  }
+  next();
+});
+
+// Serve Brotli or Gzip compressed files if they exist
+app.get('*.js', (req, res, next) => {
+  const brotliPath = path.join(__dirname, '../frontend/dist', req.url + '.br');
+  const gzipPath = path.join(__dirname, '../frontend/dist', req.url + '.gz');
+
+  if (fs.existsSync(brotliPath)) {
+    req.url = req.url + '.br';
+    res.set('Content-Encoding', 'br');
+  } else if (fs.existsSync(gzipPath)) {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+  }
+
+  next();
+});
+
+app.get('*.css', (req, res, next) => {
+  const brotliPath = path.join(__dirname, '../frontend/dist', req.url + '.br');
+  const gzipPath = path.join(__dirname, '../frontend/dist', req.url + '.gz');
+
+  if (fs.existsSync(brotliPath)) {
+    req.url = req.url + '.br';
+    res.set('Content-Encoding', 'br');
+  } else if (fs.existsSync(gzipPath)) {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+  }
+
+  next();
+});
+
+// Serve the Vue 3 build files
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Route all other requests to index.html (for client-side routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+});
+
+// Middleware to parse form data
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Add Helmet middleware with CSP
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'","https://maps.googleapis.com","https://maps.gstatic.com", "static.hotjar.com", "maps.googleapis.com" ],  // Allow scripts from Google Maps and Allow scripts from Google Maps static resources
+      frameAncestors: ["'self'", "https://www.google.com"], // Allow framing from self and Google
+      imgSrc: ["'self'", "https://maps.gstatic.com", "https://*.googleusercontent.com"], // Allow images from Google User Content and Allow images from Google Maps static resources
+      styleSrc: ["'self'","https://fonts.googleapis.com"],  // Allow styles from Google Fonts (if used)
+    },
+  },
+}));
 
 // Define rate limiter
 const contactFormLimiter = rateLimit({
