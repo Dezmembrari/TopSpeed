@@ -64,9 +64,10 @@
 <script setup>
 import { ref, computed } from 'vue';
 import axios from 'axios';
-import { useReCaptcha } from 'vue-recaptcha-v3';
+import { getCurrentInstance } from 'vue';
 
-const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
+const app = getCurrentInstance();
+const recaptcha = app.appContext.config.globalProperties.$recaptcha;
 
 const form = ref({
   nume: '',
@@ -92,8 +93,7 @@ const submitForm = async () => {
   formMessage.value = null;
 
   try {
-    await recaptchaLoaded();
-    const recaptchaToken = await executeRecaptcha('submit_contact_form');
+    const recaptchaToken = await recaptcha.executeRecaptcha('submit_contact_form');
 
     const response = await axios.post('/api/contact', {
       nume: form.value.nume,
