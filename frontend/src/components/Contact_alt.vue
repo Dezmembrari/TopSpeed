@@ -62,7 +62,7 @@ import { ref } from 'vue';
 import axios from 'axios';
 import { useReCaptcha } from 'vue-recaptcha-v3';
 
-const { executeRecaptcha } = useReCaptcha();
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
 const form = ref({
     nume: '',
@@ -77,6 +77,9 @@ const form = ref({
 const submitForm = async () => {
     if (form.value.honeypot === '') {
         try {
+            // Wait until reCAPTCHA has been loaded
+            await recaptchaLoaded();
+
             // Execute reCAPTCHA to get the token
             form.value.recaptchaToken = await executeRecaptcha();
 
