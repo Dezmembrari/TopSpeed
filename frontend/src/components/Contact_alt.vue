@@ -96,12 +96,8 @@ const submitForm = async () => {
     const recaptchaToken = await recaptcha.executeRecaptcha('submit_contact_form');
 
     const response = await axios.post('/api/contact', {
-      nume: form.value.nume,
-      prenume: form.value.prenume,
-      email: form.value.email,
-      numar_de_telefon_optional: form.value.numar_de_telefon_optional,
-      mesaj: form.value.mesaj,
-      recaptchaToken: recaptchaToken
+      ...form.value,
+      recaptchaToken
     });
 
     console.log('Mesajul a fost trimis cu succes: ', response.data);

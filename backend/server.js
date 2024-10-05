@@ -38,30 +38,28 @@ const blacklistedDomains = [
 ];
 
 // Route for the contact form
-app.post("/api/contact", contactFormLimiter, async (req, res) => {
-  console.log("Request body:", req.body);
-
-  const {
-    nume,
-    prenume,
-    email,
-    numar_de_telefon_optional,
-    mesaj,
-    honeypot,
-    recaptchaToken,
+app.post('/api/contact', contactFormLimiter, async (req, res) => {
+  console.log('Request body:', req.body);
+  
+  const { 
+    nume, 
+    prenume, 
+    email, 
+    numar_de_telefon_optional, 
+    mesaj, 
+    honeypot, 
+    recaptchaToken 
   } = req.body;
 
   // Honeypot field check
   if (honeypot) {
-    console.warn("Spam detected via honeypot field");
-    return res.status(400).json({ error: "Spam detected" });
+    console.warn('Spam detected via honeypot field');
+    return res.status(400).json({ error: 'Spam detected' });
   }
 
   // Validate the input before proceeding
   if (!nume || !prenume || !email || !mesaj) {
-    return res
-      .status(400)
-      .json({ error: "Please fill in all required fields." });
+    return res.status(400).json({ error: 'Please fill in all required fields.' });
   }
 
   // Email domain blacklist check
