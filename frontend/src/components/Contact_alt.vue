@@ -3,7 +3,6 @@
         <div class="mobile-container">
             <div class="contact-card">
                 <div class="content-container">
-                  
                     <div class="card-info">
                         <h1 class="title">Informatii contact</h1>
                         <div class="contact-details">
@@ -26,7 +25,6 @@
                         </div>
                     </div>
 
-                   
                     <div class="contact-form-container">
                         <form @submit.prevent="submitForm" class="contact-form">
                             <input v-model="form.nume" name="nume" placeholder="Nume" required />
@@ -36,13 +34,19 @@
                                 placeholder="Numar de telefon (optional)" type="number" />
                             <textarea v-model="form.mesaj" name="mesaj" placeholder="Mesaj" required></textarea>
                             <input type="hidden" v-model="form.honeypot" name="honeypot" />
-                            <input type="hidden" v-model="form.recaptchaToken" name="recaptchaToken" />
-                            <button type="submit">Trimite Mesaj</button>
+                            <button type="submit" :disabled="isSubmitting">
+                                {{ submitButtonText }}
+                            </button>
                         </form>
+                        <div v-if="formMessage" :class="['form-message', formMessage.type]">
+                            {{ formMessage.text }}
+                        </div>
                         <div class="recaptcha-disclaimer">
                             This site is protected by reCAPTCHA and the Google
-                            <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
-                            <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+                            <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>
+                            and
+                            <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+                            apply.
                         </div>
                     </div>
                 </div>
@@ -58,46 +62,66 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import axios from 'axios';
 import { useReCaptcha } from 'vue-recaptcha-v3';
 
 const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
 const form = ref({
-    nume: '',
-    prenume: '',
-    email: '',
-    numar_de_telefon_optional: '',
-    mesaj: '',
-    honeypot: '',
-    recaptchaToken: ''
+  nume: '',
+  prenume: '',
+  email: '',
+  numar_de_telefon_optional: '',
+  mesaj: '',
+  honeypot: '',
 });
 
+const isSubmitting = ref(false);
+const formMessage = ref(null);
+
+const submitButtonText = computed(() => isSubmitting.value ? 'Se trimite...' : 'Trimite Mesaj');
+
 const submitForm = async () => {
-    if (form.value.honeypot === '') {
-        try {
-            // Wait until reCAPTCHA has been loaded
-            await recaptchaLoaded();
+  if (form.value.honeypot !== '') {
+    console.log('Potential spam submission detected');
+    return;
+  }
 
-            // Execute reCAPTCHA to get the token
-            form.value.recaptchaToken = await executeRecaptcha();
+  isSubmitting.value = true;
+  formMessage.value = null;
 
-            // Send form data and reCAPTCHA token to Express backend
-            const response = await axios.post('/api/contact', {
-                nume: form.value.nume,
-                prenume: form.value.prenume,
-                email: form.value.email,
-                numar_de_telefon_optional: form.value.numar_de_telefon_optional,
-                mesaj: form.value.mesaj,
-                recaptchaToken: form.value.recaptchaToken
-            });
+  try {
+    await recaptchaLoaded();
+    const recaptchaToken = await executeRecaptcha('submit_contact_form');
 
-            console.log('Mesajul a fost trimis cu succes: ', response.data);
-        } catch (error) {
-            console.error('A fost intampinata o problema: ', error);
-        }
-    }
+    const response = await axios.post('/api/contact', {
+      nume: form.value.nume,
+      prenume: form.value.prenume,
+      email: form.value.email,
+      numar_de_telefon_optional: form.value.numar_de_telefon_optional,
+      mesaj: form.value.mesaj,
+      recaptchaToken: recaptchaToken
+    });
+
+    console.log('Mesajul a fost trimis cu succes: ', response.data);
+    formMessage.value = { type: 'success', text: 'Mesajul a fost trimis cu succes!' };
+
+    // Reset form after successful submission
+    form.value = {
+      nume: '',
+      prenume: '',
+      email: '',
+      numar_de_telefon_optional: '',
+      mesaj: '',
+      honeypot: '',
+    };
+  } catch (error) {
+    console.error('A fost intampinata o problema: ', error);
+    formMessage.value = { type: 'error', text: 'A aparut o eroare la trimiterea mesajului. Va rugam sa incercati din nou.' };
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -112,7 +136,7 @@ const submitForm = async () => {
     background-color: var(--receptie-theme-3syslightsurface-container-lowest);
 }
 
-a{
+a {
     color: white;
 }
 
@@ -220,6 +244,23 @@ a{
     }
 }
 
+.form-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+}
+
 .recaptcha-disclaimer {
     font-size: 0.9rem;
     margin-top: 10px;
@@ -266,7 +307,6 @@ a{
 }
 
 @media (max-width: 720px) {
-
     .screen {
         flex-direction: column;
     }
