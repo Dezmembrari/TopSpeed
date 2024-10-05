@@ -65,36 +65,36 @@ import { useReCaptcha } from 'vue-recaptcha-v3';
 const { executeRecaptcha } = useReCaptcha();
 
 const form = ref({
-  nume: '',
-  prenume: '',
-  email: '',
-  numar_de_telefon_optional: '',
-  mesaj: '',
-  honeypot: '',
-  recaptchaToken: ''
+    nume: '',
+    prenume: '',
+    email: '',
+    numar_de_telefon_optional: '',
+    mesaj: '',
+    honeypot: '',
+    recaptchaToken: ''
 });
 
 const submitForm = async () => {
-  if (form.value.honeypot === '') {
-    try {
-      // Execute reCAPTCHA to get the token
-      form.value.recaptchaToken = await executeRecaptcha();
+    if (form.value.honeypot === '') {
+        try {
+            // Execute reCAPTCHA to get the token
+            form.value.recaptchaToken = await executeRecaptcha();
 
-      // Send form data and reCAPTCHA token to Express backend
-      const response = await axios.post('/api/contact', {
-        nume: form.value.nume,
-        prenume: form.value.prenume,
-        email: form.value.email,
-        numar_de_telefon_optional: form.value.numar_de_telefon_optional,
-        mesaj: form.value.mesaj,
-        recaptchaToken: form.value.recaptchaToken
-      });
+            // Send form data and reCAPTCHA token to Express backend
+            const response = await axios.post('/api/contact', {
+                nume: form.value.nume,
+                prenume: form.value.prenume,
+                email: form.value.email,
+                numar_de_telefon_optional: form.value.numar_de_telefon_optional,
+                mesaj: form.value.mesaj,
+                recaptchaToken: form.value.recaptchaToken
+            });
 
-      console.log('Mesajul a fost trimis cu succes: ', response.data);
-    } catch (error) {
-      console.error('A fost intampinata o problema: ', error);
+            console.log('Mesajul a fost trimis cu succes: ', response.data);
+        } catch (error) {
+            console.error('A fost intampinata o problema: ', error);
+        }
     }
-  }
 };
 </script>
 
