@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "emailjs-com": "^3.2.0",
     "vue": "^3.4.29",
+    "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {

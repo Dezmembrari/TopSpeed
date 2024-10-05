@@ -3,20 +3,20 @@
         <div class="mobile-container">
             <div class="contact-card">
                 <div class="content-container">
-                    <!-- Contact Info Section -->
+                  
                     <div class="card-info">
                         <h1 class="title">Informatii contact</h1>
                         <div class="contact-details">
                             <a href="tel:+40788990011">
-                            <div class="contact-item">
-                                <img src="../components/images/bxs-phone-call-4@2x.webp" alt="Phone" />
-                                <p>0788 990 011</p>
-                            </div>
+                                <div class="contact-item">
+                                    <img src="../components/images/bxs-phone-call-4@2x.webp" alt="Phone" />
+                                    <p>0788 990 011</p>
+                                </div>
                             </a>
                             <a href="mailto:contact@topspeedservice.ro">
                                 <div class="contact-item">
-                                <img src="../components/images/ic-sharp-email-4@2x.webp" alt="Email" />
-                                <p>contact@topspeedservice.ro</p>
+                                    <img src="../components/images/ic-sharp-email-4@2x.webp" alt="Email" />
+                                    <p>contact@topspeedservice.ro</p>
                                 </div>
                             </a>
                             <div class="contact-item">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    <!-- Contact Form Section -->
+                   
                     <div class="contact-form-container">
                         <form @submit.prevent="submitForm" class="contact-form">
                             <input v-model="form.nume" name="nume" placeholder="Nume" required />
@@ -58,81 +58,46 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+import axios from 'axios';
+import { useReCaptcha } from 'vue-recaptcha-v3';
 
-const siteKey = '6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE'; // Your site key
+const { executeRecaptcha } = useReCaptcha({
+  siteKey: '6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE'  // Replace with your site key
+});
 
 const form = ref({
-    nume: '',
-    prenume: '',
-    email: '',
-    numar_de_telefon_optional: '',
-    mesaj: '',
-    honeypot: '', // Honeypot field
-    recaptchaToken: '', // Added reCAPTCHA token field
+  nume: '',
+  prenume: '',
+  email: '',
+  numar_de_telefon_optional: '',
+  mesaj: '',
+  honeypot: '',
+  recaptchaToken: ''
 });
 
 const submitForm = async () => {
-    // Validate required fields
-    if (!form.value.nume || !form.value.prenume || !form.value.email) {
-        alert('Vă rugăm să completați toate câmpurile obligatorii.');
-        return;
-    }
-
-    // Check if grecaptcha is available
-    if (typeof grecaptcha === 'undefined' || !grecaptcha.enterprise) {
-        alert('reCAPTCHA is not loaded. Please try again later.');
-        return;
-    }
-
+  if (form.value.honeypot === '') {
     try {
-        // Get the reCAPTCHA token
-        const recaptchaToken = await grecaptcha.enterprise.execute(siteKey, { action: 'submit' });
-        form.value.recaptchaToken = recaptchaToken; // Add token to form data
+      // Execute reCAPTCHA to get the token
+      form.value.recaptchaToken = await executeRecaptcha();
 
-        const response = await fetch('https://topspeedservice.eu/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(form.value),
-        });
+      // Send form data and reCAPTCHA token to Express backend
+      const response = await axios.post('/api/contact', {
+        nume: form.value.nume,
+        prenume: form.value.prenume,
+        email: form.value.email,
+        numar_de_telefon_optional: form.value.numar_de_telefon_optional,
+        mesaj: form.value.mesaj,
+        recaptchaToken: form.value.recaptchaToken
+      });
 
-        if (response.ok) {
-            // // Track Google Ads conversion
-            // gtag('event', 'conversion', {
-            //     send_to: 'AW-16523511425/Z7fjCNijldcZEIGNg8c9', // Replace with your Conversion ID and Label
-            //     event_callback: () => {
-            //         console.log('Google Ads conversion tracked');
-            //     }
-            // });
-
-            // Clear form on success
-            form.value = {
-                nume: '',
-                prenume: '',
-                email: '',
-                numar_de_telefon_optional: '',
-                mesaj: '',
-                honeypot: '',
-                recaptchaToken: '',
-            };
-            alert('Mesajul dvs. a fost trimis cu succes!');
-        } else {
-            alert('A apărut o eroare. Vă rugăm să încercați din nou.');
-        }
+      console.log('Mesajul a fost trimis cu succes: ', response.data);
     } catch (error) {
-        console.error('Error:', error);
-        alert('A apărut o eroare. Vă rugăm să încercați din nou.');
+      console.error('A fost intampinata o problema: ', error);
     }
+  }
 };
-// Load the reCAPTCHA script
-onMounted(() => {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/enterprise.js?render=6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE';
-    script.async = true;
-    document.head.appendChild(script);
-});
 </script>
 
 <style scoped lang="scss">

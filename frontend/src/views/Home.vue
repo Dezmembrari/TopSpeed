@@ -639,6 +639,8 @@
   
 <script setup>
 import Contact_alt from '@/components/Contact_alt.vue';
+import Contact_form from '@/components/Contact_form.vue';
+
 </script>
   
 <style lang="scss" scoped>
