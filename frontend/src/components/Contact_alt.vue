@@ -62,9 +62,7 @@ import { ref } from 'vue';
 import axios from 'axios';
 import { useReCaptcha } from 'vue-recaptcha-v3';
 
-const { executeRecaptcha } = useReCaptcha({
-  siteKey: '6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE'  // Replace with your site key
-});
+const { executeRecaptcha } = useReCaptcha();
 
 const form = ref({
   nume: '',
