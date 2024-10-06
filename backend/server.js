@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const compression = require("compression");
@@ -7,7 +8,6 @@ const axios = require("axios");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 // const cors = require("cors"); // Add CORS
-require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -153,9 +153,10 @@ const blacklistedDomains = [
   
     // Verify reCAPTCHA
     try {
-      const recaptchaSecret = '6LcBGFgqAAAAANfpXKS2m4G9dTd8K5xBkKbrXFGb';//process.env.RECAPTCHA_SECRET_KEY;
+      const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;//process.env.RECAPTCHA_SECRET_KEY;
       console.log('reCAPTCHA secret key:', recaptchaSecret); // Add this line for debugging
       console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
+      console.log('Port: ', process.env.PORT);
   
       const recaptchaResponse = await axios.post(
         `https://www.google.com/recaptcha/api/siteverify`,
