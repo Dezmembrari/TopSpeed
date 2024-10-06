@@ -10,9 +10,9 @@ const helmet = require("helmet");
 // const cors = require("cors"); // Add CORS
 
 //Test log out console
-console.log('Server is running on port:', process.env.PORT);
-console.log('SMTP User:', process.env.SMTP_USER);
-console.log('reCAPTCHA Secret Key:', process.env.RECAPTCHA_SECRET_KEY);
+// console.log('Server is running on port:', process.env.PORT);
+// console.log('SMTP User:', process.env.SMTP_USER);
+// console.log('reCAPTCHA Secret Key:', process.env.RECAPTCHA_SECRET_KEY);
 
 const app = express();
 const port = process.env.PORT || 3000;
