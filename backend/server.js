@@ -109,73 +109,145 @@ const blacklistedDomains = [
 ];
 
 // Route for the contact form
-app.post('/api/contact', contactFormLimiter, async (req, res) => {
-  console.log('Request body:', req.body);
+// app.post('/api/contact', contactFormLimiter, async (req, res) => {
+//   console.log('Request body:', req.body);
   
-  const { 
-    nume, 
-    prenume, 
-    email, 
-    numar_de_telefon_optional, 
-    mesaj, 
-    honeypot, 
-    recaptchaToken 
-  } = req.body;
+//   const { 
+//     nume, 
+//     prenume, 
+//     email, 
+//     numar_de_telefon_optional, 
+//     mesaj, 
+//     honeypot, 
+//     recaptchaToken 
+//   } = req.body;
 
-  // Honeypot field check
-  if (honeypot) {
-    console.warn('Spam detected via honeypot field');
-    return res.status(400).json({ error: 'Spam detected' });
-  }
+//   // Honeypot field check
+//   if (honeypot) {
+//     console.warn('Spam detected via honeypot field');
+//     return res.status(400).json({ error: 'Spam detected' });
+//   }
 
-  // Validate the input before proceeding
-  if (!nume || !prenume || !email || !mesaj) {
-    return res.status(400).json({ error: 'Please fill in all required fields.' });
-  }
+//   // Validate the input before proceeding
+//   if (!nume || !prenume || !email || !mesaj) {
+//     return res.status(400).json({ error: 'Please fill in all required fields.' });
+//   }
 
-  // Email domain blacklist check
-  const emailDomain = email.split("@")[1].toLowerCase();
-  if (blacklistedDomains.includes(emailDomain)) {
-    console.warn("Spam detected via email domain blacklist");
-    return res.status(400).json({ error: "Spam detected" });
-  }
+//   // Email domain blacklist check
+//   const emailDomain = email.split("@")[1].toLowerCase();
+//   if (blacklistedDomains.includes(emailDomain)) {
+//     console.warn("Spam detected via email domain blacklist");
+//     return res.status(400).json({ error: "Spam detected" });
+//   }
 
-  // Keyword filtering
-  const messageContent = `${nume} ${prenume} ${email} ${mesaj}`.toLowerCase();
-  const containsSpamKeyword = spamKeywords.some((keyword) =>
-    messageContent.includes(keyword)
-  );
+//   // Keyword filtering
+//   const messageContent = `${nume} ${prenume} ${email} ${mesaj}`.toLowerCase();
+//   const containsSpamKeyword = spamKeywords.some((keyword) =>
+//     messageContent.includes(keyword)
+//   );
 
-  if (containsSpamKeyword) {
-    console.warn("Spam detected via keyword filtering");
-    return res.status(400).json({ error: "Spam detected" });
-  }
+//   if (containsSpamKeyword) {
+//     console.warn("Spam detected via keyword filtering");
+//     return res.status(400).json({ error: "Spam detected" });
+//   }
 
-  // Verify reCAPTCHA
-  try {
-    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-    const recaptchaResponse = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify`,
-      null,
-      {
-        params: {
-          secret: recaptchaSecret,
-          response: recaptchaToken,
-        },
-      }
-    );
+//   // Verify reCAPTCHA
+//   try {
+//     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+//     const recaptchaResponse = await axios.post(
+//       `https://www.google.com/recaptcha/api/siteverify`,
+//       null,
+//       {
+//         params: {
+//           secret: recaptchaSecret,
+//           response: recaptchaToken,
+//         },
+//       }
+//     );
 
-    console.log("reCAPTCHA verification response:", recaptchaResponse.data);
+//     console.log("reCAPTCHA verification response:", recaptchaResponse.data);
 
-    if (!recaptchaResponse.data.success) {
-      return res.status(400).json({ error: "reCAPTCHA verification failed" });
+  //   if (!recaptchaResponse.data.success) {
+  //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
+  //   }
+  // } catch (err) {
+  //   console.error("reCAPTCHA verification error:", err);
+  //   return res
+  //     .status(500)
+  //     .json({ error: "Internal server error during reCAPTCHA verification" });
+  // }
+
+  app.post('/api/contact', contactFormLimiter, async (req, res) => {
+    console.log('Request body:', req.body);
+    
+    const { 
+      nume, 
+      prenume, 
+      email, 
+      numar_de_telefon_optional, 
+      mesaj, 
+      honeypot, 
+      recaptchaToken 
+    } = req.body;
+  
+    // Honeypot field check
+    if (honeypot) {
+      console.warn('Spam detected via honeypot field');
+      return res.status(400).json({ error: 'Spam detected' });
     }
-  } catch (err) {
-    console.error("reCAPTCHA verification error:", err);
-    return res
-      .status(500)
-      .json({ error: "Internal server error during reCAPTCHA verification" });
-  }
+  
+    // Validate the input before proceeding
+    if (!nume || !prenume || !email || !mesaj) {
+      return res.status(400).json({ error: 'Please fill in all required fields.' });
+    }
+  
+    // Email domain blacklist check
+    const emailDomain = email.split("@")[1].toLowerCase();
+    if (blacklistedDomains.includes(emailDomain)) {
+      console.warn("Spam detected via email domain blacklist");
+      return res.status(400).json({ error: "Spam detected" });
+    }
+  
+    // Keyword filtering
+    const messageContent = `${nume} ${prenume} ${email} ${mesaj}`.toLowerCase();
+    const containsSpamKeyword = spamKeywords.some((keyword) =>
+      messageContent.includes(keyword)
+    );
+  
+    if (containsSpamKeyword) {
+      console.warn("Spam detected via keyword filtering");
+      return res.status(400).json({ error: "Spam detected" });
+    }
+  
+    // Verify reCAPTCHA
+    try {
+      const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+      console.log('reCAPTCHA secret key:', recaptchaSecret); // Add this line for debugging
+      console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
+  
+      const recaptchaResponse = await axios.post(
+        `https://www.google.com/recaptcha/api/siteverify`,
+        null,
+        {
+          params: {
+            secret: recaptchaSecret,
+            response: recaptchaToken,
+          },
+        }
+      );
+  
+      console.log("reCAPTCHA verification response:", recaptchaResponse.data);
+  
+      if (!recaptchaResponse.data.success) {
+        return res.status(400).json({ error: "reCAPTCHA verification failed", details: recaptchaResponse.data['error-codes'] });
+      }
+    } catch (err) {
+      console.error("reCAPTCHA verification error:", err);
+      return res
+        .status(500)
+        .json({ error: "Internal server error during reCAPTCHA verification" });
+    }
+  
 
   try {
     // Create a transporter object using your SMTP server settings

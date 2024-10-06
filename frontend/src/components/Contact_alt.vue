@@ -95,6 +95,8 @@ const submitForm = async () => {
     await recaptchaLoaded();
     const recaptchaToken = await executeRecaptcha('submit_contact_form');
 
+    console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
+
     const response = await axios.post('/api/contact', {
       ...form.value,
       recaptchaToken
@@ -114,6 +116,9 @@ const submitForm = async () => {
     };
   } catch (error) {
     console.error('A fost intampinata o problema: ', error);
+    if (error.response) {
+      console.error('Error response:', error.response.data);
+    }
     formMessage.value = { type: 'error', text: 'A aparut o eroare la trimiterea mesajului. Va rugam sa incercati din nou.' };
   } finally {
     isSubmitting.value = false;
