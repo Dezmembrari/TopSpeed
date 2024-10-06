@@ -26,7 +26,7 @@ cd ..
 
 # Step 4: Restart the backend server using PM2
 echo "Restarting the backend server..."
-pm2 restart topspeed-backend || pm2 start ./backend/server.js --name "topspeed-backend"
+pm2 restart topspeed-backend || pm2 start ecosystem.config.js --env production
 pm2 save
 pm2 startup
 pm2 save
