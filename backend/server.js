@@ -17,6 +17,15 @@ const helmet = require("helmet");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware to redirect HTTP to HTTPS
+app.use((req, res, next) => {
+  if (req.protocol === 'http') {
+    res.redirect(301, `https://${req.headers.host}${req.url}`);
+  } else {
+    next();
+  }
+});
+
 // Use compression middleware to enable Gzip compression
 app.use(compression());
 
