@@ -115,7 +115,7 @@ const blacklistedDomains = [
 
 // Route for the contact form
   app.post('/api/contact', contactFormLimiter, async (req, res) => {
-    console.log('Request body:', req.body);
+    // console.log('Request body:', req.body);
     
     const { 
       nume, 
@@ -159,9 +159,9 @@ const blacklistedDomains = [
     // Verify reCAPTCHA
     try {
       const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;//process.env.RECAPTCHA_SECRET_KEY;
-      console.log('reCAPTCHA secret key:', recaptchaSecret); // Add this line for debugging
-      console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
-      console.log('Port: ', process.env.PORT);
+      // console.log('reCAPTCHA secret key:', recaptchaSecret); // Add this line for debugging
+      // console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
+      // console.log('Port: ', process.env.PORT);
   
       const recaptchaResponse = await axios.post(
         `https://www.google.com/recaptcha/api/siteverify`,

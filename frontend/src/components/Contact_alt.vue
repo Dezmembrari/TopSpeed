@@ -95,7 +95,7 @@ const submitForm = async () => {
     await recaptchaLoaded();
     const recaptchaToken = await executeRecaptcha('submit_contact_form');
 
-    console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
+    // console.log('reCAPTCHA token:', recaptchaToken); // Add this line for debugging
 
     const response = await axios.post('/api/contact', {
       ...form.value,
