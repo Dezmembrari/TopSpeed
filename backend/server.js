@@ -19,7 +19,8 @@ const port = process.env.PORT || 3000;
 
 // Middleware to redirect HTTP to HTTPS
 app.use((req, res, next) => {
-  if (req.protocol === 'http') {
+  // Check the 'X-Forwarded-Proto' header set by Apache
+  if (req.get('X-Forwarded-Proto') !== 'https') {
     res.redirect(301, `https://${req.headers.host}${req.url}`);
   } else {
     next();
