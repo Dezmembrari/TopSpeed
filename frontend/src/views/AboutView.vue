@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Container",
+  name: "AboutView",
 };
 </script>
 
@@ -28,11 +28,16 @@ export default {
   background-color: var(--background-1);
   display: flex;
   flex-wrap: wrap;
-  gap: 140px 21px;
+  gap: 21px;
   justify-content: center;
-  padding: 160px 50px 50px;
+  padding:50px;
   position: relative;
   min-width: 360px;
+
+  @media (min-width:1580px){
+    padding-top:15vh;
+    padding-bottom:15vh;
+  }
 
 
   .frame {

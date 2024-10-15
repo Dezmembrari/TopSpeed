@@ -14,9 +14,10 @@ import Contact_alt from '@/components/Contact_alt.vue';
 <style lang="scss" scoped>
 
 .padding_contact{
-  padding-top: 90px;
-  @media (max-width:765px) {
-    padding-top: 45px;
+  background-color: var(--receptie-theme-3syslightsurface-container-lowest);
+  @media (min-width:1280px) {
+    padding-top:20vh;
+    padding-bottom:20vh;
   }
 }
 

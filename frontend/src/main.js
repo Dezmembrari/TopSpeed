@@ -3,8 +3,23 @@ import { createApp } from 'vue';
 import { VueReCaptcha } from 'vue-recaptcha-v3';
 import App from './App.vue';
 import router from './router';
+// Import the FontAwesome core
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// Import specific icon sets (solid, regular, brands)
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+
+// Import the FontAwesomeIcon component
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+// Add the imported icons to the library
+library.add(faBars, farStar, faGoogle);
 
 const app = createApp(App);
+
+app.component('font-awesome-icon', FontAwesomeIcon);
 
 app.use(router);
 

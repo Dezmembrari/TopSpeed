@@ -60,11 +60,12 @@ import TwoRow from '@/components/TwoRow.vue';
 
 <style lang="scss">
 .screen {
+  padding: 25px;
   background: var(--background-1);
   min-width: 360px;
   
   .servicii {
-    padding-top: 90px;
+    // padding-top: 90px;
     margin: 0px;
     position: relative;
     color: black;

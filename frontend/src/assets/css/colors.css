@@ -13,7 +13,7 @@
     --receptie-theme-3syslightshadow: #000000;
     --receptie-theme-3syslightsurface-container-highest: rgb(163, 219, 165);
     --receptie-theme-3syslightsurface-container-high: #CDEACE;
-    --receptie-theme-3syslightsurface-container-lowest: #DBE6D3;
+    --receptie-theme-3syslightsurface-container-lowest: hsl(95, 28%, 90%);
     --receptie-theme-3syslightsurface-variant: #d2e9d3;
     --receptie-theme-3syslighttertiary: #00497e;
     --receptie-theme-3syslighttertiary-container: #246eb0;
