@@ -1,7 +1,7 @@
 <template>
 
     <head>
-        <!-- <link rel="preload" href="https://topspeedservice.eu/assets/receptie-CRYEMBfw.webp" as="image" fetchPriority="high"> -->
+        <link rel="preload" href="https://topspeedservice.eu/assets/receptie-CRYEMBfw.webp" as="image" fetchPriority="high">
         <link rel="preload" src="./images/receptie.webp" as="image" fetchPriority="high">
         <link rel="preload" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" as="image" fetchPriority="high">
     </head>
