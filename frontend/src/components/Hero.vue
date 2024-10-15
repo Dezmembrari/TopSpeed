@@ -13,7 +13,9 @@
             <div class="overlap">
                 <div class="imagine">
                     <img alt="Poza receptie" class="whatsapp-image"
-                        src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" />
+                        src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" 
+                        fetchpriority="high"
+                        />
                 </div>
                 <div class="rectangle"></div>
                 <div class="text">
@@ -66,7 +68,7 @@
                 </a>
             </div>
             <div class="hero-image">
-                <img alt="Receptie Top Speed Service" loading="lazy" src="./images/receptie.webp" />
+                <img alt="Receptie Top Speed Service" fetchpriority="high" src="./images/receptie.webp" />
             </div>
         </div>
     </div>
