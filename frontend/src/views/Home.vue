@@ -1,42 +1,36 @@
 <template>
-    
   <input type="hidden" id="anPageName" name="page" value="desktop-u621280p" />
 
+  <!-- Static Hero component -->
+  <Hero />
 
-  <Hero/>
-
-  <ResponsiveCardComponent/>
-
-  <ResponsiveSteps/>
-  
-  <Contact_alt/>
-
+  <!-- Dynamically imported components wrapped in Suspense -->
+  <Suspense>
+    <template #default>
+      <!-- Wrap lazy-loaded components in a single parent element -->
+      <div>
+        <ResponsiveCardComponent />
+        <ResponsiveSteps />
+        <Contact_alt />
+      </div>
+    </template>
+    <template #fallback>
+      <!-- Fallback content during loading -->
+      <div>Loading components...</div>
+    </template>
+  </Suspense>
 </template>
 
-  
 <script setup>
-import Contact_alt from '@/components/Contact_alt.vue';
+import { defineAsyncComponent } from 'vue'; // <-- Import this!
 import Hero from '@/components/Hero.vue';
-import ResponsiveCardComponent from '@/components/ResponsiveCardComponent.vue';
-import ResponsiveSteps from '@/components/ResponsiveSteps.vue';
 
+// Lazy load the remaining components
+const ResponsiveCardComponent = defineAsyncComponent(() => import('@/components/ResponsiveCardComponent.vue'));
+const ResponsiveSteps = defineAsyncComponent(() => import('@/components/ResponsiveSteps.vue'));
+const Contact_alt = defineAsyncComponent(() => import('@/components/Contact_alt.vue'));
 </script>
-  
-<style lang="scss" scoped>
-  
-  html, body {
-  overflow: hidden; /* Hide scrollbars */
-  }
 
-  :global(#app) {
-  max-width: 100% !important; /* Ensure full width */
-  margin: 0 !important; /* Remove margin if needed */
-  padding: 0px !important; /* Adjust padding if needed */
-  /* Add other styles you need to override */
-  }
-
-  .grecaptcha-badge { 
-    visibility: hidden !important;
-  }
-
+<style scoped>
+/* Optional styling */
 </style>

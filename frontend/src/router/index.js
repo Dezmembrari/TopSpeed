@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Contact from '@/views/Contact.vue'
-import Privacy from '@/views/Privacy.vue'
-import TermsOfService from '@/views/TermsOfService.vue'
-import Cookies from '@/views/Cookies.vue'
-import Flota from '@/views/Flota.vue'
-import Servicii from '@/views/Servicii.vue'
+// import Contact from '@/views/Contact.vue'
+// import Privacy from '@/views/Privacy.vue'
+// import TermsOfService from '@/views/TermsOfService.vue'
+// import Cookies from '@/views/Cookies.vue'
+// import Flota from '@/views/Flota.vue'
+// import Servicii from '@/views/Servicii.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,32 +26,32 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: Contact,
+      component: () => import('../views/Contact.vue')
     },
     {
       path: '/privacy-policy',
       name: 'privacy',
-      component: Privacy,
+      component:  () => import('../views/Privacy.vue')
     },
     {
       path: '/terms-services',
       name: 'tos',
-      component: TermsOfService,
+      component:  () => import('../views/TermsOfService.vue')
     },
     {
       path: '/cookies',
       name: 'cookies',
-      component: Cookies,
+      component: () => import('../views/Cookies.vue')
     },
     {
       path: '/flota',
       name: 'flota',
-      component: Flota,
+      component: () => import('../views/Cookies.vue')
     },
     {
       path: '/servicii',
       name: 'servicii',
-      component: Servicii,
+      component: () => import('../views/Servicii.vue')
     },
   ],
 
