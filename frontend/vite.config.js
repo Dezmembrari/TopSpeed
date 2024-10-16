@@ -9,8 +9,16 @@ export default defineConfig({
     viteCompression({
       algorithm: 'brotliCompress', // Use Brotli compression
       ext: '.br', // File extension for Brotli compressed files
-      threshold: 10240, // Compress files larger than 10 KB
-      deleteOriginFile: false, // Keep the original files
+      threshold: 1024, // Lower threshold to 1KB
+      deleteOriginFile: false,
+      compressionOptions: {
+        level: 11, // Maximum compression
+      },
+    }),
+    // Add gzip compression as fallback
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
     }),
   ],
   resolve: {
