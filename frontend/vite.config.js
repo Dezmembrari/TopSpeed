@@ -21,18 +21,19 @@ export default defineConfig({
   base: '/',
   build: {
     minify: 'esbuild', // Fast minification
-    // terserOptions: {
-    //   compress: {
-    //     drop_console: true, // Remove console logs
-    //     drop_debugger: true, // Remove debugger statements
-    //   },
-    // },
     rollupOptions: {
       // Enable more aggressive tree-shaking
       treeshake: {
         moduleSideEffects: 'no-external',
         propertyReadSideEffects: false, // Removes code that only has property reads
         tryCatchDeoptimization: false,  // Prevents Rollup from keeping try/catch blocks that aren't necessary
+      },
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';  // Separate vendor libraries
+          }
+        },
       },
     },
     sourcemap: false, // Optionally disable source maps in production for better performance
