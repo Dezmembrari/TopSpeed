@@ -8,7 +8,7 @@
   <Suspense>
     <template #default>
       <!-- Wrap lazy-loaded components in a single parent element -->
-      <div>
+      <div v-memo="['static-content']">
         <ResponsiveCardComponent />
         <ResponsiveSteps />
         <Contact_alt />
