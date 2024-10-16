@@ -1,11 +1,4 @@
 <template>
-
-    <head>
-        <link rel="preload" href="https://topspeedservice.eu/assets/receptie-CRYEMBfw.webp" as="image" fetchPriority="high">
-        <link rel="preload" src="./images/receptie.webp" as="image" fetchPriority="high">
-        <link rel="preload" src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" as="image" fetchPriority="high">
-    </head>
-
     <div v-if="!isSmallScreen">
         <div class="hero-area">
             <div class="reviews">
@@ -110,8 +103,6 @@ export default {
 
 <style lang="scss" scoped>
 .hero-area {
-    // border: 5px solid red;
-    // background-color: cyan;
     position: relative;
     width: 100%;
     height: 80vh;
@@ -126,7 +117,7 @@ export default {
         max-height: 680px;
         min-height: 620px;
         top: 0px;
-        left: 0px; //-67px;
+        left: 0px; 
         overflow: hidden;
 
         .imagine {
@@ -173,7 +164,6 @@ export default {
             .titlu {
                 position: relative;
                 align-self: center;
-                // align-self: stretch;
                 width: 100%;
                 height: 189px;
                 overflow: hidden;
@@ -186,7 +176,6 @@ export default {
                     position: absolute;
                     width: 689px;
                     top: 26px;
-                    // left: 377px;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
                     color: var(--receptie-theme-3white);
@@ -282,9 +271,6 @@ export default {
     position: sticky;
     top: 10vh;
     right: 10px;
-    // width: 400px;
-    // height: 250px;
-    // background-color: red;
     width: fit-content;
     scale: 0.8;
     z-index: 10;
@@ -309,8 +295,6 @@ export default {
             height: 60vw;
             min-height: 540px;
             max-height: 690px;
-            // top: ;
-            // left: 0; //-67px;
             overflow: hidden;
 
             .imagine {
@@ -329,20 +313,6 @@ export default {
                     left: 150px;
                 }
             }
-
-            // .rectangle {
-            //     position: absolute;
-            //     width: 1280px;
-            //     height: 770px;
-            //     top: 12px;
-            //     left: 0px;
-            //     backdrop-filter: blur(1px) brightness(100%);
-            //     -webkit-backdrop-filter: blur(1px) brightness(100%);
-            //     background: linear-gradient(90deg,
-            //             rgb(255, 255, 255) 40%,
-            //             rgba(255, 255, 255, 0.75) 50%,
-            //             rgba(255, 255, 255, 0) 80%);
-            // }
 
             .rectangle {
                 position: absolute;
@@ -396,7 +366,6 @@ export default {
                 }
 
                 .paragraph {
-                    // left: 16vw;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
