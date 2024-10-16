@@ -3,13 +3,13 @@
   <div v-if="!mobileBanner" class="top-banner-0w3mEM" data-id="244:1198">
     <div class="contact-727KgL" data-id="244:1199">
       <div class="telefon-E0lKG6" data-id="244:1200">
-        <img class="phone-0TmUck phone" data-id="244:1201" src="./images/phone-1@2x.webp" alt="Phone" />
+        <img class="phone-0TmUck phone" data-id="244:1201" src="../assets/images/phone-1@2x.webp" alt="Phone" />
         <div class="x0788-990-011-0TmUck x0788-990-011 inter-normal-white-14-5px" data-id="244:1202">
           <a href="tel:+40788990011" style="color: white;">0788 990 011</a>
         </div>
       </div>
       <div class="email-E0lKG6" data-id="244:1203">
-        <img class="mail-HSA5eX mail" data-id="244:1204" src="./images/mail-2@2x.webp" alt="mail" />
+        <img class="mail-HSA5eX mail" data-id="244:1204" src="../assets/images/mail-2@2x.webp" alt="mail" />
         <div class="officetopspeedserviceeu-HSA5eX officetopspeedserviceeu inter-normal-white-14-5px"
           data-id="244:1205">
           <a href="mailto:contact@topspeedservice.ro" style="color: white;">contact@topspeedservice.ro</a>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="program-727KgL" data-id="244:1206">
-      <img class="clock-cmdIc7" data-id="244:1207" src="./images/clock-1@2x.webp" alt="Clock" />
+      <img class="clock-cmdIc7" data-id="244:1207" src="../assets/images/clock-1@2x.webp" alt="Clock" />
       <div class="luni-vineri-0800-cmdIc7 inter-normal-white-14-5px" data-id="244:1208">
         Luni-Vineri: 08:00-17:30
       </div>
@@ -31,7 +31,7 @@
       <transition name="branding">
         <div v-if="showBranding" class="branding">
           <router-link :to="{ name: 'home' }">
-            <img src="../components/images/TSP_Logo.webp" alt="Top Speed Service">
+            <img src="../assets/images/TSP_Logo.webp" alt="Top Speed Service">
           </router-link>
         </div>
       </transition>
@@ -43,7 +43,7 @@
         <!-- <li><router-link class="link" :to="{name: 'flota'}">Flota</router-link></li> -->
         <li><router-link class="link" :to="{ name: 'about' }">Despre noi</router-link></li>
         <li><router-link class="link-t" :to="{ name: 'contact' }">
-            <div class="contacteaza-ne"> <img class="icon" src="./images/icon-46@2x.webp" />
+            <div class="contacteaza-ne"> <img class="icon" src="../assets/images/icon-46@2x.webp" />
               <p>Contacteaza-ne</p>
             </div>
           </router-link></li>

@@ -33,7 +33,7 @@
   ];
   
   // Function to generate the full URL for images dynamically
-  const getImageUrl = (imageName) => new URL(`./images/${imageName}`, import.meta.url).href;
+  const getImageUrl = (imageName) => new URL(`../assets/images/${imageName}`, import.meta.url).href;
   </script>
   
   <style scoped>

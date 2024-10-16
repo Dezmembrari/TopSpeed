@@ -163,15 +163,15 @@ $tablet-breakpoint: 1280px;
   }
 
   &.card-1 .picture {
-    @include card-image('../components/images/pexels.webp');
+    @include card-image('../assets/images/pexels.webp');
   }
 
   &.card-2 .picture {
-    @include card-image('../components/images/mercedes-platforma.webp');
+    @include card-image('../assets/images/mercedes-platforma.webp');
   }
 
   &.card-3 .picture {
-    @include card-image('../components/images/hands.webp');
+    @include card-image('../assets/images/hands.webp');
   }
 
   .frame {

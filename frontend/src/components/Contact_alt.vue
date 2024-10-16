@@ -8,18 +8,18 @@
                         <div class="contact-details">
                             <a href="tel:+40788990011">
                                 <div class="contact-item">
-                                    <img src="../components/images/bxs-phone-call-4@2x.webp" alt="Phone" />
+                                    <img src="../assets/images/bxs-phone-call-4@2x.webp" alt="Phone" />
                                     <p>0788 990 011</p>
                                 </div>
                             </a>
                             <a href="mailto:contact@topspeedservice.ro">
                                 <div class="contact-item">
-                                    <img src="../components/images/ic-sharp-email-4@2x.webp" alt="Email" />
+                                    <img src="../assets/images/ic-sharp-email-4@2x.webp" alt="Email" />
                                     <p>contact@topspeedservice.ro</p>
                                 </div>
                             </a>
                             <div class="contact-item">
-                                <img src="../components/images/carbon-location-filled-4@2x.webp" alt="Location" />
+                                <img src="../assets/images/carbon-location-filled-4@2x.webp" alt="Location" />
                                 <span>Sos. Clinceni, DJ401A 6, Bragadiru 077025</span>
                             </div>
                         </div>

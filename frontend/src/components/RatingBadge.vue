@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import fullStar from '../components/images/star-1-1@2x.webp';
+import fullStar from '../assets/images/star-1-1@2x.webp';
 
 export default {
   name: "RatingBadge",

@@ -53,7 +53,7 @@
 
 <script setup>
 import TwoRow from '@/components/TwoRow.vue';
-//import Stepper from '../components/Stepper.vue';
+//import Stepper from '../assets/Stepper.vue';
 
 // Your existing script code...
 </script>
@@ -77,13 +77,13 @@ import TwoRow from '@/components/TwoRow.vue';
 }
 
 // Image classes
-.tinichigerie-image { background-image: url('../components/images/tinichigerie.webp'); }
-.vopsitorie-image { background-image: url('../components/images/vopsitorie.webp'); }
-.mecanica-image { background-image: url('../components/images/mecanica.webp'); }
-.aer-image { background-image: url('../components/images/aer.webp'); }
-.pexels-image { background-image: url('../components/images/pexels.webp'); }
-.mercedes-platforma-image { background-image: url('../components/images/mercedes-platforma.webp'); }
-.hands-image { background-image: url('../components/images/hands.webp'); }
+.tinichigerie-image { background-image: url('../assets/images/tinichigerie.webp'); }
+.vopsitorie-image { background-image: url('../assets/images/vopsitorie.webp'); }
+.mecanica-image { background-image: url('../assets/images/mecanica.webp'); }
+.aer-image { background-image: url('../assets/images/aer.webp'); }
+.pexels-image { background-image: url('../assets/images/pexels.webp'); }
+.mercedes-platforma-image { background-image: url('../assets/images/mercedes-platforma.webp'); }
+.hands-image { background-image: url('../assets/images/hands.webp'); }
 
 // Common styles for all images
 [class$="-image"] {

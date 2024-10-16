@@ -8,7 +8,7 @@
             <div class="overlap">
                 <div class="imagine">
                     <img alt="Poza receptie" class="whatsapp-image"
-                        src="../components/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" 
+                        src="../assets/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" 
                         fetchpriority="high"
                         />
                 </div>
@@ -27,7 +27,7 @@
                     </p>
                     <router-link class="link" :to="{ name: 'contact' }">
                         <div class="extended-FAB">
-                            <img alt="" class="img" src="../components/images/icon-46@21x.webp" />
+                            <img alt="" class="img" src="../assets/images/icon-46@21x.webp" />
                             <div class="label-text">Contact</div>
                         </div>
                     </router-link>
@@ -55,7 +55,7 @@
                 </div>
                 <a href="tel:+40788990011" class="contact-button">
                     <div class="button-content">
-                        <img class="button-icon" src="../components/images/icon-49@2x.webp" alt="Icon" />
+                        <img class="button-icon" src="../assets/images/icon-49@2x.webp" alt="Icon" />
                         <div class="button-text">
                             CONTACTEAZA-NE
                         </div>
@@ -63,7 +63,7 @@
                 </a>
             </div>
             <div class="hero-image">
-                <img alt="Receptie Top Speed Service" fetchpriority="high" src="./images/receptie.webp" />
+                <img alt="Receptie Top Speed Service" fetchpriority="high" src="../assets/images/receptie.webp" />
             </div>
         </div>
     </div>
@@ -168,7 +168,7 @@ export default {
                 height: 189px;
                 overflow: hidden;
                 background-size: 100% 100%;
-                background-image: url('../components/images/polygon-1-1.webp');
+                background-image: url('../assets/images/polygon-1-1.webp');
 
 
                 .CENTRU-CONSTATARE {
