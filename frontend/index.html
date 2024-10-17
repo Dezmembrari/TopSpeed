@@ -1,26 +1,472 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
 
-    <!-- Favicon -->
-    <link rel="icon" href="./src/assets/ICON.png">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="robots" content="index, follow">
 
-    <!-- Preload key images with high priority -->
-    <link rel="preload" href="./src/assets/images/receptie.webp" as="image" fetchPriority="high">
-    <link rel="preload" href="./src/assets/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" as="image" fetchPriority="high">
 
-    <!-- Preload Material 3 Font: Roboto Flex -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <style lang="scss" scoped>
+    .hero-area {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      max-height: 670px;
+      min-height: 620px;
+      overflow: visible;
 
-    <!-- Structured Data (JSON-LD) for SEO -->
-    <script type="application/ld+json">
+      .overlap {
+        position: absolute;
+        width: 100%;
+        height: 80vh;
+        max-height: 680px;
+        min-height: 620px;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+
+        .imagine {
+          position: absolute;
+          width: stretch;
+          height: 718px;
+          top: -10px;
+          left: 440px;
+
+          .whatsapp-image {
+            position: absolute;
+            width: 100%;
+            height: 711px;
+            top: 1px;
+            left: 0px;
+          }
+        }
+
+        .rectangle {
+          position: absolute;
+          width: 1280px;
+          height: stretch;
+          top: 0px;
+          left: 0px;
+          backdrop-filter: blur(1px) brightness(100%);
+          -webkit-backdrop-filter: blur(1px) brightness(100%);
+          background: linear-gradient(90deg,
+              rgb(255, 255, 255) 40%,
+              rgba(255, 255, 255, 0.75) 50%,
+              rgba(255, 255, 255, 0) 80%);
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          width: 1000px;
+          align-items: center;
+          justify-content: center;
+          gap: 18px;
+          position: absolute;
+          top: 133px;
+          left: -107px;
+
+          .titlu {
+            position: relative;
+            align-self: center;
+            width: 100%;
+            height: 189px;
+            overflow: hidden;
+            background-size: 100% 100%;
+            background-image: url('./src/assets/images/polygon-1-1.webp');  
+
+
+            .CENTRU-CONSTATARE {
+              left: 210px;
+              position: absolute;
+              width: 689px;
+              top: 26px;
+              font-family: "Roboto", sans-serif;
+              font-weight: 700;
+              color: white;
+              font-size: 40px;
+              letter-spacing: -1.2px;
+              line-height: 40px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              line-clamp: 3;
+              -webkit-box-orient: vertical;
+
+              .text-wrapper {
+                letter-spacing: -0.48px;
+                line-height: 48px;
+              }
+
+              .span {
+                font-size: 81px;
+                letter-spacing: -1.97px;
+                line-height: 81px;
+              }
+            }
+          }
+
+          .paragraph {
+            position: relative;
+            width: 577px;
+            background: linear-gradient(180deg, rgb(7, 110, 9) 0%, rgb(5.49, 86.31, 7.06) 100%);
+            -webkit-background-clip: text !important;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 36px;
+            text-align: justify;
+            letter-spacing: 0;
+            line-height: 44px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+
+          .extended-FAB {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            width: 166px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: transparent;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: all 0.2s ease;
+
+            &:hover {
+              scale: 1.2;
+            }
+
+            .img {
+              position: relative;
+              width: 24px;
+              height: 24px;
+            }
+
+            .label-text {
+              position: relative;
+              width: fit-content;
+              font-family: 'Roboto', sans-serif;
+              font-weight: var(--material-theme-green-label-large-font-weight);
+              color: var(--receptie-theme-3syslightprimary);
+              font-size: var(--material-theme-green-label-large-font-size);
+              text-align: center;
+              letter-spacing: var(--material-theme-green-label-large-letter-spacing);
+              line-height: var(--material-theme-green-label-large-line-height);
+              white-space: nowrap;
+              font-style: var(--material-theme-green-label-large-font-style);
+            }
+          }
+        }
+      }
+    }
+
+    .reviews {
+      position: sticky;
+      top: 10vh;
+      right: 10px;
+      width: fit-content;
+      scale: 0.8;
+      z-index: 10;
+      float: right;
+      margin-top: 20px;
+
+      @media (max-width:1280px) {
+        scale: 0.6;
+        right: -20px;
+      }
+    }
+
+    @media (max-width:1280px) {
+      .hero-area {
+        height: 60vw;
+        min-height: 540px;
+        max-height: 690px;
+
+        .overlap {
+          position: absolute;
+          width: 100%;
+          height: 60vw;
+          min-height: 540px;
+          max-height: 690px;
+          overflow: hidden;
+
+          .imagine {
+            position: absolute;
+            width: stretch;
+            height: 718px;
+            top: -2px;
+            left: 0px;
+
+            .whatsapp-image {
+              position: absolute;
+              width: 100%;
+              min-width: 60vw;
+              height: 711px;
+              top: 1px;
+              left: 150px;
+            }
+          }
+
+          .rectangle {
+            position: absolute;
+            width: 90vw;
+            height: stretch;
+            top: 0px;
+            left: 0px;
+            backdrop-filter: blur(1px) brightness(100%);
+            -webkit-backdrop-filter: blur(1px) brightness(100%);
+            background: linear-gradient(90deg,
+                rgb(255, 255, 255) 40%,
+                rgba(255, 255, 255, 0.75) 50%,
+                rgba(255, 255, 255, 0) 80%);
+          }
+
+          .text {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: left;
+            padding-left: 12px;
+
+            .titlu {
+              width: 100%;
+              height: 15vw;
+
+              .CENTRU-CONSTATARE {
+                left: 16vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Centers horizontally */
+                align-items: left;
+                width: auto;
+                height: auto;
+
+                .text-wrapper {
+                  font-size: 3vw;
+                  letter-spacing: -0.48px;
+                  line-height: 3vw;
+                }
+
+                .span {
+                  font-size: 6.3vw;
+                  letter-spacing: -1.97px;
+                  line-height: 6.3vw;
+                }
+              }
+            }
+
+            .paragraph {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              /* Centers horizontally */
+              align-items: center;
+              width: 50%;
+              height: auto;
+              font-size: 2.5vw;
+              line-height: calc(2.5vw + 2px);
+            }
+
+            .extended-FAB {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              width: fit-content;
+              height: fit-content;
+              padding: 12px 25px 12px 25px;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              background-color: transparent;
+              border-radius: 25px;
+              overflow: hidden;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              transition: all 0.2s ease;
+
+              &:hover {
+                scale: 1.2;
+              }
+
+
+              .img {
+                position: relative;
+                width: 14px;
+                height: 14px;
+              }
+
+              .label-text {
+                position: relative;
+                width: fit-content;
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                white-space: nowrap;
+                font-size: 14px;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    @media (max-width: 720px) {
+
+      .hero-section,
+      .hero-content,
+      .hero-image {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+      }
+
+      .hero-section {
+        align-items: flex-start;
+        gap: 17px;
+        z-index: 4;
+        min-width: 360px;
+        background-color: whitesmoke;
+      }
+
+      .hero-content {
+        align-items: center;
+        gap: 15px;
+        padding: 24px;
+      }
+
+      .hero-title {
+        align-items: flex-start;
+        gap: 4.5px;
+      }
+
+      .title-line {
+        align-self: stretch;
+        text-align: center;
+        line-height: 34px;
+      }
+
+      .title-text,
+      .title-text-bold {
+        color: var(--william);
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+      }
+
+      .title-text {
+        font-size: 19px;
+      }
+
+      .title-text-bold {
+        font-size: 38.9px;
+      }
+
+      .hero-description {
+        align-self: stretch;
+        border-radius: 19.17px;
+        padding: 15px 20px;
+      }
+
+      .description-text {
+        color: var(--receptie-theme-3syslighton-secondary-container);
+        font-family: "Roboto", sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: justify;
+      }
+
+      .contact-button {
+        align-self: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--receptie-theme-3syslightsecondary);
+        border-radius: 118.08px;
+        box-shadow: 0px 2px 6px 2px #00000026, 0px 1px 2px #0000004c, 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+        min-width: 94.46429443359375px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        color: white;
+      }
+
+      .contact-button:hover {
+        transform: scale(1.1);
+      }
+
+      .button-content {
+        display: inline-flex;
+        gap: 14px;
+        padding: 19px;
+        background-color: var(--receptie-theme-3syslightprimary);
+        border-radius: 118.08px;
+      }
+
+      .button-icon {
+        height: 28.339px;
+        width: 28.339px;
+        color: white;
+      }
+
+      .button-text {
+        font-weight: 500;
+        white-space: nowrap;
+        align-items: center;
+      }
+
+      .hero-image {
+        align-items: center;
+        gap: 10px;
+        padding: 0px 20px 25px 25px;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  </style>
+
+  <link rel="preload" href="./src/assets/css/styles.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./src/assets/css/styles.scss"></noscript> 
+
+  <!-- Favicon -->
+  <link rel="icon" href="./src/assets/ICON.png">
+
+  <!-- Preload key images with high priority -->
+  <link rel="preload" href="./src/assets/images/receptie.webp" as="image" fetchPriority="high">
+  <link rel="preload" href="./src/assets/images/whatsapp-image-2024-08-04-at-15-45-14-e5fa0d06-1-1.webp" as="image"
+    fetchPriority="high">
+
+  <!-- Preload Material 3 Font: Roboto Flex -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="font"
+    type="font/woff2" crossorigin>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutoRepair",
@@ -48,66 +494,76 @@
       }
     </script>
 
-    <!-- Meta Tags for Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru">
-    <meta property="og:description" content="Top Speed Service SRL din Bragadiru este atât un service auto de încredere, cât și un centru specializat în constatarea daunelor. Oferim servicii complete de mecanica, tinichigerie și vopsitorie pentru a vă asigura că vehiculul dumneavoastră este în cele mai bune condiții.">
-    <meta property="og:image" content="/assets/receptie-CRYEMBfw.webp">
-    <meta property="og:url" content="https://www.topspeedservice.eu">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru">
-    <meta name="twitter:description" content="Top Speed Service SRL din Bragadiru este atât un service auto de încredere, cât și un centru specializat în constatarea daunelor. Oferim servicii complete de mecanica, tinichigerie și vopsitorie pentru a vă asigura că vehiculul dumneavoastră este în cele mai bune condiții.">
-    <meta name="twitter:image" content="/assets/receptie-CRYEMBfw.webp">
+  <!-- Meta Tags for Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru">
+  <meta property="og:description"
+    content="Top Speed Service SRL din Bragadiru este atât un service auto de încredere, cât și un centru specializat în constatarea daunelor. Oferim servicii complete de mecanica, tinichigerie și vopsitorie pentru a vă asigura că vehiculul dumneavoastră este în cele mai bune condiții.">
+  <meta property="og:image" content="/assets/receptie-CRYEMBfw.webp">
+  <meta property="og:url" content="https://www.topspeedservice.eu">
 
-    <!-- Title and Google Tag Manager -->
-    <title>Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru</title>
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-        j.async=1; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WF7RMP9G');
-    </script>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru">
+  <meta name="twitter:description"
+    content="Top Speed Service SRL din Bragadiru este atât un service auto de încredere, cât și un centru specializat în constatarea daunelor. Oferim servicii complete de mecanica, tinichigerie și vopsitorie pentru a vă asigura că vehiculul dumneavoastră este în cele mai bune condiții.">
+  <meta name="twitter:image" content="/assets/receptie-CRYEMBfw.webp">
 
-    <!-- Google Tag Manager (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH0W4L7HMT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LH0W4L7HMT');
-    </script>
+  <!-- Title and Google Tag Manager -->
+  <title>Top Speed Service - Service Auto si Centru Constatare Daune Bragadiru</title>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = 1; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WF7RMP9G');
+  </script>
 
-    <!-- Hotjar Tracking Script -->
-    <script>
-      (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5152145,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+  <!-- Google Tag Manager (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH0W4L7HMT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LH0W4L7HMT');
+  </script>
 
-    <!-- Google reCAPTCHA Script -->
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE" async></script>
-    <style> .grecaptcha-badge { visibility: hidden !important; } </style>
+  <!-- Hotjar Tracking Script -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 5152145, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 
-    <!-- Cookie Consent - Cookiebot -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="21a2d9c7-fe13-4656-896c-af4123c54bb1" data-blockingmode="auto" type="text/javascript" defer></script>
-    
-    <!-- Essential Styles and Scripts -->
-    <script type="module" src="/src/main.js" defer></script>
-  </head>
+  <!-- Google reCAPTCHA Script -->
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcBGFgqAAAAAByjRU_60UbV6VuQcxD4_oOS2iNE"
+    async></script>
+  <style>
+    .grecaptcha-badge {
+      visibility: hidden !important;
+    }
+  </style>
 
-  <body>
-    <div id="app"></div>
+  <!-- Cookie Consent - Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="21a2d9c7-fe13-4656-896c-af4123c54bb1"
+    data-blockingmode="auto" type="text/javascript" defer></script>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF7RMP9G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-  </body>
+  <!-- Essential Styles and Scripts -->
+  <script type="module" src="/src/main.js" defer></script>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF7RMP9G" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+</body>
+
 </html>
