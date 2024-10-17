@@ -2,13 +2,14 @@
   <input type="hidden" id="anPageName" name="page" value="desktop-u621280p" />
 
   <!-- Static Hero component -->
-  <Hero />
+   <div v-once><Hero /></div>
+  
 
   <!-- Dynamically imported components wrapped in Suspense -->
   <Suspense>
     <template #default>
       <!-- Wrap lazy-loaded components in a single parent element -->
-      <div v-memo="['static-content']">
+      <div v-once>
         <ResponsiveCardComponent />
         <ResponsiveSteps />
         <Contact_alt />
