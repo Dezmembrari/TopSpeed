@@ -9,7 +9,7 @@
   <Suspense>
     <template #default>
       <!-- Wrap lazy-loaded components in a single parent element -->
-      <div v-once>
+      <div>
         <ResponsiveCardComponent />
         <ResponsiveSteps />
         <Contact_alt />
