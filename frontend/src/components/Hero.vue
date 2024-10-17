@@ -291,7 +291,7 @@ export default {
 
         .overlap {
             position: absolute;
-            width: 100vw;
+            width: 100%;
             height: 60vw;
             min-height: 540px;
             max-height: 690px;
